@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PeerPowerClub</string>
+    <string-array name="subjects">
+        <item>automobile</item>
+        <item>graphics</item>
+        <item>app development</item>
+
+
+    </string-array>
 </resources>
