@@ -54,9 +54,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/emailreg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+        app:layout_constraintTop_toBottomOf="@+id/progress" />
 
     <EditText
         android:id="@+id/emailreg"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
-        android:id="@+id/inputConfirmPassword"
+        android:id="@+id/passregcon"
         android:layout_width="382dp"
         android:layout_height="47dp"
         android:layout_marginTop="20dp"
@@ -102,13 +102,13 @@
         android:textColorHint="#F4EFEF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/passreg"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        app:layout_constraintStart_toStartOf="@+id/passreg"
+        app:layout_constraintTop_toBottomOf="@+id/passreg" />
 
     <EditText
-        android:id="@+id/inputPassword"
+        android:id="@+id/passreg"
         android:layout_width="382dp"
         android:layout_height="47dp"
         android:layout_marginTop="20dp"
@@ -126,13 +126,13 @@
         android:textColorHint="#F4EFEF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/inputUsn"
+        app:layout_constraintEnd_toEndOf="@+id/state"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputUsn"
-        app:layout_constraintTop_toBottomOf="@+id/inputUsn" />
+        app:layout_constraintStart_toStartOf="@+id/state"
+        app:layout_constraintTop_toBottomOf="@+id/state" />
 
     <EditText
-        android:id="@+id/inputUsn"
+        android:id="@+id/state"
         android:layout_width="382dp"
         android:layout_height="47dp"
         android:layout_marginTop="20dp"
@@ -150,10 +150,10 @@
         android:textColorHint="#F4EFEF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/studentsName"
+        app:layout_constraintEnd_toEndOf="@+id/scroll"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/studentsName"
-        app:layout_constraintTop_toBottomOf="@+id/studentsName" />
+        app:layout_constraintStart_toStartOf="@+id/scroll"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
 
     <EditText
         android:id="@+id/contact"
@@ -181,7 +181,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emailreg" />
 
     <EditText
-        android:id="@+id/studentsName"
+        android:id="@+id/scroll"
         android:layout_width="382dp"
         android:layout_height="47dp"
         android:layout_marginTop="20dp"
@@ -216,14 +216,14 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/preg"
+        app:layout_constraintEnd_toEndOf="@+id/regbtn"
         app:layout_constraintHorizontal_bias="0.577"
-        app:layout_constraintStart_toStartOf="@+id/preg"
-        app:layout_constraintTop_toBottomOf="@+id/preg"
+        app:layout_constraintStart_toStartOf="@+id/regbtn"
+        app:layout_constraintTop_toBottomOf="@+id/regbtn"
         app:layout_constraintVertical_bias="0.448" />
 
     <Button
-        android:id="@+id/preg"
+        android:id="@+id/regbtn"
         android:layout_width="382dp"
         android:layout_height="47dp"
 
@@ -234,14 +234,14 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@color/teal_200"
-        app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
+        app:layout_constraintEnd_toEndOf="@+id/passregcon"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
+        app:layout_constraintStart_toStartOf="@+id/passregcon"
+        app:layout_constraintTop_toBottomOf="@+id/passregcon"
         app:rippleColor="@color/black" />
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/progress"
         style="?android:attr/progressBarStyle"
         android:layout_width="93dp"
         android:layout_height="78dp"
@@ -250,7 +250,7 @@
         android:layout_marginTop="31dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="20dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -258,7 +258,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBoxpr"
+        android:id="@+id/showpassreg"
         android:layout_width="135dp"
         android:layout_height="32dp"
         android:text="Show Password"
@@ -266,9 +266,9 @@
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/alreadyhave"
-        app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
+        app:layout_constraintEnd_toEndOf="@+id/passregcon"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
+        app:layout_constraintStart_toStartOf="@+id/passregcon"
+        app:layout_constraintTop_toBottomOf="@+id/passregcon"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/inputEmail2"
+        android:id="@+id/emaillog"
         android:layout_width="350dp"
         android:layout_height="58dp"
         android:layout_marginStart="36dp"
@@ -34,13 +34,13 @@
         android:textColorHint="@color/black"
         android:textColorLink="#FAF3F3"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword2"
+        app:layout_constraintBottom_toTopOf="@+id/passlog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLogin2" />
+        app:layout_constraintTop_toBottomOf="@+id/signin" />
 
     <TextView
-        android:id="@+id/textLogin2"
+        android:id="@+id/signin"
         android:layout_width="119dp"
         android:layout_height="48dp"
         android:layout_marginStart="36dp"
@@ -53,14 +53,14 @@
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inputEmail2"
+        app:layout_constraintBottom_toTopOf="@+id/emaillog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnLogin2"
+        android:id="@+id/loginbtn"
         android:layout_width="262dp"
         android:layout_height="52dp"
 
@@ -76,14 +76,14 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@color/teal_200"
-        app:layout_constraintBottom_toTopOf="@+id/register"
+        app:layout_constraintBottom_toTopOf="@+id/registerpage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/remember2" />
+        app:layout_constraintTop_toBottomOf="@+id/rememberme" />
 
     <TextView
-        android:id="@+id/register"
+        android:id="@+id/registerpage"
         android:layout_width="223dp"
         android:layout_height="51dp"
         android:layout_marginStart="88dp"
@@ -101,15 +101,14 @@
         android:textColorHint="#F1EAEA"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/forgotPassword2"
+        app:layout_constraintBottom_toTopOf="@+id/forgotpass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin2"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/forgotPassword2"
+        android:id="@+id/forgotpass"
         android:layout_width="164dp"
         android:layout_height="40dp"
         android:layout_marginStart="120dp"
@@ -131,11 +130,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintTop_toBottomOf="@+id/registerpage"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/inputPassword2"
+        android:id="@+id/passlog"
         android:layout_width="350dp"
         android:layout_height="58dp"
         android:layout_marginStart="36dp"
@@ -158,13 +157,13 @@
         android:textColor="#F8F2F2"
         android:textColorHint="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/remember2"
+        app:layout_constraintBottom_toTopOf="@+id/rememberme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail2" />
+        app:layout_constraintTop_toBottomOf="@+id/emaillog" />
 
     <CheckBox
-        android:id="@+id/remember2"
+        android:id="@+id/rememberme"
         android:layout_width="141dp"
         android:layout_height="48dp"
         android:layout_marginStart="36dp"
@@ -175,13 +174,13 @@
         android:text="Remember Me"
         android:textColor="#F6EEEE"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin2"
-        app:layout_constraintEnd_toStartOf="@+id/c"
+        app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+        app:layout_constraintEnd_toStartOf="@+id/passshowlog"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/passlog" />
 
     <CheckBox
-        android:id="@+id/c"
+        android:id="@+id/passshowlog"
         android:layout_width="141dp"
         android:layout_height="48dp"
         android:layout_marginBottom="68dp"
@@ -190,10 +189,10 @@
         android:textColorHint="#F1EAEA"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword2"
+        app:layout_constraintEnd_toEndOf="@+id/passlog"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/passlog"
         app:layout_constraintVertical_bias="0.018" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
