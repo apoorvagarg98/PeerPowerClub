@@ -25,6 +25,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Registration extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
@@ -36,6 +37,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     ToggleButton toggleButton;
    static String AreaofInterest = "automobile",daynight = "day";
     ArrayAdapter<CharSequence> adapter;
+    DatabaseReference groups;
 
     Spinner spinner;
     @Override
@@ -51,6 +53,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         editTextphonenumber = (EditText) findViewById(R.id.contact);
         chpassword2 = (EditText) findViewById(R.id.inputConfirmPassword);
         toggleButton = findViewById(R.id.dayNight);
+        groups = FirebaseDatabase.getInstance().getReference().child("groups");
         spinner = findViewById(R.id.interest);
          adapter = ArrayAdapter.createFromResource(this,R.array.subjects, android.R.layout.simple_spinner_item);
          adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -150,13 +153,22 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(Registration.this, "registered", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Registration.this, "registered", Toast.LENGTH_SHORT).show();
 
                                 startActivity(new Intent(Registration.this,Login.class));
                             } else {
                                 Toast.makeText(Registration.this, "Registration Failed", Toast.LENGTH_LONG).show();
 
                             }
+                        }
+                    });
+
+                    groups.child(AreaofInterest).child(daynight).setValue(useR).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(Registration.this, "registered fully", Toast.LENGTH_LONG).show();
+
+
                         }
                     });
 
