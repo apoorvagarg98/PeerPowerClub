@@ -8,13 +8,53 @@
     tools:context=".Registration">
 
 
+    <EditText
+        android:id="@+id/name2"
+        android:layout_width="382dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/inpuut_bg"
+        android:drawableLeft="@drawable/ic_baseline_text_fields_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="select preffered timing"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorHint="#F4EFEF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/interest"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/interest"
+        app:layout_constraintTop_toBottomOf="@+id/interest" />
+
+    <ToggleButton
+        android:id="@+id/dayNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:drawableStart="@drawable/selector"
+        android:drawableLeft="@drawable/selector"
+        android:text="select preffered time"
+        android:textOff="day"
+        android:textOn="Night"
+        app:layout_constraintBottom_toBottomOf="@+id/name2"
+        app:layout_constraintEnd_toEndOf="@+id/name2"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="@+id/name2" />
+
     <TextView
         android:id="@+id/reg"
-        android:layout_width="224dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="24dp"
+        android:layout_width="223dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
 
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="16dp"
         android:paddingLeft="20dp"
         android:paddingRight="10dp"
         android:text="CLIENT INFORMATION"
@@ -25,15 +65,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="382dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="29dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
         android:layout_marginBottom="20dp"
@@ -54,14 +93,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/emailreg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress" />
+        app:layout_constraintTop_toBottomOf="@+id/reg" />
 
     <EditText
         android:id="@+id/emailreg"
         android:layout_width="382dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_email_24"
@@ -83,10 +122,10 @@
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
-        android:id="@+id/passregcon"
+        android:id="@+id/inputConfirmPassword"
         android:layout_width="382dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="5dp"
@@ -102,16 +141,16 @@
         android:textColorHint="#F4EFEF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/passreg"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/passreg"
-        app:layout_constraintTop_toBottomOf="@+id/passreg" />
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
     <EditText
-        android:id="@+id/passreg"
+        android:id="@+id/inputPassword"
         android:layout_width="382dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="5dp"
@@ -126,40 +165,15 @@
         android:textColorHint="#F4EFEF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/state"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/state"
-        app:layout_constraintTop_toBottomOf="@+id/state" />
-
-    <EditText
-        android:id="@+id/state"
-        android:layout_width="382dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_location_on_24"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="State:"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="#F4EFEF"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/scroll"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/scroll"
-        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+        app:layout_constraintTop_toBottomOf="@+id/interest"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
 
     <EditText
         android:id="@+id/contact"
         style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
         android:layout_width="382dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
@@ -180,31 +194,6 @@
         app:layout_constraintStart_toStartOf="@+id/emailreg"
         app:layout_constraintTop_toBottomOf="@+id/emailreg" />
 
-    <EditText
-        android:id="@+id/scroll"
-        android:layout_width="382dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_text_student"
-        android:drawablePadding="5dp"
-        android:ems="10"
-
-        android:hint="Topic of interest"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="#F4EFEF"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/contact"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/contact"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
-
     <TextView
         android:id="@+id/alreadyhave"
         android:layout_width="228dp"
@@ -216,59 +205,65 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/regbtn"
+        app:layout_constraintEnd_toEndOf="@+id/preg"
         app:layout_constraintHorizontal_bias="0.577"
-        app:layout_constraintStart_toStartOf="@+id/regbtn"
-        app:layout_constraintTop_toBottomOf="@+id/regbtn"
+        app:layout_constraintStart_toStartOf="@+id/preg"
+        app:layout_constraintTop_toBottomOf="@+id/preg"
         app:layout_constraintVertical_bias="0.448" />
 
     <Button
-        android:id="@+id/regbtn"
+        android:id="@+id/preg"
         android:layout_width="382dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
 
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/inpuut_bg"
         android:text="REGISTER"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@color/teal_200"
-        app:layout_constraintEnd_toEndOf="@+id/passregcon"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/passregcon"
-        app:layout_constraintTop_toBottomOf="@+id/passregcon"
+        app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
         app:rippleColor="@color/black" />
 
-    <ProgressBar
-        android:id="@+id/progress"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="93dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="20dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/reg"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <CheckBox
-        android:id="@+id/showpassreg"
+        android:id="@+id/checkBoxpr"
         android:layout_width="135dp"
-        android:layout_height="32dp"
+        android:layout_height="48dp"
         android:text="Show Password"
         android:textColor="#FAF7F7"
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/alreadyhave"
-        app:layout_constraintEnd_toEndOf="@+id/passregcon"
+        app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/passregcon"
-        app:layout_constraintTop_toBottomOf="@+id/passregcon"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <Spinner
+        android:id="@+id/interest"
+
+        android:layout_width="382dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/inpuut_bg"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:contentDescription="@string/app_name"
+        android:drawingCacheQuality="high"
+        android:dropDownWidth="match_parent"
+        android:dropDownSelector="@drawable/bgg"
+        android:spinnerMode="dropdown"
+        android:splitMotionEvents="true"
+        android:theme="@style/Theme.PeerPowerClub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

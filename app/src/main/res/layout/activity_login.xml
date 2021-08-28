@@ -60,6 +60,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="72dp"
+        android:layout_height="76dp"
+        tools:layout_editor_absoluteX="333dp"
+
+
+        tools:layout_editor_absoluteY="-1dp" />
+
     <Button
         android:id="@+id/loginbtn"
         android:layout_width="262dp"
