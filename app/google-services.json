@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "592473456574",
+    "project_id": "peerpowerclub-bd810",
+    "storage_bucket": "peerpowerclub-bd810.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592473456574:android:4e603ba62f78e82ad6c3ef",
+        "android_client_info": {
+          "package_name": "com.example.PeerPowerClub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592473456574-4k69d6g5s10sokkim3lpacok29v9bk1r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrYS8_LRoRbzpBYYAN9OwEp8PpouS9I6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592473456574-4k69d6g5s10sokkim3lpacok29v9bk1r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
