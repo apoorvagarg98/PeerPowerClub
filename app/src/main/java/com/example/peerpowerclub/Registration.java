@@ -163,7 +163,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                         }
                     });
 
-                    groups.child(AreaofInterest).child(daynight).setValue(useR).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    groups.child(AreaofInterest + daynight).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(useR).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(Registration.this, "registered fully", Toast.LENGTH_LONG).show();

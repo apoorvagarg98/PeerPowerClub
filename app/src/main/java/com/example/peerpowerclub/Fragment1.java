@@ -28,7 +28,7 @@ public class Fragment1 extends Fragment {
     private FirebaseUser user;
     public DatabaseReference reference;
     private String userId;
-    static  String areaofinterest,dayNight;
+    static  String areaofinterest,dayNight,email;
 
     private Button buttons,logout;
     @Nullable
@@ -60,7 +60,7 @@ public class Fragment1 extends Fragment {
                 user user4profile = snapshot.getValue(user.class);
                 if (user4profile != null) {
                     dayNight= user4profile.prefferedTime;
-                    String email = user4profile.email;
+                     email = user4profile.email;
                     String phone = user4profile.phonenumber;
                     areaofinterest = user4profile.areaOfInterest;
 
@@ -69,8 +69,8 @@ public class Fragment1 extends Fragment {
                     fullnameTextView.setText("Name - " + name);
                     emailTextView.setText("Email - " + email);
                     phonenumberTextView.setText("PhoneNumber- " + phone);
-                    prefferedTextView.setText("USN- " + dayNight);
-                    areaofInterestTextView.setText("Student Name - " + areaofinterest);
+                    prefferedTextView.setText("prefferedTime- " + dayNight);
+                    areaofInterestTextView.setText("areOfInterest - " + areaofinterest);
 
                 }
             }
