@@ -147,12 +147,13 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    user useR = new user(name, email, phone, AreaofInterest,daynight);
+                    user useR = new user(name, email, phone, AreaofInterest,daynight,FirebaseAuth.getInstance().getCurrentUser().getUid());
                     FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                             .setValue(useR).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
+
                                 Toast.makeText(Registration.this, "registered", Toast.LENGTH_SHORT).show();
 
                                 startActivity(new Intent(Registration.this,Login.class));

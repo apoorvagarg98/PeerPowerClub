@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextemail, editTextPassword;
-    private TextView  register,editTextForgotpassword;
+    private TextView  editTextForgotpassword;
 
     private Button  signin;
     private FirebaseAuth mAuth;
@@ -40,8 +40,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        register = (TextView) findViewById(R.id.register);
-        register.setOnClickListener(this);
+
+
 
         editTextForgotpassword = (TextView) findViewById(R.id.forgotPassword2);
         editTextForgotpassword.setOnClickListener(new View.OnClickListener() {

@@ -20,6 +20,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class AdapterGroupChat extends RecyclerView.Adapter<AdapterGroupChat.HolderGroupChat> {
@@ -61,9 +62,12 @@ String senderUid = model.getSender();
 
         Calendar cal = Calendar.getInstance(Locale.ENGLISH);
         cal.setTimeInMillis(Long.parseLong(timestamp));
-        String datetime = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss").toString();
+        Date d = cal.getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/Mm/YYYY hh:mm");
+        String date2 = sdf.format(d);
+
 holder.messagetv.setText(message  );
-holder.timetv.setText(datetime);
+holder.timetv.setText(date2);
     setUserName(model, holder);
     }
 
@@ -74,7 +78,7 @@ holder.timetv.setText(datetime);
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                 for (DataSnapshot ds : datasnapshot.getChildren())
                 {
-                    String name = "" + ds.child("name").getValue().toString();
+                    String name =  ds.child("fullname").getValue().toString();
                     holder.nameTv.setText(name);
                 }
             }

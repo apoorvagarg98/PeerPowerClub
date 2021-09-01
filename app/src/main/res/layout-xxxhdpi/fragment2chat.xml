@@ -20,28 +20,36 @@
             <TextView
                 android:id="@+id/groupName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_baseline_group_24"
+                android:drawablePadding="5dp"
+                android:includeFontPadding="true"
                 android:text="GroupName"
+                android:textColor="#FAF7F7"
                 android:textSize="40sp"
                 tools:ignore="MissingConstraints" />
 
         </RelativeLayout>
 
     </Toolbar>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
         android:layout_above="@id/chatLayout"
+        android:layout_below="@id/toolbar"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:stackFromEnd="true"
-        tools:listitem="@layout/row_groupchat_left"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        tools:listitem="@layout/row_groupchat_left" />
 
     <LinearLayout
         android:id="@+id/chatLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:gravity="center"
@@ -54,21 +62,22 @@
             android:layout_height="50dp"
             android:background="@null"
             android:src="@drawable/ic_baseline_attach_file_24" />
+
         <EditText
+            android:id="@+id/messageEt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/messageEt"
-            android:hint="start typing...."
-            android:inputType="textCapSentences|textMultiLine"
             android:layout_weight="1"
             android:background="@null"
-            />
+            android:hint="start typing...."
+            android:inputType="textCapSentences|textMultiLine" />
+
         <ImageButton
             android:id="@+id/sendbtn"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_baseline_send_24"
-            android:background="@null"/>
+            android:background="@null"
+            android:src="@drawable/ic_baseline_send_24" />
 
 
     </LinearLayout>

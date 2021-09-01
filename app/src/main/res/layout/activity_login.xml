@@ -65,25 +65,25 @@
                  android:textStyle="bold" />
 
              <EditText
-             android:id="@+id/inputPassword2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:background="@drawable/inpuut_bg"
-             android:drawableLeft="@drawable/ic_baseline_lock_open_24"
-             android:drawablePadding="@dimen/_10sdp"
-             android:ems="20"
+                 android:id="@+id/inputPassword2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
                  android:layout_marginTop="@dimen/_10sdp"
+                 android:background="@drawable/inpuut_bg"
+                 android:drawableLeft="@drawable/ic_baseline_lock_open_24"
+                 android:drawablePadding="@dimen/_10sdp"
+                 android:ems="20"
 
-             android:hint="PASSWORD"
-             android:inputType="textPassword"
-             android:paddingLeft="20dp"
-             android:paddingTop="10dp"
-             android:paddingRight="20dp"
-             android:paddingBottom="10dp"
-             android:password="false"
-             android:textColor="#F8F2F2"
-             android:textColorHint="@color/black"
-             android:textStyle="bold" />
+                 android:hint="PASSWORD"
+                 android:inputType="textPassword"
+                 android:paddingLeft="20dp"
+                 android:paddingTop="10dp"
+                 android:paddingRight="20dp"
+                 android:paddingBottom="10dp"
+                 android:password="false"
+                 android:textColor="#121111"
+                 android:textColorHint="@color/black"
+                 android:textStyle="bold" />
 
      </LinearLayout>
 
@@ -106,12 +106,12 @@
 
              <CheckBox
                  android:id="@+id/c"
-                 android:layout_width="141dp"
-                 android:layout_height="48dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
                  android:layout_marginLeft="@dimen/_1sdp"
                  android:text="Show Password"
                  android:textColor="#0B0B0B"
-                 android:textColorHint="#F1EAEA"
+                 android:textColorHint="#0C0C0C"
                  android:textStyle="bold" />
          </LinearLayout>
 

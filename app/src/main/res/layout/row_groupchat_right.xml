@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="100dp"
+
+    android:layout_marginLeft="100dp"
     android:layout_marginTop="10dp"
-    android:layout_marginRight="100dp"
+    android:background="@drawable/inpuut_bg"
     android:padding="10dp">
+
     <TextView
         android:id="@+id/nameTv"
-        android:text="Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_marginStart="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="me"
         android:textColor="@color/design_default_color_primary"
         android:textStyle="bold"
-        android:layout_marginLeft="5dp" />
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/messageTv"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginStart="5dp"
-        android:text="the message"
-        android:textColor="@color/black"
-
-        android:layout_below="@+id/nameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp" />
+        android:layout_below="@+id/nameTv"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="the message"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/timetv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/messageTv"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:text="time"
         android:textSize="12sp" />
 
