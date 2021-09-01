@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        register = (TextView) findViewById(R.id.register);
+//        register = (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
 
         editTextForgotpassword = (TextView) findViewById(R.id.forgotPassword2);
@@ -109,10 +109,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.register:
-                startActivity(new Intent(this, Registration.class));
+//            case R.id.register:
+//                startActivity(new Intent(this, Registration.class));
 
-                break;
+//                break;
 
             case R.id.btnLogin2:
                 userLogin();

@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PeerPowerClub">
+        <activity android:name=".startactivity"></activity>
         <activity android:name=".Registration" />
         <activity android:name=".Login" />
-        <activity android:name=".myHome"/>
+        <activity android:name=".myHome" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
