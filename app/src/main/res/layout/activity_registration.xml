@@ -12,23 +12,26 @@ android:orientation="vertical"
 
     <TextView
         android:id="@+id/reg"
-        android:layout_width="223dp"
-        android:layout_height="81dp"
-        android:drawablePadding="5dp"
-android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_47sdp"
+        android:drawablePadding="1dp"
+        android:layout_marginLeft="@dimen/_50sdp"
         android:text="CLIENT INFORMATION"
         android:textColor="#0B0B0B"
         android:textColorHint="#070707"
-        android:textSize="22sp"
+        android:textSize="@dimen/_20sdp"
         android:textStyle="bold"
          />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_minus30sdp"
 
-        android:background="@drawable/inpuut_bg"
         android:drawableLeft="@drawable/ic_baseline_text_fields_24"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -47,9 +50,10 @@ android:layout_marginLeft="@dimen/_50sdp"
         android:id="@+id/contact"
         style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="@dimen/_35sdp"
         android:drawablePadding="5dp"
-        android:background="@drawable/inpuut_bg"
+
         android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
         android:paddingLeft="20dp"
         android:ems="10"
@@ -64,9 +68,10 @@ android:layout_marginLeft="@dimen/_50sdp"
     <EditText
         android:id="@+id/emailreg"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/inpuut_bg"
+        android:layout_height="@dimen/_35sdp"
+
+        android:layout_marginTop="@dimen/_10sdp"
+
         android:drawableLeft="@drawable/ic_baseline_mark_email_unread_24"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -80,11 +85,11 @@ android:layout_marginLeft="@dimen/_50sdp"
 
     <Spinner
         android:id="@+id/interest"
-android:paddingLeft="20dp"
+        android:paddingLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/inpuut_bg"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+
         android:clipChildren="true"
         android:clipToPadding="true"
         android:contentDescription="@string/app_name"
@@ -97,44 +102,51 @@ android:paddingLeft="20dp"
 
         />
 
-    <EditText
+    <TextView
         android:id="@+id/name2"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/_35sdp"
         android:drawablePadding="5dp"
-        android:background="@drawable/inpuut_bg"
-        android:drawableLeft="@drawable/ic_baseline_text_fields_24"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:drawableLeft="@drawable/ic_baseline_watch_later_24"
         android:paddingLeft="20dp"
         android:ems="10"
-        android:hint="Select preffered timing"
-        android:inputType="textPersonName"
+        android:text="Select Preffered Timing"
+        android:inputType="none"
 
         android:textAllCaps="false"
         android:textColor="#0B0B0B"
         android:textColorHint="#070707"
-        android:textSize="16sp"
+        android:textSize="@dimen/_20sdp"
         android:textStyle="bold" />
 
     <ToggleButton
         android:id="@+id/dayNight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_225sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/inpuut_bg"
+        android:layout_marginLeft="@dimen/_46sdp"
+        android:paddingRight="@dimen/_30sdp"
+        android:paddingLeft="20dp"
         android:checked="false"
         android:drawableStart="@drawable/selector"
         android:drawableLeft="@drawable/selector"
         android:text="select preffered time"
-        android:textColor="#0B0B0B"
+        android:textColor="#050505"
+        android:textStyle="bold"
         android:textColorHint="#070707"
-        android:textOff="day"
+        android:textOff="Day"
         android:textOn="Night" />
 
     <EditText
         android:id="@+id/inputPassword"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:paddingLeft="20dp"
-        android:background="@drawable/inpuut_bg"
+
         android:drawableLeft="@drawable/ic_baseline_lock_open_24"
         android:drawablePadding="5dp"
         android:ems="10"
@@ -149,9 +161,10 @@ android:paddingLeft="20dp"
     <EditText
         android:id="@+id/inputConfirmPassword"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:drawablePadding="5dp"
-        android:background="@drawable/inpuut_bg"
+
         android:drawableLeft="@drawable/ic_baseline_lock_open_24"
         android:paddingLeft="20dp"
         android:ems="10"
@@ -167,7 +180,8 @@ android:paddingLeft="20dp"
     <CheckBox
         android:id="@+id/checkBoxpr"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:text="Show Password"
         android:textColor="#0B0B0B"
         android:textSize="13sp"
@@ -178,8 +192,8 @@ android:paddingLeft="20dp"
     <Button
         android:id="@+id/preg"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
 
         android:background="@drawable/inpuut_bg"
         android:text="REGISTER"
@@ -189,5 +203,6 @@ android:paddingLeft="20dp"
         app:backgroundTint="@color/teal_200"
 
         app:rippleColor="@color/black" />
+
 
 </LinearLayout>
