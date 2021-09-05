@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-    android:layout_marginLeft="100dp"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/inpuut_bg"
+    android:layout_marginLeft="120dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/left"
     android:padding="10dp">
 
     <TextView
@@ -28,8 +28,10 @@
         android:layout_below="@+id/nameTv"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginTop="@dimen/_44sdp"
+        android:layout_marginEnd="@dimen/_60sdp"
+
+        android:layout_marginRight="83dp"
         android:text="the message"
         android:textColor="@color/black" />
 
@@ -38,13 +40,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/messageTv"
-        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_60sdp"
 
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
+
+        android:layout_marginRight="@dimen/_60sdp"
         android:text="time"
         android:textSize="12sp" />
 
