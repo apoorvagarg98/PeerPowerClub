@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgwithlogo"
     tools:context=".startactivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"/>
+        android:orientation="vertical" />
 
     <LinearLayout
         android:id="@+id/LOGREG"
@@ -16,30 +18,31 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/_10sdp"
         android:paddingLeft="@dimen/_43sdp"
+        android:paddingTop="@dimen/_20sdp"
         android:paddingRight="@dimen/_43sdp"
-        android:paddingTop="@dimen/_20sdp" >
+        android:paddingBottom="@dimen/_10sdp">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome To Peer Power Club"
             android:layout_marginTop="@dimen/_minus10sdp"
-            android:layout_marginBottom="@dimen/_80sdp"
-            android:textColor="@color/purple_500"
-            android:textStyle="bold"
-            android:textSize="@dimen/_30sdp"/>
+            android:layout_marginBottom="@dimen/_100sdp"
+
+            android:background="@drawable/logo"
+
+             />
 
 
         <Button
             android:id="@+id/login"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_minus25sdp"
             android:layout_marginBottom="@dimen/_25sdp"
 
+            android:background="@drawable/inpuut_bg"
             android:gravity="center"
             android:includeFontPadding="false"
             android:minWidth="120dp"
@@ -47,26 +50,31 @@
             android:singleLine="true"
             android:text="Sign In"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/_15sdp"
-            android:visibility="visible" />
+            android:textSize="@dimen/_14sdp"
+            android:visibility="visible"
+            app:backgroundTint="#157575"
+            app:backgroundTintMode="screen" />
 
         <Button
             android:id="@+id/register"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_minus18sdp"
             android:layout_marginBottom="@dimen/_10sdp"
 
+            android:background="@drawable/inpuut_bg"
             android:gravity="center"
             android:includeFontPadding="false"
             android:minWidth="120dp"
             android:padding="8dp"
             android:singleLine="true"
-            android:text="Register"
+            android:text="Sign Up"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/_15sdp"
-            android:visibility="visible" />
+            android:textSize="@dimen/_14sdp"
+            android:visibility="visible"
+            app:backgroundTint="#157575"
+            app:backgroundTintMode="screen" />
 
     </LinearLayout>
 

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.peerpowerclub">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PeerPowerClub">
-        <activity android:name=".startactivity"></activity>
+        <activity android:name=".feed"></activity>
+        <activity android:name=".startactivity" />
         <activity android:name=".Registration" />
         <activity android:name=".Login" />
         <activity android:name=".myHome" />
@@ -26,6 +26,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>
