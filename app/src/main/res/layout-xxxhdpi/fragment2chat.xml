@@ -36,9 +36,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="593dp"
         android:layout_above="@id/chatLayout"
         android:layout_below="@id/toolbar"
+        android:layout_marginBottom="33dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:stackFromEnd="true"
         tools:listitem="@layout/row_groupchat_left" />
@@ -47,9 +48,9 @@
         android:id="@+id/chatLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentLeft="false"
         android:layout_alignParentTop="false"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentRight="false"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:gravity="center"

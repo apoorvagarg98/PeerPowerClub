@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -117,12 +118,12 @@
 
          <Button
              android:id="@+id/btnLogin2"
-             android:layout_width="match_parent"
+             android:layout_width="234dp"
              android:layout_height="wrap_content"
              android:layout_gravity="center"
              android:layout_marginTop="@dimen/_25sdp"
              android:layout_marginBottom="@dimen/_30sdp"
-             android:background="@drawable/inpuut_bg"
+             android:background="@drawable/buttongreen"
              android:gravity="center"
              android:includeFontPadding="false"
              android:minWidth="120dp"
@@ -131,7 +132,9 @@
              android:text="Sign In"
              android:textColor="@android:color/white"
              android:textSize="@dimen/_15sdp"
-             android:visibility="visible" />
+             android:visibility="visible"
+             app:backgroundTint="@color/material_on_surface_stroke"
+             app:backgroundTintMode="screen" />
 
          <TextView
                  android:id="@+id/forgotPassword2"
