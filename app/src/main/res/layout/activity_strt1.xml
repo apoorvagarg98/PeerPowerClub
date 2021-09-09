@@ -24,7 +24,7 @@
         <ImageView
             android:layout_width="@dimen/_104sdp"
             android:layout_height="@dimen/_104sdp"
-            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:srcCompat="@drawable/strt" />
 
         <ImageView
@@ -41,14 +41,14 @@
             android:layout_marginTop="@dimen/_30sdp"
             android:gravity="center"
             android:text="Students of a particular peer group can see each other’s profile, and can chat with each other."
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+
+            android:layout_marginTop="@dimen/_15sdp"
             app:srcCompat="@drawable/strtc" />
 
 

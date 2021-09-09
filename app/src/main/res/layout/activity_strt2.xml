@@ -23,7 +23,7 @@
         <ImageView
             android:layout_width="@dimen/_104sdp"
             android:layout_height="@dimen/_104sdp"
-            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:srcCompat="@drawable/strt" />
 
 
@@ -37,18 +37,18 @@
             android:id="@+id/forgotPassword2"
             android:layout_width="@dimen/_249sdp"
             android:layout_height="@dimen/_95sdp"
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             android:gravity="center"
             android:text="The feed tab will show content posted by students using the application. Initially all posts will be shown to all students. The person's profile will not be fully accessible to everyone."
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
 
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+
+            android:layout_marginTop="@dimen/_15sdp"
             app:srcCompat="@drawable/strta" />
 
 

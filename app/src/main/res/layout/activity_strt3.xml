@@ -19,16 +19,17 @@
         android:paddingRight="@dimen/_50sdp"
 
         >
+
         <ImageView
             android:layout_width="@dimen/_104sdp"
             android:layout_height="@dimen/_104sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:srcCompat="@drawable/strt" />
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_140sdp"
+            android:layout_width="244dp"
+            android:layout_height="235dp"
             android:layout_marginTop="@dimen/_20sdp"
             app:srcCompat="@drawable/swita" />
 
@@ -41,19 +42,16 @@
             android:text="These will be visible to join only when the time of the previous Peer Group has finished.
 First time user will see them, once he is a part of a particular Peer Group then these will not be accessible to users.
 "
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
 
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+
             app:srcCompat="@drawable/strtb" />
-
-
-
 
 
     </LinearLayout>
