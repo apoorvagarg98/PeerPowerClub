@@ -11,7 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PeerPowerClub">
-        <activity android:name=".feed"></activity>
+        <activity
+            android:name=".strt3"
+            android:exported="true" />
+        <activity
+            android:name=".strt2"
+            android:exported="true" />
+        <activity
+            android:name=".strt1"
+            android:exported="true" />
+        <activity android:name=".feed" />
         <activity android:name=".startactivity" />
         <activity android:name=".Registration" />
         <activity android:name=".Login" />

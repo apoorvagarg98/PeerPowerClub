@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".strt2">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_50sdp"
+
+        android:paddingRight="@dimen/_50sdp"
+
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_104sdp"
+            android:layout_height="@dimen/_104sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:srcCompat="@drawable/strt" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:srcCompat="@drawable/switb" />
+
+        <TextView
+            android:id="@+id/forgotPassword2"
+            android:layout_width="@dimen/_249sdp"
+            android:layout_height="@dimen/_95sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:gravity="center"
+            android:text="The feed tab will show content posted by students using the application. Initially all posts will be shown to all students. The person's profile will not be fully accessible to everyone."
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:srcCompat="@drawable/strta" />
+
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>
