@@ -1,4 +1,4 @@
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.registrationAndLogin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.registrationAndLogin.Login;
+import com.example.peerpowerclub.registrationAndLogin.Registration;
 
 public class startactivity extends AppCompatActivity {
 
@@ -18,7 +21,7 @@ public class startactivity extends AppCompatActivity {
            register.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent i=new Intent(getBaseContext(),Registration.class);
+                   Intent i=new Intent(getBaseContext(), Registration.class);
                    startActivity(i);
 
                }
@@ -27,7 +30,7 @@ public class startactivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(getBaseContext(),Login.class);
+                Intent i=new Intent(getBaseContext(), Login.class);
                 startActivity(i);
 
             }

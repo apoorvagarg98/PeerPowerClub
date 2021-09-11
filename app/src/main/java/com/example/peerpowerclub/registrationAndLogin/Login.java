@@ -1,4 +1,4 @@
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.registrationAndLogin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,10 +14,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.myHome;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -30,7 +31,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private Button  signin;
     private FirebaseAuth mAuth;
-    static String AreaofInterest2 = Registration.AreaofInterest,daynight2 = Registration.daynight;
+    public static String AreaofInterest2 = Registration.AreaofInterest,daynight2 = Registration.daynight;
 
     String checkbox;
 
@@ -63,7 +64,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         if(checkbox.equals("true"))
         {
-            startActivity(new Intent(Login.this,myHome.class));
+            startActivity(new Intent(Login.this, myHome.class));
+            finish();
         }
         else if (checkbox.equals("false"))
         {

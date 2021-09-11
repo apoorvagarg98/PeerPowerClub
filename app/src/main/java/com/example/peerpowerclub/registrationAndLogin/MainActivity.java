@@ -1,9 +1,11 @@
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.registrationAndLogin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.peerpowerclub.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
                     sleep(2*1000);
 
                     // After 5 seconds redirect to another intent
-                    Intent i=new Intent(getBaseContext(),startactivity.class);
+                    Intent i=new Intent(getBaseContext(), startactivity.class);
                     startActivity(i);
 
                     //Remove activity

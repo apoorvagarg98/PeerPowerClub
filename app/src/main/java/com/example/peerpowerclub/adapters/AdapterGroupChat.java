@@ -1,14 +1,18 @@
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.adapters;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.models.modelGroupChat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -16,7 +20,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -53,6 +56,7 @@ public class AdapterGroupChat extends RecyclerView.Adapter<AdapterGroupChat.Hold
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(@NonNull HolderGroupChat holder, int position) {
 modelGroupChat model = modelGroupChatList.get(position);
@@ -63,7 +67,10 @@ String senderUid = model.getSender();
         Calendar cal = Calendar.getInstance(Locale.ENGLISH);
         cal.setTimeInMillis(Long.parseLong(timestamp));
         Date d = cal.getTime();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/Mm/YYYY hh:mm");
+        SimpleDateFormat sdf = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            sdf = new SimpleDateFormat("dd/MM/YYYY hh:mm");
+        }
         String date2 = sdf.format(d);
 
 holder.messagetv.setText(message  );

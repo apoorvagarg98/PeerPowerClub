@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:orientation="vertical"
-    tools:context=".adapters.myViewHolder">
+    tools:context=".coursesItem">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        android:animationCache="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="5dp"
         app:cardElevation="10dp"
+        app:cardMaxElevation="5dp"
         app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="5dp">
-
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,32 +22,35 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/loo"
+                android:id="@+id/CourseName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:text="Id:"
-                android:textColor="#090909"
-                android:textSize="@dimen/_24sdp"
+                android:text="coursename"
+                android:textColor="#070707"
+                android:textSize="34sp"
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/feedimage"
+                android:id="@+id/courseImage"
                 android:layout_width="match_parent"
-                android:layout_height="280dp"
-
+                android:layout_height="161dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/caption"
+                android:id="@+id/shortdesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="caption"
-                android:textColor="#090909"
-                android:textSize="@dimen/_24sdp"
-                android:textStyle="bold" />
+                android:gravity="center"
+                android:text="courseDescriptionShort"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/enrollNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="enroll Now" />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-</RelativeLayout>
+</LinearLayout>

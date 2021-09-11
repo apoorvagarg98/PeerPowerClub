@@ -1,5 +1,8 @@
 package com.example.peerpowerclub;
 
+
+import static com.example.peerpowerclub.fragmentCodes.finalHome.imageUri;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,10 +12,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
+import com.example.peerpowerclub.fragmentCodes.Fragment1;
+import com.example.peerpowerclub.fragmentCodes.Fragment2Chat;
+import com.example.peerpowerclub.fragmentCodes.Fragment3courses;
+import com.example.peerpowerclub.fragmentCodes.finalHome;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class myHome extends AppCompatActivity {
@@ -27,6 +31,7 @@ public class myHome extends AppCompatActivity {
 getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new finalHome()).commit();
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -40,11 +45,16 @@ getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new fin
         {
             case R.id.profile:
               getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new Fragment1()).commit();
+              break;
+            case R.id.addPost:
+                startActivity(new Intent(myHome.this,postkaro.class));
 
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNav = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override

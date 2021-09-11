@@ -1,9 +1,5 @@
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.fragmentCodes;
 
-import static android.content.Context.MODE_PRIVATE;
-
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.models.user;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -57,7 +55,7 @@ public class Fragment1 extends Fragment {
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                user user4profile = snapshot.getValue(user.class);
+                com.example.peerpowerclub.models.user user4profile = snapshot.getValue(user.class);
                 if (user4profile != null) {
                     dayNight= user4profile.prefferedTime;
                      email = user4profile.email;

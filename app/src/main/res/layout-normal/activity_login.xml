@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@drawable/bggg"
-    tools:context=".Login">
+    tools:context=".registrationAndLogin.Login">
 
 
     <LinearLayout

@@ -1,5 +1,5 @@
 
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.registrationAndLogin;
 
 
 import androidx.annotation.NonNull;
@@ -21,6 +21,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.models.user;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -35,7 +36,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
     ToggleButton toggleButton;
-   static String AreaofInterest = "automobile",daynight = "day";
+  public static String AreaofInterest = "automobile",daynight = "day";
     ArrayAdapter<CharSequence> adapter;
     DatabaseReference groups;
 
@@ -156,7 +157,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
                                 Toast.makeText(Registration.this, "registered", Toast.LENGTH_SHORT).show();
 
-                                startActivity(new Intent(Registration.this,Login.class));
+                                startActivity(new Intent(Registration.this, Login.class));
                             } else {
                                 Toast.makeText(Registration.this, "Registration Failed", Toast.LENGTH_LONG).show();
 

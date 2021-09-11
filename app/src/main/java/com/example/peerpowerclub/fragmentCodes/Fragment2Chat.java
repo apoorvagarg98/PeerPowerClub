@@ -1,4 +1,4 @@
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.fragmentCodes;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -18,6 +18,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.peerpowerclub.adapters.AdapterGroupChat;
+import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.models.modelGroupChat;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,16 +35,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Fragment2Chat extends Fragment {
-    private FirebaseAuth mAuth;
-    private FirebaseUser user;
+    public FirebaseAuth mAuth;
+    public FirebaseUser user;
     public DatabaseReference reference;
-    private ImageButton attachbtn,sendbtn;
-    private TextView groupTitleTv;
-    private EditText messageEt;
+    public ImageButton attachbtn,sendbtn;
+    public TextView groupTitleTv;
+    public EditText messageEt;
     Toolbar toolbar;
     RecyclerView chatRv;
-    private ArrayList<modelGroupChat> groupChatList;
-    private AdapterGroupChat adapterGroupChat;
+    public ArrayList<modelGroupChat> groupChatList;
+    public AdapterGroupChat adapterGroupChat;
 
     @Nullable
     @Override
@@ -77,10 +80,10 @@ public class Fragment2Chat extends Fragment {
 
     }
 
-    private void loaadGroupMessges() {
+    public void loaadGroupMessges() {
         groupChatList = new ArrayList<>();
         reference = FirebaseDatabase.getInstance().getReference().child("groups");
-reference.child(Fragment1.areaofinterest + Fragment1.dayNight).child("messages").addValueEventListener(new ValueEventListener() {
+reference.child(finalHome.areaofinterest + finalHome.dayNight).child("messages").addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(@NonNull DataSnapshot datasnapshot) {
         groupChatList.clear();
@@ -99,7 +102,7 @@ reference.child(Fragment1.areaofinterest + Fragment1.dayNight).child("messages")
 });
     }
 
-    private void sendmsg(String message) {
+    public void sendmsg(String message) {
 
         String timestamp = "" + System.currentTimeMillis();
         HashMap<String, Object> hashMap= new HashMap();
@@ -108,7 +111,7 @@ reference.child(Fragment1.areaofinterest + Fragment1.dayNight).child("messages")
         hashMap.put("timestamp","" + timestamp);
         hashMap.put("type","" + "text");//text/image/file
         reference = FirebaseDatabase.getInstance().getReference().child("groups");
-        reference.child(Fragment1.areaofinterest + Fragment1.dayNight).child("messages").child(timestamp).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+        reference.child(finalHome.areaofinterest + finalHome.dayNight).child("messages").child(timestamp).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 //message sent
@@ -123,8 +126,8 @@ reference.child(Fragment1.areaofinterest + Fragment1.dayNight).child("messages")
 
     }
 
-    private void loadGroupInfo() {
-        groupTitleTv.setText(Fragment1.areaofinterest + Fragment1.dayNight);
+    public void loadGroupInfo() {
+        groupTitleTv.setText(finalHome.areaofinterest + finalHome.dayNight);
 
        /* reference = FirebaseDatabase.getInstance().getReference().child("groups");
         reference.orderByChild("email").equalTo(Fragment1.email).addValueEventListener(new ValueEventListener() {

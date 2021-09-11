@@ -1,4 +1,4 @@
-package com.example.peerpowerclub;
+package com.example.peerpowerclub.models;
 
 public class user {
 
