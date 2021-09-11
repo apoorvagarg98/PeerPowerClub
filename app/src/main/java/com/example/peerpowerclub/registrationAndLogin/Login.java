@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +30,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextemail, editTextPassword;
     private TextView  editTextForgotpassword;
 
-    private Button  signin;
+    private ImageButton  signin;
     private FirebaseAuth mAuth;
     public static String AreaofInterest2 = Registration.AreaofInterest,daynight2 = Registration.daynight;
 
@@ -51,7 +52,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 startActivity(new Intent(Login.this, forgotpassword.class));
             }
         });
-        signin = (Button) findViewById(R.id.btnLogin2);
+        signin = findViewById(R.id.btnLogin2);
         signin.setOnClickListener(this);
         c1 = findViewById(R.id.c);
 

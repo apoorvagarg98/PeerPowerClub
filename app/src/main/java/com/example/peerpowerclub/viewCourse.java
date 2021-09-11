@@ -1,5 +1,6 @@
 package com.example.peerpowerclub;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +13,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.gson.JsonObject;
 //import com.payu.base.models.PayUPaymentParams;
 import com.razorpay.Checkout;
@@ -32,15 +42,20 @@ import javax.mail.internet.MimeMessage;*/
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.Properties;
 
 public class viewCourse extends AppCompatActivity implements PaymentResultListener {
     String coursename,grouplink;
     TextView link;
+    private FirebaseUser user;
+    public DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_course);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("users");
         coursename= getIntent().getStringExtra("cn");
         grouplink= getIntent().getStringExtra("gl");
         String courseimageuri= getIntent().getStringExtra("ci");
@@ -55,6 +70,21 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
         Button btpay = findViewById(R.id.pay);
         String sAmount = "100";
         int amount = Math.round(Float.parseFloat(sAmount)*100);
+        reference.child(user.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.child("status").getValue().toString().equals("enrolled in "+ coursename))
+                {
+                    link.setVisibility(View.VISIBLE);
+                    link.setText("join whatsapp group" + grouplink);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         /*btpay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,6 +140,16 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
         builder.show();
         link.setVisibility(View.VISIBLE);
         link.setText("join whatsapp group" + grouplink);
+
+        HashMap hashMap = new HashMap();
+        hashMap.put("status","enrolled in "+ coursename);
+        reference.child(user.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+                Toast.makeText(viewCourse.this, "you enrolled succesfully please join the group with the link", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
     }

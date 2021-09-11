@@ -11,13 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PeerPowerClub">
-        <activity android:name=".feed"></activity>
-        <activity android:name=".startactivity" />
-        <activity android:name=".Registration" />
-        <activity android:name=".Login" />
+
+        <activity android:name=".registrationAndLogin.startactivity" />
+        <activity android:name=".registrationAndLogin.Registration" />
+        <activity android:name=".registrationAndLogin.Login" />
+        <activity android:name=".viewCourse"/>
         <activity android:name=".myHome" />
         <activity
-            android:name=".MainActivity"
+            android:name=".registrationAndLogin.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

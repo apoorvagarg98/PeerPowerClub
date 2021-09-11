@@ -3,9 +3,9 @@
 
     <string-array name="subjects">
         <item>Choose Your Club</item>
-        <item>1) Automobile</item>
-        <item>2) Graphics</item>
-        <item>3) App Development</item>
+        <item>Automobile</item>
+        <item>Graphics</item>
+        <item>App Development</item>
 
 
     </string-array>
