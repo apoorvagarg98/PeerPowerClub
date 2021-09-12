@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 public class forgotpassword extends AppCompatActivity {
     private EditText emailEditText;
     private Button resetPasswordButtton;
-    private ProgressBar ProgressBar;
+
 
 
     FirebaseAuth mAuth;
@@ -32,9 +32,9 @@ public class forgotpassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgotpassword);
 
-        emailEditText = (EditText) findViewById(R.id.chemailreset);
+        emailEditText = (EditText) findViewById(R.id.chEmailReset);
         resetPasswordButtton = (Button) findViewById(R.id.chresetpassword);
-        ProgressBar = (ProgressBar) findViewById(R.id.chprogressBar);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -60,7 +60,7 @@ public class forgotpassword extends AppCompatActivity {
             return;
 
         }
-            ProgressBar.setVisibility(View.VISIBLE);
+
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<Void> task) {
