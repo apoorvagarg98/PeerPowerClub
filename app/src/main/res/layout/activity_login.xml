@@ -16,20 +16,22 @@
         android:gravity="center"
         android:orientation="vertical"
         android:paddingLeft="@dimen/_43sdp"
-        android:paddingTop="@dimen/_50sdp"
+
         android:paddingRight="@dimen/_43sdp"
-        android:paddingBottom="@dimen/_27sdp">
+
+        >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ppc" />
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:srcCompat="@drawable/ppc" />
 
         <EditText
             android:id="@+id/inputEmail2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             android:background="@drawable/lginbg"
 
 
@@ -69,7 +71,6 @@
             android:textStyle="bold" />
 
 
-
         <CheckBox
             android:id="@+id/c"
             android:layout_width="wrap_content"
@@ -90,38 +91,40 @@
             android:text="Remember Me"
             android:textColor="#157575"
             android:textSize="13sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
 
-        <Button
+        <ImageButton
+
+
             android:id="@+id/btnLogin2"
-            android:layout_width="234dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:layout_marginBottom="@dimen/_30sdp"
-            android:background="@drawable/inpuut_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
             android:gravity="center"
-            android:includeFontPadding="false"
             android:minWidth="120dp"
+
             android:padding="8dp"
             android:singleLine="true"
-            android:text="Sign In"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_15sdp"
+            android:textSize="16sp"
+
+
             android:visibility="visible"
-            app:backgroundTint="#157575"
-            app:backgroundTintMode="src_in" />
+            app:backgroundTint="#ffffff"
+            app:srcCompat="@drawable/signin" />
 
         <TextView
             android:id="@+id/forgotPassword2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="@dimen/_1sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_8sdp"
             android:text="Forgot Password?"
             android:textColor="#157575"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_12sdp" />
 
     </LinearLayout>
 
