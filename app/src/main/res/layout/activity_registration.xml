@@ -10,219 +10,205 @@ android:orientation="vertical"
     tools:context=".registrationAndLogin.Registration">
 
 
+    <LinearLayout
 
-        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_43sdp"
 
+        android:paddingRight="@dimen/_43sdp"
+
+        >
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image1"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:srcCompat="@drawable/ic_baseline_person_24"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+
+        <EditText
+            android:id="@+id/name"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+
+            android:ems="20"
+            android:hint="Name:"
+            android:includeFontPadding="false"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:shadowColor="#F8EFEF"
+            android:textColor="#157575"
+            android:textColorHighlight="#090909"
+            android:textColorHint="#157575"
+            android:textColorLink="#FAF3F3"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/contact"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:ems="20"
+
+            android:hint="Contact no:"
+
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+
+            android:textColor="#157575"
+            android:textColorHint="#157575"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/emailreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:ems="20"
+
+            android:hint="Email:"
+
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+
+            android:textColor="#157575"
+            android:textColorHint="#157575"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/interest"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:contentDescription="@string/app_name"
+            android:drawablePadding="5dp"
+            android:drawingCacheQuality="high"
+            android:dropDownWidth="match_parent"
+            android:paddingLeft="20dp"
+            android:spinnerMode="dropdown"
+
+
+            android:splitMotionEvents="true" />
+
+
+        <ToggleButton
+            android:id="@+id/dayNight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+            android:checked="false"
+            android:drawableLeft="@drawable/selector"
+            android:paddingLeft="@dimen/_70sdp"
+            android:paddingRight="@dimen/_70sdp"
+
+            android:textColor="#157575"
+            android:textColorHint="#070707"
+            android:textOff="Day"
+            android:textOn="Night"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="Password:"
+            android:inputType="textPassword"
+
+            android:paddingLeft="20dp"
+            android:textColor="#157575"
+            android:textColorHint="#157575"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="Confirm Password:"
+            android:inputType="textPassword"
+
+            android:paddingLeft="20dp"
+
+            android:textColor="#157575"
+            android:textColorHint="#157575"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBoxpr"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Show Password"
+            android:textColor="#157575"
+            android:textSize="13sp"
+
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/preg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+
+            android:background="@drawable/inpuut_bg"
             android:gravity="center"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/_43sdp"
 
-            android:paddingRight="@dimen/_43sdp"
+            android:minWidth="120dp"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
 
-            >
-
-            <TextView
-                android:id="@+id/reg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:drawablePadding="1dp"
-                android:gravity="center"
+            app:backgroundTint="#157575"
+            app:backgroundTintMode="src_in" />
 
 
-                android:text="Sign Up"
-                android:textColor="#157575"
-                android:textColorHint="#070707"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold" />
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image1"
-                android:layout_width="match_parent"
-                android:layout_height="96dp"
-                android:src="@drawable/ic_baseline_person_24"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp" />
-
-
-            <EditText
-                android:id="@+id/name"
-                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/lginbg"
-
-
-                android:ems="20"
-                android:hint="Name:"
-                android:includeFontPadding="false"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="10dp"
-                android:shadowColor="#F8EFEF"
-                android:textColor="#157575"
-                android:textColorHighlight="#090909"
-                android:textColorHint="#157575"
-                android:textColorLink="#FAF3F3"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/contact"
-                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/lginbg"
-
-                android:ems="20"
-
-                android:hint="Contact no:"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-                android:password="false"
-                android:textColor="#157575"
-                android:textColorHint="#157575"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/emailreg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/lginbg"
-
-                android:ems="20"
-
-                android:hint="Email:"
-
-                android:paddingLeft="20dp"
-                android:paddingTop="10dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="10dp"
-
-                android:textColor="#157575"
-                android:textColorHint="#157575"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/interest"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/lginbg"
-
-                android:clipChildren="true"
-                android:clipToPadding="true"
-                android:contentDescription="@string/app_name"
-                android:drawablePadding="5dp"
-                android:drawingCacheQuality="high"
-                android:dropDownWidth="match_parent"
-                android:paddingLeft="20dp"
-                android:spinnerMode="dropdown"
-
-
-                android:splitMotionEvents="true" />
-
-
-
-            <ToggleButton
-                android:id="@+id/dayNight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/lginbg"
-                android:checked="false"
-                android:drawableLeft="@drawable/selector"
-                android:paddingLeft="@dimen/_70sdp"
-                android:paddingRight="@dimen/_70sdp"
-
-                android:textColor="#157575"
-                android:textColorHint="#070707"
-                android:textOff="Day"
-                android:textOn="Night"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/inputPassword"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/lginbg"
-
-                android:drawablePadding="5dp"
-                android:ems="10"
-                android:hint="Password:"
-                android:inputType="textPassword"
-
-                android:paddingLeft="20dp"
-                android:textColor="#157575"
-                android:textColorHint="#157575"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/inputConfirmPassword"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="@drawable/lginbg"
-
-                android:drawablePadding="5dp"
-                android:ems="10"
-                android:hint="Confirm Password:"
-                android:inputType="textPassword"
-
-                android:paddingLeft="20dp"
-
-                android:textColor="#157575"
-                android:textColorHint="#157575"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <CheckBox
-                android:id="@+id/checkBoxpr"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginLeft="@dimen/_200sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:text="Show Password"
-                android:textColor="#157575"
-                android:textSize="13sp"
-
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/preg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-
-                android:layout_marginBottom="@dimen/_40sdp"
-                android:background="@drawable/inpuut_bg"
-                android:gravity="center"
-
-                android:minWidth="120dp"
-                android:padding="8dp"
-                android:singleLine="true"
-                android:text="Sign Up"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
-
-                app:backgroundTint="#157575"
-                app:backgroundTintMode="src_in" />
-
-
-        </LinearLayout>
+    </LinearLayout>
     </RelativeLayout>

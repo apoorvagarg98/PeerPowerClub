@@ -2,12 +2,12 @@
     <string name="app_name">PeerPowerClub</string>
 
     <string-array name="subjects">
-        <item>Choose Your Club</item>
-        <item>Automobile</item>
-        <item>Graphics</item>
-        <item>App Development</item>
-        <item>Python Programming</item>
-        <item>C++ Programming</item>
+
+        <item> Automobile</item>
+        <item> Graphics</item>
+        <item> App Development</item>
+        <item> Python Programming</item>
+        <item> C++ Programming</item>
         <item> Java Programming</item>
         <item> Front end web development</item>
         <item> Digital Marketing</item>
@@ -18,10 +18,10 @@
         <item> Machine Learning</item>
         <item> Data Science</item>
         <item> DSA in C++</item>
-        <item>  DSA in Java</item>
+        <item> DSA in Java</item>
         <item> Graphic designing</item>
         <item> Content writing</item>
-        <item>  UI/UX designing</item>
+        <item> UI/UX designing</item>
         <item> No-Code and WordPress development</item>
 
 
