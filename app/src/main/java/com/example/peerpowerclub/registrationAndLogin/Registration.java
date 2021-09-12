@@ -3,9 +3,11 @@ package com.example.peerpowerclub.registrationAndLogin;
 
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.util.Patterns;
@@ -23,16 +25,26 @@ import android.widget.ToggleButton;
 import com.example.peerpowerclub.R;
 import com.example.peerpowerclub.models.user;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Registration extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     private EditText editTextname, editTextemail, editTextpassword, editTextphonenumber, chpassword2;
     private TextView registeruser;
+    public static  final int REQUEST_CODE = 101;
+    public static Uri imageUri;
+    public CircleImageView profilePhoto;
+    StorageReference profilePhotoImageRef;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
     ToggleButton toggleButton;
@@ -46,7 +58,9 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
+        profilePhoto = findViewById(R.id.profile_image1);
         registeruser = (Button) findViewById(R.id.preg);
+        profilePhotoImageRef = FirebaseStorage.getInstance().getReference().child("profilePhotos");
         registeruser.setOnClickListener(this);
         editTextname = (EditText) findViewById(R.id.name);
         editTextemail = (EditText) findViewById(R.id.emailreg);
@@ -76,7 +90,14 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
              }
          });
 
-
+profilePhoto.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        startActivityForResult(intent , REQUEST_CODE);
+    }
+});
 
     }
 
@@ -88,16 +109,26 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        imageUri = data.getData();
+        profilePhoto.setImageURI(imageUri);
+    }
+
     private void Registeruser()
     {
         String email = editTextemail.getText().toString();
-
+        String profilephotouri= imageUri.toString();
         String name = editTextname.getText().toString();
         String phone = editTextphonenumber.getText().toString();
         String password = editTextpassword.getText().toString();
         String chpassword = chpassword2.getText().toString();
 
-
+if(imageUri==null)
+{
+    Toast.makeText(this, "please select an image", Toast.LENGTH_SHORT).show();
+}
         if(name.isEmpty())
         {
             editTextname.setError("full name required");
@@ -149,24 +180,40 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     String status = "unenrolled";
-                    user useR = new user(name, email, phone, AreaofInterest,daynight,FirebaseAuth.getInstance().getCurrentUser().getUid(),status);
-                    FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(useR).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    final user[] useR = new user[1];
+
+                    profilePhotoImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
+                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                            if(task.isSuccessful()){
+                                profilePhotoImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                    @Override
+                                    public void onSuccess(Uri uri) {
+                                        Toast.makeText(Registration.this, "done", Toast.LENGTH_LONG).show();
+                                        useR[0] = new user(name, email, phone, AreaofInterest,daynight,FirebaseAuth.getInstance().getCurrentUser().getUid(),status,uri.toString());
+                                        FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
 
-                                Toast.makeText(Registration.this, "registered", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(Registration.this, "registered", Toast.LENGTH_SHORT).show();
 
-                                startActivity(new Intent(Registration.this, Login.class));
-                            } else {
-                                Toast.makeText(Registration.this, "Registration Failed", Toast.LENGTH_LONG).show();
+                                                    startActivity(new Intent(Registration.this, Login.class));
+                                                } else {
+                                                    Toast.makeText(Registration.this, "Registration Failed", Toast.LENGTH_LONG).show();
 
+                                                }
+                                            }
+                                        });
+
+                                    }
+                                });
                             }
                         }
                     });
 
-                    groups.child(AreaofInterest + daynight).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(useR).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    groups.child(AreaofInterest + daynight).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(Registration.this, "registered fully", Toast.LENGTH_LONG).show();

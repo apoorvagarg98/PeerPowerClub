@@ -7,7 +7,15 @@
     android:layout_height="match_parent"
 android:orientation="vertical"
 
-    tools:context=".Registration">
+    tools:context=".registrationAndLogin.Registration">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image1"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
 
 
     <TextView

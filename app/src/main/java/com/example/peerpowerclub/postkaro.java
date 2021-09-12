@@ -33,7 +33,6 @@ import java.util.HashMap;
 
 public class postkaro extends AppCompatActivity {
     public static  final int REQUEST_CODE = 101;
-    private static final int PICK_FROM_GALLERY = 1;
     public static ImageView attatchpost,sendpost,badaPost;
     public EditText addcaption;
     public static Uri imageUri;
