@@ -10,10 +10,10 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/design_default_color_primary_dark"
+        android:background="@color/teal_200"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -22,14 +22,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableLeft="@drawable/ic_baseline_group_24"
-                android:drawablePadding="5dp"
+                android:drawablePadding="10dp"
                 android:includeFontPadding="true"
+                android:paddingLeft="@dimen/_10sdp"
                 android:text="GroupName"
                 android:textColor="#FAF7F7"
-                android:textSize="40sp"
+                android:textSize="@dimen/_18sdp"
                 tools:ignore="MissingConstraints" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </Toolbar>
 

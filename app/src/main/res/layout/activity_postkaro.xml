@@ -22,8 +22,8 @@
 
         <ImageView
             android:id="@+id/insertImage"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
             android:paddingLeft="@dimen/_2sdp"
 
 
@@ -31,8 +31,8 @@
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
             android:layout_weight="1"
             android:textColor="#157575"
             android:textStyle="normal"
@@ -55,9 +55,10 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/_40sdp"
         android:paddingTop="@dimen/_10sdp"
         android:paddingBottom="@dimen/_10sdp"
-        android:layout_marginLeft="@dimen/_110sdp"
 
         tools:srcCompat="@tools:sample/avatars" />
 

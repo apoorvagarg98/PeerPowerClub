@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,70 +8,80 @@
     android:orientation="vertical"
     tools:context=".viewCourse">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+
+
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/badacoursename"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="#040303"
-                android:textSize="48sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/bigcourseImage"
-                android:layout_width="match_parent"
-                android:layout_height="186dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="398dp">
-
-                <LinearLayout
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/badacoursename"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="#157575"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/LongDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:overScrollMode="always"
-                        android:scrollY="50dp"
-                        android:scrollbarAlwaysDrawVerticalTrack="true"
-                        android:scrollbarStyle="outsideOverlay"
-                        android:scrollbars="vertical"
-                        android:scrollHorizontally="true"
-                        android:text="TextView"
-                        android:textSize="20sp"
-                        android:textStyle="italic"
-                        android:verticalScrollbarPosition="right" />
-                </LinearLayout>
-            </ScrollView>
+                <ImageView
+                    android:id="@+id/bigcourseImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
 
-            <Button
-                android:id="@+id/pay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="pay" />
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/linkForGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="link"
-                android:visibility="invisible" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/LongDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:overScrollMode="always"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:scrollY="50dp"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="true"
+                    android:text="TextView"
+                    android:textColor="#040404"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:verticalScrollbarPosition="right" />
 
-</LinearLayout>
+                <Button
+                    android:id="@+id/pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/inpuut_bg"
+                    android:text="Pay 200 inr only"
+                    app:backgroundTint="#157575" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/linkForGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="link"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+</RelativeLayout>

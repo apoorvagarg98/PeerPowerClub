@@ -27,8 +27,8 @@
         android:animationCache="true"
         android:clipChildren="true"
         android:clipToPadding="true"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
+
+
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
         app:contentPadding="5dp">
@@ -44,22 +44,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-
                 android:drawableLeft="@drawable/ic_baseline_person_24"
                 android:paddingLeft="10dp"
+                android:drawablePadding="@dimen/_10sdp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
                 android:text="Id:"
 
                 android:textColor="#157575"
-                android:textSize="@dimen/_24sdp"
+                android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/feedimage"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
                 tools:srcCompat="@tools:sample/avatars" />
 
@@ -67,14 +68,15 @@
                 android:id="@+id/caption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_baseline_create_24"
-                android:paddingLeft="@dimen/_10sdp"
-                android:drawablePadding="@dimen/_5sdp"
-                android:text="Caption:"
+                android:layout_marginTop="@dimen/_8sdp"
 
-                android:textColor="#157575"
-                android:textSize="@dimen/_18sdp"
-                android:textStyle="normal" />
+                android:drawableLeft="@drawable/ic_baseline_nat_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:text="Caption:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
