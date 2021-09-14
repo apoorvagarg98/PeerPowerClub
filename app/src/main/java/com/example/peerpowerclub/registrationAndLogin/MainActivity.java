@@ -3,18 +3,29 @@ package com.example.peerpowerclub.registrationAndLogin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.myHome;
 import com.example.peerpowerclub.strt1;
 
 public class MainActivity extends AppCompatActivity {
-
+    String checkbox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
+        checkbox = preferences.getString("remember","");
+        if(checkbox.equals("true"))
+        {
+            startActivity(new Intent(MainActivity.this, myHome.class));
+            finish();
+        }
+        else{
+
         Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
 
@@ -52,4 +63,4 @@ public class MainActivity extends AppCompatActivity {
                 .putBoolean("isFirstRun", false).commit();
 
     }
-}
+}}
