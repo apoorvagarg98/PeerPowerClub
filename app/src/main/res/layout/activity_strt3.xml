@@ -31,7 +31,7 @@
         <ImageView
             android:layout_width="244dp"
             android:layout_height="235dp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_1sdp"
             app:srcCompat="@drawable/swita" />
 
         <TextView
@@ -50,15 +50,19 @@ First time user will see them, once he is a part of a particular Peer Group then
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
 
             app:srcCompat="@drawable/strtb" />
 
         <Button
             android:id="@+id/startforfirsttime"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:text="start" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:background="@drawable/inpuut_bg"
+            android:text="Login/SignUp"
+            android:textAllCaps="false"
+            app:backgroundTint="#157575" />
 
 
     </LinearLayout>
