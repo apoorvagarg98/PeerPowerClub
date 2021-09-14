@@ -17,6 +17,9 @@
         <activity android:name=".registrationAndLogin.Login" />
         <activity android:name=".viewCourse"/>
         <activity android:name=".myHome" />
+        <activity android:name=".strt1"/>
+        <activity android:name=".strt2"/>
+        <activity android:name=".strt3"/>
         <activity
             android:name=".registrationAndLogin.MainActivity"
             android:exported="true">

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bggg"
@@ -53,6 +53,12 @@ First time user will see them, once he is a part of a particular Peer Group then
             android:layout_marginTop="@dimen/_15sdp"
 
             app:srcCompat="@drawable/strtb" />
+
+        <Button
+            android:id="@+id/startforfirsttime"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:text="start" />
 
 
     </LinearLayout>
