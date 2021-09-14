@@ -71,16 +71,19 @@
                     android:text="Pay 200 inr only"
                     app:backgroundTint="#157575" />
 
+                <TextView
+                    android:id="@+id/linkForGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:autoLink="all"
+                    android:linksClickable="true"
+                    android:text="link"
+                    android:visibility="invisible" />
+
             </LinearLayout>
         </ScrollView>
 
 
-        <TextView
-            android:id="@+id/linkForGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="link"
-            android:visibility="invisible" />
     </LinearLayout>
 
 

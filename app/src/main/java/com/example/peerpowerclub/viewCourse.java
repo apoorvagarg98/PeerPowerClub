@@ -76,7 +76,7 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
                 if (snapshot.child("status").getValue().toString().equals("enrolled in "+ coursename))
                 {
                     link.setVisibility(View.VISIBLE);
-                    link.setText("join whatsapp group" + grouplink);
+                    link.setText( grouplink);
                 }
             }
 

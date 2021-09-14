@@ -2,6 +2,7 @@ package com.example.peerpowerclub.fragmentCodes;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -20,7 +21,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.peerpowerclub.adapters.AdapterGroupChat;
 import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.groupparticipants;
 import com.example.peerpowerclub.models.modelGroupChat;
+import com.example.peerpowerclub.registrationAndLogin.Registration;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -62,6 +65,14 @@ public class Fragment2Chat extends Fragment {
         user = FirebaseAuth.getInstance().getCurrentUser();
         loadGroupInfo();
         loaadGroupMessges();
+        groupTitleTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), groupparticipants.class);
+                intent.putExtra("gt",finalHome.areaofinterest + finalHome.dayNight);
+                startActivity(intent);
+            }
+        });
         sendbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

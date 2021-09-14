@@ -58,7 +58,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
-        profilePhoto = findViewById(R.id.profile_image1);
+        profilePhoto = findViewById(R.id.groupwalekaphoto);
         registeruser = (Button) findViewById(R.id.preg);
         profilePhotoImageRef = FirebaseStorage.getInstance().getReference().child("profilePhotos");
         registeruser.setOnClickListener(this);
@@ -201,11 +201,27 @@ if(imageUri==null)
 
                                                     startActivity(new Intent(Registration.this, Login.class));
                                                 } else {
-                                                    Toast.makeText(Registration.this, "Registration Failed", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(Registration.this, "Registration Failed1", Toast.LENGTH_LONG).show();
 
                                                 }
                                             }
                                         });
+                                        FirebaseDatabase.getInstance().getReference("groups").child(AreaofInterest + daynight).child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                                .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
+
+                                                    Toast.makeText(Registration.this, "registered fully", Toast.LENGTH_SHORT).show();
+
+                                                    startActivity(new Intent(Registration.this, Login.class));
+                                                } else {
+                                                    Toast.makeText(Registration.this, "Registration Failed2", Toast.LENGTH_LONG).show();
+
+                                                }
+                                            }
+                                        });
+
 
                                     }
                                 });
@@ -213,18 +229,18 @@ if(imageUri==null)
                         }
                     });
 
-                    groups.child(AreaofInterest + daynight).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    /*groups.child(AreaofInterest + daynight).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(Registration.this, "registered fully", Toast.LENGTH_LONG).show();
 
 
                         }
-                    });
+                    });*/
 
 
                 } else {
-                    Toast.makeText(Registration.this, "registration failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registration.this, "registration failed3", Toast.LENGTH_LONG).show();
 
                 }
             }

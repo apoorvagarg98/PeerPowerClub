@@ -9,14 +9,7 @@
         android:visible="true"
         app:showAsAction="always">
     </item>
-    <item
-        android:id="@+id/Notification"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_circle_notifications_24"
-        android:title="notification"
-        android:visible="true"
-        app:showAsAction="always">
-    </item>
+
     <item
         android:id="@+id/addPost"
         android:enabled="true"
