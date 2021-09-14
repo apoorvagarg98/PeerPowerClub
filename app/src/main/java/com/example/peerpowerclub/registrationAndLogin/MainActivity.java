@@ -20,9 +20,26 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
         checkbox = preferences.getString("remember","");
         if(checkbox.equals("true"))
-        {
-            startActivity(new Intent(MainActivity.this, myHome.class));
-            finish();
+        { Thread background = new Thread() {
+            public void run() {
+                try {
+                    // Thread will sleep for 5 seconds
+                    sleep(2*1000);
+
+                    // After 5 seconds redirect to another intent
+                    Intent i=new Intent(getBaseContext(), myHome.class);
+                    startActivity(i);
+
+                    //Remove activity
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        };
+            // start thread
+            background.start();
+
+
         }
         else{
 
