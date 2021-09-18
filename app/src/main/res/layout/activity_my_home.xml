@@ -10,7 +10,10 @@
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="617dp">
+        android:layout_height="675dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentTop="true"
+        android:foregroundGravity="bottom">
 
     </FrameLayout>
 
