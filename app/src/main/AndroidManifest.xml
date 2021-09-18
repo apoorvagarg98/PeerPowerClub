@@ -19,7 +19,8 @@
         <activity android:name=".registrationAndLogin.Registration" />
         <activity android:name=".registrationAndLogin.Login" />
         <activity android:name=".viewCourse" />
-        <activity android:name=".myHome" />
+        <activity android:name=".myHome"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".strt1" />
         <activity android:name=".strt2" />
         <activity android:name=".strt3" />

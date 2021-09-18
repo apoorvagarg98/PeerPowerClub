@@ -84,8 +84,8 @@ android:orientation="vertical"
 
         <EditText
             android:id="@+id/emailreg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="327dp"
+            android:layout_height="89dp"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
 
