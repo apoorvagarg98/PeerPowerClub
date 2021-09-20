@@ -22,16 +22,16 @@
         >
 
         <ImageView
-            android:layout_width="@dimen/_104sdp"
-            android:layout_height="@dimen/_104sdp"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
             app:srcCompat="@drawable/strt" />
 
 
         <ImageView
-            android:layout_width="244dp"
-            android:layout_height="235dp"
-            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus50sdp"
             app:srcCompat="@drawable/swita" />
 
         <TextView
@@ -39,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_slab"
             android:gravity="center"
             android:text="These will be visible to join only when the time of the previous Peer Group has finished.
 First time user will see them, once he is a part of a particular Peer Group then these will not be accessible to users.
@@ -48,7 +49,7 @@ First time user will see them, once he is a part of a particular Peer Group then
 
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_25sdp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
 
@@ -60,6 +61,7 @@ First time user will see them, once he is a part of a particular Peer Group then
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_11sdp"
             android:background="@drawable/inpuut_bg"
+            android:fontFamily="@font/roboto_slab_bold"
             android:text="Login/SignUp"
             android:textAllCaps="false"
             app:backgroundTint="#157575" />

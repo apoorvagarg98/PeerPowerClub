@@ -44,14 +44,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:paddingLeft="10dp"
+
                 android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingRight="10dp"
-                android:paddingBottom="10dp"
-                android:text="Id:"
+                android:paddingBottom="@dimen/_5sdp"
 
+                android:text="Id:"
                 android:textColor="#157575"
                 android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
@@ -59,8 +60,8 @@
             <ImageView
                 android:id="@+id/feedimage"
                 android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
                 tools:srcCompat="@tools:sample/avatars" />
 
@@ -68,10 +69,11 @@
                 android:id="@+id/caption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
 
                 android:drawableLeft="@drawable/ic_baseline_nat_24"
                 android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/roboto_slab"
                 android:paddingLeft="@dimen/_5sdp"
                 android:text="Caption:"
                 android:textColor="@color/black"

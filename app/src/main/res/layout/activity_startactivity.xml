@@ -26,29 +26,31 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="@dimen/_minus10sdp"
             android:layout_marginBottom="@dimen/_100sdp"
-
             android:background="@drawable/logo"
 
-             />
+            />
 
 
         <Button
             android:id="@+id/login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_minus25sdp"
-            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
 
             android:background="@drawable/inpuut_bg"
+            android:fontFamily="@font/roboto_slab_bold"
             android:gravity="center"
             android:includeFontPadding="false"
-            android:minWidth="120dp"
-            android:padding="8dp"
+
+            android:padding="2dp"
             android:singleLine="true"
             android:text="Sign In"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="@dimen/_14sdp"
             android:visibility="visible"
@@ -57,19 +59,21 @@
 
         <Button
             android:id="@+id/register"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_minus18sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-
+            android:layout_marginBottom="@dimen/_30sdp"
             android:background="@drawable/inpuut_bg"
+
+            android:fontFamily="@font/roboto_slab_bold"
             android:gravity="center"
             android:includeFontPadding="false"
-            android:minWidth="120dp"
-            android:padding="8dp"
+
+            android:padding="2dp"
             android:singleLine="true"
             android:text="Sign Up"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="@dimen/_14sdp"
             android:visibility="visible"

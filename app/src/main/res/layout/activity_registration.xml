@@ -45,6 +45,7 @@ android:orientation="vertical"
 
 
             android:ems="20"
+            android:fontFamily="@font/roboto_slab"
             android:hint="Name:"
             android:includeFontPadding="false"
             android:inputType="textPersonName"
@@ -70,34 +71,36 @@ android:orientation="vertical"
 
             android:ems="20"
 
-            android:hint="Contact no:"
+            android:fontFamily="@font/roboto_slab"
 
+            android:hint="Contact no:"
             android:minHeight="48dp"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
-            android:paddingBottom="10dp"
 
+            android:paddingBottom="10dp"
             android:textColor="#157575"
             android:textColorHint="#157575"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/emailreg"
-            android:layout_width="327dp"
-            android:layout_height="89dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
 
             android:ems="20"
 
-            android:hint="Email:"
+            android:fontFamily="@font/roboto_slab"
 
+            android:hint="Email:"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
-            android:paddingBottom="10dp"
 
+            android:paddingBottom="10dp"
             android:textColor="#157575"
             android:textColorHint="#157575"
             android:textStyle="bold" />
@@ -131,9 +134,10 @@ android:orientation="vertical"
             android:background="@drawable/lginbg"
             android:checked="false"
             android:drawableLeft="@drawable/selector"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="@dimen/_70sdp"
-            android:paddingRight="@dimen/_70sdp"
 
+            android:paddingRight="@dimen/_70sdp"
             android:textColor="#157575"
             android:textColorHint="#070707"
             android:textOff="Day"
@@ -149,9 +153,10 @@ android:orientation="vertical"
 
             android:drawablePadding="5dp"
             android:ems="10"
+            android:fontFamily="@font/roboto_slab"
             android:hint="Password:"
-            android:inputType="textPassword"
 
+            android:inputType="textPassword"
             android:paddingLeft="20dp"
             android:textColor="#157575"
             android:textColorHint="#157575"
@@ -167,11 +172,12 @@ android:orientation="vertical"
 
             android:drawablePadding="5dp"
             android:ems="10"
+            android:fontFamily="@font/roboto_slab"
             android:hint="Confirm Password:"
+
             android:inputType="textPassword"
 
             android:paddingLeft="20dp"
-
             android:textColor="#157575"
             android:textColorHint="#157575"
             android:textSize="16sp"
@@ -183,10 +189,11 @@ android:orientation="vertical"
             android:layout_height="@dimen/_35sdp"
             android:layout_marginLeft="@dimen/_60sdp"
             android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_slab"
             android:text="Show Password"
             android:textColor="#157575"
-            android:textSize="13sp"
 
+            android:textSize="13sp"
             android:textStyle="bold" />
 
         <Button
@@ -197,15 +204,16 @@ android:orientation="vertical"
 
 
             android:background="@drawable/inpuut_bg"
-            android:gravity="center"
+            android:fontFamily="@font/roboto_slab"
 
+            android:gravity="center"
             android:minWidth="120dp"
             android:padding="8dp"
             android:singleLine="true"
             android:text="Sign Up"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
 
+            android:textSize="14sp"
             app:backgroundTint="#157575"
             app:backgroundTintMode="src_in" />
 

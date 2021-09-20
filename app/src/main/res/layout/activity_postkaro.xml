@@ -22,10 +22,10 @@
 
         <ImageView
             android:id="@+id/insertImage"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:paddingLeft="@dimen/_2sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
 
+android:background="#157575"
 
             app:srcCompat="@drawable/ic_baseline_add_a_photo_24" />
 
@@ -43,8 +43,8 @@
 
         <ImageView
             android:id="@+id/sendpost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_25sdp"
             android:background="@null"
             app:srcCompat="@drawable/ic_baseline_send_24" />
 
@@ -53,7 +53,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="343dp"
+        android:layout_width="340dp"
         android:layout_height="457dp"
 
         android:layout_above="@+id/sendpostLayout"
@@ -64,8 +64,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginLeft="@dimen/_40sdp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="154dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="150dp"
         android:paddingTop="@dimen/_10sdp"
         android:paddingBottom="@dimen/_10sdp"
         tools:srcCompat="@tools:sample/avatars" />
