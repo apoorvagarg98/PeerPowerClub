@@ -25,6 +25,7 @@
 
                 android:background="@drawable/grpnamee"
                 android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_slab_bold"
                 android:includeFontPadding="true"
                 android:paddingLeft="@dimen/_5sdp"
                 android:text="Group Name"
@@ -83,6 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:fontFamily="robo"
                     android:hint="Start typing...."
                     android:inputType="textCapSentences|textMultiLine"
                     android:paddingLeft="@dimen/_2sdp"

@@ -24,15 +24,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/badacoursename"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
                     android:gravity="center"
                     android:text="TextView"
                     android:textColor="#157575"
-                    android:textSize="48sp"
+                    android:textSize="40sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -48,6 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab"
                     android:overScrollMode="always"
                     android:paddingLeft="@dimen/_10sdp"
                     android:scrollY="50dp"
@@ -68,7 +71,10 @@
                     android:layout_alignParentBottom="true"
                     android:layout_gravity="center"
                     android:background="@drawable/inpuut_bg"
-                    android:text="Pay 200 inr only"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Pay 200 INR Only"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
                     app:backgroundTint="#157575" />
 
                 <TextView

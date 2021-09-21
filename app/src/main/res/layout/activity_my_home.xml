@@ -26,7 +26,7 @@
 
         android:clipToPadding="true"
         app:itemHorizontalTranslationEnabled="false"
-        app:itemIconTint="@color/black"
+        app:itemIconTint="#157575"
         app:menu="@menu/bottom_menu" />
 
 </RelativeLayout>

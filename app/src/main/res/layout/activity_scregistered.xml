@@ -34,33 +34,36 @@
 
         />
 
-    <TextView
-        android:id="@+id/forgotPassword2"
-        android:layout_width="@dimen/_249sdp"
-        android:layout_height="@dimen/_95sdp"
+        <TextView
+            android:id="@+id/forgotPassword2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:gravity="center"
-        android:textColor="#157575"
-        android:text="Sucessfully registered"
-        android:textSize="@dimen/_16sdp"
-        android:textStyle="normal" />
+            android:fontFamily="@font/roboto_slab"
+            android:gravity="center"
+            android:text="Sucessfully Registered!"
+            android:textColor="#157575"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="normal" />
 
         <Button
             android:id="@+id/btngotohome"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_40sdp"
             android:layout_marginBottom="@dimen/_40sdp"
             android:background="@drawable/inpuut_bg"
-            android:gravity="center"
+            android:fontFamily="@font/roboto_slab_bold"
 
+            android:gravity="center"
             android:minWidth="120dp"
             android:padding="8dp"
             android:singleLine="true"
-            android:text="Move to Home"
+            android:text="Back to Home"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:visibility="visible"
             app:backgroundTint="#157575"
             app:backgroundTintMode="src_in" />

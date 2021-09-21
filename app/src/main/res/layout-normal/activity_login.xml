@@ -34,21 +34,22 @@
             android:layout_marginTop="@dimen/_1sdp"
             android:background="@drawable/lginbg"
 
-
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="@dimen/_5sdp"
             android:ems="20"
-            android:hint="EMAIL"
+            android:fontFamily="@font/roboto_slab"
+            android:hint="Email"
             android:includeFontPadding="false"
             android:inputType="textPersonName"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
             android:shadowColor="#F8EFEF"
             android:textColor="#157575"
             android:textColorHighlight="#090909"
-            android:textColorHint="#157575"
             android:textColorLink="#FAF3F3"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
         <EditText
             android:id="@+id/inputPassword2"
@@ -56,19 +57,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="@dimen/_5sdp"
 
             android:ems="20"
-
-            android:hint="PASSWORD"
+            android:fontFamily="@font/roboto_slab"
+            android:hint="Password"
             android:inputType="textPassword"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
             android:paddingBottom="10dp"
             android:password="false"
             android:textColor="#157575"
-            android:textColorHint="#157575"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
 
         <CheckBox
@@ -77,6 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_65sdp"
 
+            android:fontFamily="@font/roboto_slab_bold"
             android:text="Show Password"
             android:textColor="#157575"
             android:textSize="12sp"
@@ -86,11 +89,12 @@
             android:id="@+id/remember2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_65sdp"
+            android:layout_marginLeft="@dimen/_63sdp"
 
+            android:fontFamily="@font/roboto_slab_bold"
             android:text="Remember Me"
             android:textColor="#157575"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
 
@@ -119,9 +123,10 @@
             android:id="@+id/forgotPassword2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_slab"
             android:gravity="center"
-            android:paddingTop="@dimen/_5sdp"
-            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_20sdp"
             android:text="Forgot Password?"
             android:textColor="#157575"
             android:textSize="@dimen/_12sdp" />
