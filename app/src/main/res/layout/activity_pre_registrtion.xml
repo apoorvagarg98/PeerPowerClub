@@ -1,65 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bggg"
     tools:context=".preRegistrtion">
 
+    <LinearLayout
 
-    <EditText
-        android:id="@+id/prepassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_43sdp"
 
-    <EditText
-        android:id="@+id/prepassword2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="confirm password"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prepassword"
-        app:layout_constraintVertical_bias="0.167" />
+        android:paddingRight="@dimen/_43sdp"
 
-    <EditText
-        android:id="@+id/preemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autoText="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
-
-    <Button
-        android:id="@+id/yo"
-        android:layout_width="118dp"
-        android:layout_height="69dp"
-        android:text="register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prepassword2"
-        app:layout_constraintVertical_bias="0.33" />
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:srcCompat="@drawable/ppc" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            android:fontFamily="@font/aclonica"
+            android:text="Hello!"
+            android:textColor="#F21758BA"
+            android:textSize="@dimen/_18sdp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/aclonica"
+            android:text="Signup To Get Started!"
+            android:textColor="#F21758BA"
+            android:textSize="@dimen/_16sdp"
+             />
+
+
+        <EditText
+            android:id="@+id/preemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:autoText="true"
+            android:background="@drawable/lginbg"
+            android:drawableLeft="@drawable/ic_baseline_email_241"
+            android:drawablePadding="@dimen/_5sdp"
+            android:ems="20"
+            android:fontFamily="@font/roboto_slab"
+            android:hint="Email"
+            android:includeFontPadding="false"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:shadowColor="#F8EFEF"
+            android:textColor="#157575"
+            android:textColorHighlight="#090909"
+            android:textColorLink="#FAF3F3"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/prepassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/lginbg"
+            android:drawableLeft="@drawable/ic_baseline_lock_241"
+            android:drawablePadding="@dimen/_5sdp"
+
+            android:ems="20"
+            android:fontFamily="@font/roboto_slab"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:password="false"
+            android:textColor="#157575"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/prepassword2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/lginbg"
+            android:drawableLeft="@drawable/ic_baseline_lock_241"
+            android:drawablePadding="@dimen/_5sdp"
+
+            android:ems="20"
+            android:fontFamily="@font/roboto_slab"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:password="false"
+            android:textColor="#157575"
+            android:textStyle="normal" />
+
+
+        <Button
+            android:id="@+id/yo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/inpuut_bg"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:backgroundTint="#F21758BA" />
+
+    </LinearLayout>
+</RelativeLayout>

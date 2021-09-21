@@ -13,7 +13,7 @@ android:orientation="vertical"
     <LinearLayout
 
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingLeft="@dimen/_43sdp"
@@ -44,18 +44,19 @@ android:orientation="vertical"
 
 
             android:ems="20"
+            android:fontFamily="@font/roboto_slab"
             android:hint="Name:"
             android:includeFontPadding="false"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
             android:shadowColor="#F8EFEF"
             android:textColor="#157575"
             android:textColorHighlight="#090909"
-            android:textColorHint="#157575"
+
             android:textColorLink="#FAF3F3"
             android:textStyle="bold" />
 
@@ -69,16 +70,17 @@ android:orientation="vertical"
 
             android:ems="20"
 
+            android:fontFamily="@font/roboto_slab"
+
             android:hint="Contact no:"
-
             android:minHeight="48dp"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
 
+            android:paddingBottom="10dp"
             android:textColor="#157575"
-            android:textColorHint="#157575"
+
             android:textStyle="bold" />
 
         <EditText
@@ -91,16 +93,16 @@ android:orientation="vertical"
 
             android:ems="20"
 
-            android:hint="linkedId"
+            android:fontFamily="@font/roboto_slab"
 
+            android:hint="Linkedin Id:"
             android:minHeight="48dp"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingRight="20dp"
+            android:paddingRight="10dp"
             android:paddingBottom="10dp"
-
             android:textColor="#157575"
-            android:textColorHint="#157575"
+
             android:textStyle="bold" />
 
         <EditText
@@ -113,16 +115,17 @@ android:orientation="vertical"
 
             android:ems="20"
 
-            android:hint="short Term Goal"
+            android:fontFamily="@font/roboto_slab"
 
+            android:hint="Short Term Goal"
             android:minHeight="48dp"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
 
+            android:paddingBottom="10dp"
             android:textColor="#157575"
-            android:textColorHint="#157575"
+
             android:textStyle="bold" />
 
         <EditText
@@ -135,16 +138,17 @@ android:orientation="vertical"
 
             android:ems="20"
 
-            android:hint="long Term GOAL"
+            android:fontFamily="@font/roboto_slab"
 
+            android:hint="Long Term Goal"
             android:minHeight="48dp"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
 
+            android:paddingBottom="10dp"
             android:textColor="#157575"
-            android:textColorHint="#157575"
+
             android:textStyle="bold" />
 
         <EditText
@@ -157,22 +161,23 @@ android:orientation="vertical"
 
             android:ems="20"
 
-            android:hint="language "
+            android:fontFamily="@font/roboto_slab"
 
+            android:hint="Language "
             android:minHeight="48dp"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
 
+            android:paddingBottom="10dp"
             android:textColor="#157575"
-            android:textColorHint="#157575"
+
             android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/interest"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="48dp"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
 
@@ -198,32 +203,35 @@ android:orientation="vertical"
             android:background="@drawable/lginbg"
             android:checked="false"
             android:drawableLeft="@drawable/selector"
-            android:paddingLeft="@dimen/_70sdp"
-            android:paddingRight="@dimen/_70sdp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:paddingLeft="@dimen/_80sdp"
+
+            android:paddingRight="@dimen/_80sdp"
 
             android:textColor="#157575"
-            android:textColorHint="#070707"
             android:textOff="Day"
             android:textOn="Night"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/preg"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
 
 
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/inpuut_bg"
+            android:fontFamily="@font/roboto_slab"
             android:gravity="center"
-
             android:minWidth="120dp"
             android:padding="8dp"
             android:singleLine="true"
-            android:text="update profile"
+            android:text="Update Profile"
+            android:textAllCaps="false"
+
             android:textColor="@android:color/white"
             android:textSize="14sp"
-
             app:backgroundTint="#157575"
             app:backgroundTintMode="src_in" />
 

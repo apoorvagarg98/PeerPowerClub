@@ -50,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
             //show start activity
 
             startActivity(new Intent(MainActivity.this, strt1.class));
-            Toast.makeText(MainActivity.this, "First Run", Toast.LENGTH_LONG)
-                    .show();
+
         }
         else{
             Thread background = new Thread() {

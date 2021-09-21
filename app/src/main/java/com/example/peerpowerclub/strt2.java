@@ -42,9 +42,7 @@ public class strt2 extends AppCompatActivity {
          */
 
             if(event2.getX() < event1.getX()){
-                Toast.makeText(getBaseContext(),
-                        "Swipe left - startActivity()",
-                        Toast.LENGTH_SHORT).show();
+
 
                 //switch another activity
                 Intent intent = new Intent(
