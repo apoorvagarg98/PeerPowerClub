@@ -23,6 +23,8 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.fragmentCodes.Fragment1;
+import com.example.peerpowerclub.fragmentCodes.Fragment2Chat;
 import com.example.peerpowerclub.models.user;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,7 +41,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Registration extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
-    private EditText editTextname, editTextemail, editTextpassword, editTextphonenumber, chpassword2;
+    private EditText editTextname,  editTextphonenumber,language,profileurl,stg,ltg;
     private TextView registeruser;
     public static  final int REQUEST_CODE = 101;
     public static Uri imageUri;
@@ -59,14 +61,17 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
         profilePhoto = findViewById(R.id.groupwalekaphoto);
+        language = findViewById(R.id.languages);
+        profileurl = findViewById(R.id.linkedIdProfileUrl);
+        ltg = findViewById(R.id.longTermGoal);
+        stg = findViewById(R.id.shortTermGoal);
         registeruser = (Button) findViewById(R.id.preg);
         profilePhotoImageRef = FirebaseStorage.getInstance().getReference().child("profilePhotos");
         registeruser.setOnClickListener(this);
         editTextname = (EditText) findViewById(R.id.name);
-        editTextemail = (EditText) findViewById(R.id.emailreg);
-        editTextpassword = (EditText) findViewById(R.id.inputPassword);
+
         editTextphonenumber = (EditText) findViewById(R.id.contact);
-        chpassword2 = (EditText) findViewById(R.id.inputConfirmPassword);
+
         toggleButton = findViewById(R.id.dayNight);
         groups = FirebaseDatabase.getInstance().getReference().child("groups");
         spinner = findViewById(R.id.interest);
@@ -116,118 +121,105 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
         profilePhoto.setImageURI(imageUri);
     }
 
-    private void Registeruser()
-    {
-        String email = editTextemail.getText().toString();
-        String profilephotouri= imageUri.toString();
+    private void Registeruser() {
+
         String name = editTextname.getText().toString();
         String phone = editTextphonenumber.getText().toString();
-        String password = editTextpassword.getText().toString();
-        String chpassword = chpassword2.getText().toString();
+        String profilekaurl = profileurl.getText().toString();
+        String longtm = ltg.getText().toString();
+        String shorttm= stg.getText().toString();
+        String languageSpoken = language.getText().toString();
 
-if(imageUri==null)
-{
-    Toast.makeText(this, "please select an image", Toast.LENGTH_SHORT).show();
-}
-        if(name.isEmpty())
-        {
+
+        if (imageUri == null) {
+            Toast.makeText(this, "please select an image", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (name.isEmpty()) {
             editTextname.setError("full name required");
             editTextname.requestFocus();
             return;
         }
-        if(password.isEmpty())
-        {
-            editTextpassword.setError("password required");
-            editTextpassword.requestFocus();
+        if (profilekaurl.isEmpty()) {
+            profileurl.setError("profile url required");
+            profileurl.requestFocus();
+            return;
+        }
+        if (shorttm.isEmpty()) {
+            stg.setError("short Term Goal required");
+            stg.requestFocus();
+            return;
+        }
+        if (longtm.isEmpty()) {
+            ltg.setError("Long Term Goal required");
+            ltg.requestFocus();
+            return;
+        }
+        if (languageSpoken.isEmpty()) {
+           language.setError("languages Spoken required");
+            language.requestFocus();
             return;
         }
 
-        if(phone.isEmpty())
-        {
+
+        if (phone.isEmpty()) {
             editTextphonenumber.setError("phonenumber required");
             editTextphonenumber.requestFocus();
             return;
         }
-        if(email.isEmpty())
-        {
-            editTextemail.setError("email required");
-            editTextemail.requestFocus();
-            return;
-        }
-        if(!password.equals(chpassword)) {
-            chpassword2.setError("Passwords do not match.Kindly recheck");
-            chpassword2.requestFocus();
-            return;
-
-        }
-
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextemail.setError("please provide valid email");
-            editTextemail.requestFocus();
-            return;
-
-        }
-        if(password.length()<6)
-        {
-            editTextpassword.setError("min pass require length should be 6");
-            editTextpassword.requestFocus();
-            return;
-        }
 
 
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+        String status = "unenrolled";
+        final user[] useR = new user[1];
+
+        profilePhotoImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
+            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                 if (task.isSuccessful()) {
-                    String status = "unenrolled";
-                    final user[] useR = new user[1];
-
-                    profilePhotoImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                    profilePhotoImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
-                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            if(task.isSuccessful()){
-                                profilePhotoImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                    @Override
-                                    public void onSuccess(Uri uri) {
-                                        Toast.makeText(Registration.this, "done", Toast.LENGTH_LONG).show();
-                                        useR[0] = new user(name, email, phone, AreaofInterest,daynight,FirebaseAuth.getInstance().getCurrentUser().getUid(),status,uri.toString());
-                                        FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                                .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
+                        public void onSuccess(Uri uri) {
+                            Toast.makeText(Registration.this, "done", Toast.LENGTH_LONG).show();
+                            useR[0] = new user(name,  phone, AreaofInterest, daynight, status, uri.toString(),profilekaurl,shorttm,longtm,languageSpoken);
+                            FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
 
-                                                    Toast.makeText(Registration.this, "registered", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Registration.this, "details added", Toast.LENGTH_SHORT).show();
 
-                                                    startActivity(new Intent(Registration.this, Login.class));
-                                                } else {
-                                                    Toast.makeText(Registration.this, "Registration Failed1", Toast.LENGTH_LONG).show();
-
-                                                }
-                                            }
-                                        });
-                                        FirebaseDatabase.getInstance().getReference("groups").child(AreaofInterest + daynight).child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                                .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
-
-                                                    Toast.makeText(Registration.this, "registered fully", Toast.LENGTH_SHORT).show();
-
-                                                    startActivity(new Intent(Registration.this, Login.class));
-                                                } else {
-                                                    Toast.makeText(Registration.this, "Registration Failed2", Toast.LENGTH_LONG).show();
-
-                                                }
-                                            }
-                                        });
-
+                                    } else {
+                                        Toast.makeText(Registration.this, "details addition failed", Toast.LENGTH_LONG).show();
 
                                     }
-                                });
-                            }
+                                }
+                            });
+                            FirebaseDatabase.getInstance().getReference("groups").child(AreaofInterest + daynight).child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+
+                                        Toast.makeText(Registration.this, "added in group", Toast.LENGTH_SHORT).show();
+                                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new Fragment2Chat()).commit();
+
+
+                                        startActivity(new Intent(Registration.this, Login.class));
+                                    } else {
+                                        Toast.makeText(Registration.this, "group addition failed", Toast.LENGTH_LONG).show();
+
+                                    }
+                                }
+                            });
+
+
                         }
                     });
+                }
+            }
+        });
 
                     /*groups.child(AreaofInterest + daynight).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -239,13 +231,9 @@ if(imageUri==null)
                     });*/
 
 
-                } else {
-                    Toast.makeText(Registration.this, "registration failed3", Toast.LENGTH_LONG).show();
+    }
 
-                }
-            }
 
-        });}
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

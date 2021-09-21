@@ -61,7 +61,7 @@ public class postkaro extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 com.example.peerpowerclub.models.user user4profile = snapshot.getValue(com.example.peerpowerclub.models.user.class);
                 dayNight= user4profile.prefferedTime;
-                email = user4profile.email;
+                //email = user4profile.email;
                 areaofinterest = user4profile.areaOfInterest;
                 name = user4profile.fullname;
 

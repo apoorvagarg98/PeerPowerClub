@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton  signin;
     private FirebaseAuth mAuth;
-    public static String AreaofInterest2 = Registration.AreaofInterest,daynight2 = Registration.daynight;
+
 
     String checkbox;
 

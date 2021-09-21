@@ -68,7 +68,7 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
         cld.setText(courseLongDescription);
         Picasso.get().load(courseimageuri).into(ci);
         Button btpay = findViewById(R.id.pay);
-        String sAmount = "100";
+        String sAmount = "200";
         int amount = Math.round(Float.parseFloat(sAmount)*100);
         reference.child(user.getUid()).addValueEventListener(new ValueEventListener() {
             @Override

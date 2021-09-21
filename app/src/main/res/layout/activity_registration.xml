@@ -23,7 +23,6 @@ android:orientation="vertical"
         >
 
 
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/groupwalekaphoto"
             android:layout_width="match_parent"
@@ -83,16 +82,84 @@ android:orientation="vertical"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/emailreg"
-            android:layout_width="327dp"
-            android:layout_height="89dp"
+            android:id="@+id/linkedIdProfileUrl"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
 
             android:ems="20"
 
-            android:hint="Email:"
+            android:hint="linkedId"
 
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+
+            android:textColor="#157575"
+            android:textColorHint="#157575"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/shortTermGoal"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:ems="20"
+
+            android:hint="short Term Goal"
+
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+
+            android:textColor="#157575"
+            android:textColorHint="#157575"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/longTermGoal"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:ems="20"
+
+            android:hint="long Term GOAL"
+
+            android:minHeight="48dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+
+            android:textColor="#157575"
+            android:textColorHint="#157575"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/languages"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/lginbg"
+
+            android:ems="20"
+
+            android:hint="language "
+
+            android:minHeight="48dp"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
@@ -124,7 +191,7 @@ android:orientation="vertical"
 
         <ToggleButton
             android:id="@+id/dayNight"
-            android:layout_width="wrap_content"
+            android:layout_width="303dp"
             android:layout_height="wrap_content"
 
             android:layout_marginTop="@dimen/_10sdp"
@@ -140,55 +207,6 @@ android:orientation="vertical"
             android:textOn="Night"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/inputPassword"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-
-            android:drawablePadding="5dp"
-            android:ems="10"
-            android:hint="Password:"
-            android:inputType="textPassword"
-
-            android:paddingLeft="20dp"
-            android:textColor="#157575"
-            android:textColorHint="#157575"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/inputConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-
-            android:drawablePadding="5dp"
-            android:ems="10"
-            android:hint="Confirm Password:"
-            android:inputType="textPassword"
-
-            android:paddingLeft="20dp"
-
-            android:textColor="#157575"
-            android:textColorHint="#157575"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <CheckBox
-            android:id="@+id/checkBoxpr"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginLeft="@dimen/_60sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:text="Show Password"
-            android:textColor="#157575"
-            android:textSize="13sp"
-
-            android:textStyle="bold" />
-
         <Button
             android:id="@+id/preg"
             android:layout_width="wrap_content"
@@ -202,7 +220,7 @@ android:orientation="vertical"
             android:minWidth="120dp"
             android:padding="8dp"
             android:singleLine="true"
-            android:text="Sign Up"
+            android:text="update profile"
             android:textColor="@android:color/white"
             android:textSize="14sp"
 

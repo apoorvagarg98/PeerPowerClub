@@ -30,7 +30,7 @@ public class Fragment1 extends Fragment {
     private FirebaseUser user;
     public DatabaseReference reference;
     private String userId;
-    static  String areaofinterest,dayNight,email;
+    static  String areaofinterest,dayNight,email,ltg,stg,ln,prl;
     public CircleImageView profilephoto;
 
     private Button buttons,logout;
@@ -58,24 +58,36 @@ public class Fragment1 extends Fragment {
         final TextView prefferedTextView = (TextView) view.findViewById(R.id.prefferedtime);
         final TextView areaofInterestTextView = (TextView) view.findViewById(R.id.areaofinterest);
         final TextView status = (TextView) view.findViewById(R.id.status);
+        final TextView shtg = (TextView) view.findViewById(R.id.stg);
+        final TextView lotg = (TextView) view.findViewById(R.id.ltg);
+        final TextView lng = (TextView) view.findViewById(R.id.lng);
+        final TextView purl= (TextView) view.findViewById(R.id.profileurl);
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 com.example.peerpowerclub.models.user user4profile = snapshot.getValue(user.class);
                 if (user4profile != null) {
                      dayNight= user4profile.prefferedTime;
-                     email = user4profile.email;
+                    ltg = user4profile.ltg;
+                    stg = user4profile.stg;
+                    ln = user4profile.language;
+                    prl = user4profile.profileurl;
+                    email = user.getEmail();
                      String phone = user4profile.phonenumber;
                      areaofinterest = user4profile.areaOfInterest;
-                     String imageuri = user4profile.imageuri;
+
                      String name = user4profile.fullname;
 
-                    fullnameTextView.setText("Name - " + name);
-                    emailTextView.setText("Email - " + email);
-                    phonenumberTextView.setText("PhoneNumber- " + phone);
-                    prefferedTextView.setText("prefferedTime- " + dayNight);
-                    areaofInterestTextView.setText("areOfInterest - " + areaofinterest);
-                    status.setText("status- " + user4profile.status);
+                    fullnameTextView.setText("Name: " + name);
+                    emailTextView.setText("Email:  " + email);
+                    phonenumberTextView.setText("Phone Number: " + phone);
+                    prefferedTextView.setText("Preffered Time: " + dayNight);
+                    areaofInterestTextView.setText("Area of interest: " + areaofinterest);
+                    status.setText("Status: " + user4profile.status);
+                    shtg.setText("short term goal" + user4profile.stg);
+                    lotg.setText("short term goal" + user4profile.stg);
+                    lng.setText("long term goal" + user4profile.language);
+                    purl.setText("short term goal" + user4profile.profileurl);
                     Picasso.get().load(user4profile.imageuri).into(profilephoto);
 
                 }

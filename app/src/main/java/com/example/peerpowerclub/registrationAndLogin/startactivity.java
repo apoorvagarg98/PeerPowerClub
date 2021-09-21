@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.preRegistrtion;
 import com.example.peerpowerclub.registrationAndLogin.Login;
 import com.example.peerpowerclub.registrationAndLogin.Registration;
 
@@ -21,7 +22,7 @@ public class startactivity extends AppCompatActivity {
            register.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   Intent i=new Intent(getBaseContext(), Registration.class);
+                   Intent i=new Intent(getBaseContext(), preRegistrtion.class);
                    startActivity(i);
 
                }

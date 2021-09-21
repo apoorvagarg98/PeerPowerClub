@@ -23,6 +23,7 @@ import com.example.peerpowerclub.adapters.AdapterGroupChat;
 import com.example.peerpowerclub.R;
 import com.example.peerpowerclub.groupparticipants;
 import com.example.peerpowerclub.models.modelGroupChat;
+import com.example.peerpowerclub.models.user;
 import com.example.peerpowerclub.registrationAndLogin.Registration;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,12 +41,13 @@ import java.util.HashMap;
 public class Fragment2Chat extends Fragment {
     public FirebaseAuth mAuth;
     public FirebaseUser user;
-    public DatabaseReference reference;
+    public DatabaseReference reference,userref;
     public ImageButton attachbtn,sendbtn;
     public TextView groupTitleTv;
     public EditText messageEt;
     Toolbar toolbar;
     RecyclerView chatRv;
+    String dayNight, areaofinterest;
     public ArrayList<modelGroupChat> groupChatList;
     public AdapterGroupChat adapterGroupChat;
 
@@ -60,7 +62,7 @@ public class Fragment2Chat extends Fragment {
         attachbtn = view.findViewById(R.id.attachbtn);
         sendbtn = view.findViewById(R.id.sendbtn);
         chatRv = view.findViewById(R.id.chatRv);
-
+       userref= FirebaseDatabase.getInstance().getReference("users");
         messageEt = view.findViewById(R.id.messageEt);
         user = FirebaseAuth.getInstance().getCurrentUser();
         loadGroupInfo();
@@ -69,7 +71,7 @@ public class Fragment2Chat extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), groupparticipants.class);
-                intent.putExtra("gt",finalHome.areaofinterest + finalHome.dayNight);
+                intent.putExtra("gt",areaofinterest + dayNight);
                 startActivity(intent);
             }
         });
@@ -92,25 +94,40 @@ public class Fragment2Chat extends Fragment {
     }
 
     public void loaadGroupMessges() {
-        groupChatList = new ArrayList<>();
-        reference = FirebaseDatabase.getInstance().getReference().child("groups");
-reference.child(finalHome.areaofinterest + finalHome.dayNight).child("messages").addValueEventListener(new ValueEventListener() {
-    @Override
-    public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-        groupChatList.clear();
-        for(DataSnapshot ds: datasnapshot.getChildren()){
-            modelGroupChat model = ds.getValue(modelGroupChat.class);
-            groupChatList.add(model);
-        }
-        adapterGroupChat = new AdapterGroupChat(getActivity(),groupChatList);
-        chatRv.setAdapter(adapterGroupChat);
-    }
 
-    @Override
-    public void onCancelled(@NonNull DatabaseError error) {
 
-    }
-});
+        userref.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                com.example.peerpowerclub.models.user user4profile = snapshot.getValue(com.example.peerpowerclub.models.user.class);
+                dayNight= user4profile.prefferedTime;
+
+                areaofinterest = user4profile.areaOfInterest;
+                groupChatList = new ArrayList<>();
+                reference = FirebaseDatabase.getInstance().getReference().child("groups");
+                reference.child(areaofinterest+dayNight).child("messages").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+                groupChatList.clear();
+                for(DataSnapshot ds: datasnapshot.getChildren()){
+                    modelGroupChat model = ds.getValue(modelGroupChat.class);
+                    groupChatList.add(model);
+
+                }
+                adapterGroupChat = new AdapterGroupChat(getActivity(),groupChatList);
+                chatRv.setAdapter(adapterGroupChat);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+             }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}});
+
+
     }
 
     public void sendmsg(String message) {
@@ -122,7 +139,7 @@ reference.child(finalHome.areaofinterest + finalHome.dayNight).child("messages")
         hashMap.put("timestamp","" + timestamp);
         hashMap.put("type","" + "text");//text/image/file
         reference = FirebaseDatabase.getInstance().getReference().child("groups");
-        reference.child(finalHome.areaofinterest + finalHome.dayNight).child("messages").child(timestamp).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+        reference.child(groupTitleTv.getText().toString()).child("messages").child(timestamp).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 //message sent
@@ -138,7 +155,17 @@ reference.child(finalHome.areaofinterest + finalHome.dayNight).child("messages")
     }
 
     public void loadGroupInfo() {
-        groupTitleTv.setText(finalHome.areaofinterest + finalHome.dayNight);
+        userref.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                com.example.peerpowerclub.models.user user4profile = snapshot.getValue(com.example.peerpowerclub.models.user.class);
+               dayNight= user4profile.prefferedTime;
+
+              areaofinterest = user4profile.areaOfInterest;
+                groupTitleTv.setText(areaofinterest + dayNight);}
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}});
+
 
        /* reference = FirebaseDatabase.getInstance().getReference().child("groups");
         reference.orderByChild("email").equalTo(Fragment1.email).addValueEventListener(new ValueEventListener() {

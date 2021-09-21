@@ -40,7 +40,7 @@ public class finalHome extends Fragment {
     public FirebaseUser user;
     public DatabaseReference reference,postref;
     public String userId;
-   public static  String areaofinterest,dayNight,email;
+
    public RecyclerView recyclerView;
 
 
@@ -86,15 +86,7 @@ public class finalHome extends Fragment {
         reference = FirebaseDatabase.getInstance().getReference("users");
         postref = FirebaseDatabase.getInstance().getReference("posts");
         userId = user.getUid();
-        reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                com.example.peerpowerclub.models.user user4profile = snapshot.getValue(user.class);
-                dayNight= user4profile.prefferedTime;
-                email = user4profile.email;
-                areaofinterest = user4profile.areaOfInterest; }
-                @Override
-            public void onCancelled(@NonNull DatabaseError error) {}});
+
         loadPost();
 
        /* sendpost.setOnClickListener(new View.OnClickListener() {
