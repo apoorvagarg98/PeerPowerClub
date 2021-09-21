@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -74,9 +75,11 @@ preregister.setOnClickListener(new View.OnClickListener() {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 HashMap hashMap = new HashMap();
                 hashMap.put("email",email);
-                hashMap.put("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
+
                 hashMap.put("areaOfInterest","");
-                FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                FirebaseUser user;
+                user = FirebaseAuth.getInstance().getCurrentUser();
+                FirebaseDatabase.getInstance().getReference("users").child(user.getUid())
                         .setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

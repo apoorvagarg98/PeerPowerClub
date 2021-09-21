@@ -44,7 +44,7 @@ getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new fin
         userka.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.child("areaOfInterest").getValue().toString().equals("")){
+                if(snapshot.child("areaOfInterest").getValue().equals("")){
                     //  startActivity(new Intent(myHome.this,Registration.class));
                     Toast.makeText(myHome.this, "i am working", Toast.LENGTH_SHORT).show();
 hey = true;

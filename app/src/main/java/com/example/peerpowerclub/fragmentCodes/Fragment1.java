@@ -1,5 +1,8 @@
 package com.example.peerpowerclub.fragmentCodes;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -33,21 +37,29 @@ public class Fragment1 extends Fragment {
     static  String areaofinterest,dayNight,email,ltg,stg,ln,prl;
     public CircleImageView profilephoto;
 
+
+
     private Button buttons,logout;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1home,container,false);
-     /*   logout = view.findViewById(R.id.logout);
+        logout = view.findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
 
+                SharedPreferences preferences = getActivity().getSharedPreferences("checkbox",MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember","false");
+                editor.apply();
+
                 getActivity().finish();
 
             }
-        });*/
+        });
+
         profilephoto = view.findViewById(R.id.profile_image);
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("users");
@@ -84,10 +96,10 @@ public class Fragment1 extends Fragment {
                     prefferedTextView.setText("Preffered Time: " + dayNight);
                     areaofInterestTextView.setText("Area of interest: " + areaofinterest);
                     status.setText("Status: " + user4profile.status);
-                    shtg.setText("short term goal" + user4profile.stg);
-                    lotg.setText("short term goal" + user4profile.stg);
-                    lng.setText("long term goal" + user4profile.language);
-                    purl.setText("short term goal" + user4profile.profileurl);
+                    shtg.setText("short term goal:" + user4profile.stg);
+                    lotg.setText("long term goal:" + user4profile.ltg);
+                    lng.setText("language: " + user4profile.language);
+                    purl.setText("profileUrl:" + user4profile.profileurl);
                     Picasso.get().load(user4profile.imageuri).into(profilephoto);
 
                 }
@@ -103,4 +115,5 @@ public class Fragment1 extends Fragment {
 
 
     }
+
 }

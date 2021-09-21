@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -75,10 +76,6 @@ String senderUid = model.getSender();
 
 holder.messagetv.setText(message  );
 holder.timetv.setText(date2);
-    setUserName(model, holder);
-    }
-
-    private void setUserName(modelGroupChat model, HolderGroupChat holder) {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users");
         ref.orderByChild("uid").equalTo(model.getSender()).addValueEventListener(new ValueEventListener() {
             @Override
@@ -86,6 +83,7 @@ holder.timetv.setText(date2);
                 for (DataSnapshot ds : datasnapshot.getChildren())
                 {
                     String name =  ds.child("fullname").getValue().toString();
+
                     holder.nameTv.setText(name);
                 }
             }
@@ -96,6 +94,8 @@ holder.timetv.setText(date2);
             }
         });
     }
+
+
 
     @Override
     public int getItemCount() {

@@ -31,6 +31,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -45,10 +46,12 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     private TextView registeruser;
     public static  final int REQUEST_CODE = 101;
     public static Uri imageUri;
+
     public CircleImageView profilePhoto;
     StorageReference profilePhotoImageRef;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
+    FirebaseUser user;
     ToggleButton toggleButton;
   public static String AreaofInterest = "automobile",daynight = "day";
     ArrayAdapter<CharSequence> adapter;
@@ -61,6 +64,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
         profilePhoto = findViewById(R.id.groupwalekaphoto);
+        user = FirebaseAuth.getInstance().getCurrentUser();
         language = findViewById(R.id.languages);
         profileurl = findViewById(R.id.linkedIdProfileUrl);
         ltg = findViewById(R.id.longTermGoal);
@@ -181,7 +185,7 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onSuccess(Uri uri) {
                             Toast.makeText(Registration.this, "done", Toast.LENGTH_LONG).show();
-                            useR[0] = new user(name,  phone, AreaofInterest, daynight, status, uri.toString(),profilekaurl,shorttm,longtm,languageSpoken);
+                            useR[0] = new user(name,  phone, AreaofInterest, daynight, status, uri.toString(),profilekaurl,shorttm,longtm,languageSpoken,user.getUid().toString());
                             FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -206,7 +210,7 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
                                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new Fragment2Chat()).commit();
 
 
-                                        startActivity(new Intent(Registration.this, Login.class));
+
                                     } else {
                                         Toast.makeText(Registration.this, "group addition failed", Toast.LENGTH_LONG).show();
 

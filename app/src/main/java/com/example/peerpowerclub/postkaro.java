@@ -119,9 +119,9 @@ public class postkaro extends AppCompatActivity {
         if(postcap.isEmpty()){
             addcaption.setError("please add caption");
         }
-        else if(imageUri==null){
-            Toast.makeText(this, "please select an image", Toast.LENGTH_SHORT).show();
-        }
+       // else if(imageUri==null){
+           // Toast.makeText(this, "please select an image", Toast.LENGTH_SHORT).show();
+       // }
         else{
 
             mLoadingBar.setTitle("Adding post");
