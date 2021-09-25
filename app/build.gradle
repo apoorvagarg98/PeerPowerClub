@@ -3,9 +3,9 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
-id  'kotlin-android'
-id  'kotlin-android-extensions'
-    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id  'kotlin-android'
+    id  'kotlin-kapt'
 }
 
 android {
@@ -80,6 +80,8 @@ implementation'com.squareup.picasso:picasso:2.71828'
    implementation 'in.payu:payu-checkout-pro:1.7.5'
     implementation 'com.razorpay:checkout:1.6.4'
     implementation 'androidx.databinding:databinding-runtime:7.0.0'
+    implementation 'com.google.firebase:firebase-common-ktx:20.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

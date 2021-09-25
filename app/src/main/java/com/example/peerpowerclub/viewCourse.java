@@ -106,7 +106,11 @@ public class viewCourse extends AppCompatActivity  {
         btpay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(viewCourse.this,MainActivity.class));
+                Intent intent = new Intent(viewCourse.this,MainActivity.class);
+                intent.putExtra("grplnk",grouplink);
+                intent.putExtra("userid",user.getUid());
+                intent.putExtra("coursename", coursename);
+                startActivity(intent);
              /*   Checkout checkout = new Checkout();
                 checkout.setKeyID("rzp_test_rfooZLYQbv7p5h");
                 checkout.setImage(R.drawable.rzp_logo);

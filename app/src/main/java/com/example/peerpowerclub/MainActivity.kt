@@ -11,11 +11,19 @@ import android.webkit.WebView
 import android.widget.ArrayAdapter
 import android.widget.CompoundButton
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.peerpowerclub.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
+
+import com.google.firebase.ktx.Firebase
 import com.payu.base.models.*
 import com.payu.checkoutpro.PayUCheckoutPro
 import com.payu.checkoutpro.models.PayUCheckoutProConfig
@@ -27,7 +35,9 @@ import com.payu.ui.model.listeners.PayUHashGenerationListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_si_details.*
 
-class MainActivity : AppCompatActivity() {
+
+
+ class MainActivity : AppCompatActivity() {
 
     private val email: String = "snooze@payu.in"
     private val phone = "9999999999"
@@ -35,12 +45,15 @@ class MainActivity : AppCompatActivity() {
     private val surl = "https://payuresponse.firebaseapp.com/success"
     private val furl = "https://payuresponse.firebaseapp.com/failure"
     private val amount = "200.0"
-
+    var grplnk=""
+    var userid=""
+    var coursename=""
     //Test Key and Salt
     private val testKey = "IUIaFM"
     private val testSalt = "67njRYSI"
     private val merchantAccessKey = "E5ABOXOWAAZNXB6JEF5Z"
     private val merchantSecretKey = "e425e539233044146a2d185a346978794afd7c66"
+    val database = Firebase.database
 
 
     //Prod Key and Salt
@@ -74,9 +87,34 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        grplnk = intent.getStringExtra("grplnk").toString()
+        userid = intent.getStringExtra("userid").toString()
+        coursename = intent.getStringExtra("coursename").toString()
+        grlnk.text = grplnk
+        val myRef = database.getReference("users")
+        myRef.child(userid).addValueEventListener(object: ValueEventListener {
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if(snapshot.child("status").getValue<String>().equals("enrolled in" + coursename))
+
+                    grlnk.visibility = View.VISIBLE
+                else
+                    grlnk.visibility = View.GONE
+
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("hey", "Failed to read value.", error.toException())
+            }
+
+        })
+
+
+
         initializeSIView()
         setInitalData()
         initListeners()
+
     }
 
     private fun initializeSIView() {
@@ -109,10 +147,10 @@ class MainActivity : AppCompatActivity() {
         updateProdEnvDetails()
         binding.etSurl.setText(surl)
         binding.etFurl.setText(furl)
-        binding.etMerchantName.setText(merchantName)
+        binding.etMerchantName.setText("peerPowerClub")
         binding.etPhone.setText(phone)
         binding.etAmount.setText(amount)
-        binding.etUserCredential.setText("${binding.etKey.text}:$email")
+        binding.etUserCredential.setText("Apoorva")
         binding.etSurePayCount.setText("0")
     }
 
@@ -233,6 +271,7 @@ class MainActivity : AppCompatActivity() {
             object : PayUCheckoutProListener {
 
                 override fun onPaymentSuccess(response: Any) {
+
                     processResponse(response)
                 }
 
@@ -241,7 +280,9 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onPaymentCancel(isTxnInitiated: Boolean) {
-                    showSnackBar(resources.getString(R.string.transaction_cancelled_by_user))
+                    showSnackBar(resources.getString(R.string.transaction_cancelled_by_user) + grplnk)
+                    val Ref = database.getReference("users")
+                    Ref.child(userid).child("status").setValue("enrolled in" + coursename)
                 }
 
                 override fun onError(errorResponse: ErrorResponse) {
@@ -252,6 +293,8 @@ class MainActivity : AppCompatActivity() {
                     else
                         errorMessage = resources.getString(R.string.some_error_occurred)
                     showSnackBar(errorMessage)
+
+
                 }
 
                 override fun generateHash(
@@ -373,14 +416,14 @@ class MainActivity : AppCompatActivity() {
         response as HashMap<*, *>
         Log.d(
             BaseApiLayerConstants.SDK_TAG,
-            "payuResponse ; > " + response[PayUCheckoutProConstants.CP_PAYU_RESPONSE]
+            "payuResponse ; > " + grplnk + response[PayUCheckoutProConstants.CP_PAYU_RESPONSE]
                     + ", merchantResponse : > " + response[PayUCheckoutProConstants.CP_MERCHANT_RESPONSE]
         )
 
         AlertDialog.Builder(this, R.style.Theme_AppCompat_Light_Dialog_Alert)
             .setCancelable(false)
             .setMessage(
-                "Payu's Data : " + response.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE) + "\n\n\n Merchant's Data: " + response.get(
+                "Payu's Data : " + grplnk + response.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE) + "\n\n\n Merchant's Data: " + response.get(
                     PayUCheckoutProConstants.CP_MERCHANT_RESPONSE
                 )
             )

@@ -37,6 +37,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:padding="10dp"
+                        android:visibility="invisible"
                         app:cardBackgroundColor="#fcfcfc"
                         app:cardCornerRadius="3dp"
                         app:cardElevation="5dp"
@@ -120,81 +121,29 @@
                                 android:textColor="@color/black"
                                 android:textSize="18sp" />
 
+                            <TextView
+                                android:id="@+id/etMerchantName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="none"
+                                android:maxLines="1"
+                                android:nextFocusDown="@+id/card_name_et"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
                             <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/tilKey"
+                                android:id="@+id/tilUserCredential"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:hint="Enter key"
+                                android:hint="Enter user credential"
                                 app:errorEnabled="false"
                                 app:hintEnabled="true">
 
                                 <EditText
-                                    android:id="@+id/etKey"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="10dp"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:nextFocusDown="@+id/card_name_et"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
-                            </com.google.android.material.textfield.TextInputLayout>
-
-                            <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/tilSalt"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:hint="Enter salt"
-                                app:errorEnabled="false"
-                                app:hintEnabled="true">
-
-                                <EditText
-                                    android:id="@+id/etSalt"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="10dp"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:nextFocusDown="@+id/card_name_et"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
-                            </com.google.android.material.textfield.TextInputLayout>
-
-                            <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/tilAmount"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="Enter amount"
-                                app:errorEnabled="false"
-                                app:hintEnabled="true">
-
-                                <EditText
-                                    android:id="@+id/etAmount"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="10dp"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="numberDecimal"
-                                    android:maxLines="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
-                            </com.google.android.material.textfield.TextInputLayout>
-
-                            <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/tilMerchantName"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:hint="Enter merchant name"
-                                app:errorEnabled="false"
-                                app:hintEnabled="true">
-
-                                <EditText
-                                    android:id="@+id/etMerchantName"
+                                    android:id="@+id/etUserCredential"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="10dp"
@@ -227,18 +176,37 @@
                                     android:textColor="@color/black"
                                     android:textSize="16sp" />
                             </com.google.android.material.textfield.TextInputLayout>
+                            <Button
+                                android:id="@+id/pay_now_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="25dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
+                                android:onClick="startPayment"
+                                android:text="Pay Now" />
+
+                            <TextView
+                                android:id="@+id/grlnk"
+                                android:layout_width="match_parent"
+                                android:layout_height="41dp"
+                                android:autoLink="all|phone"
+                                android:text="TextView"
+                                android:visibility="invisible" />
 
                             <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/tilUserCredential"
+                                android:id="@+id/tilKey"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:hint="Enter user credential"
+                                android:hint="Enter key"
+                                android:visibility="invisible"
                                 app:errorEnabled="false"
                                 app:hintEnabled="true">
 
                                 <EditText
-                                    android:id="@+id/etUserCredential"
+                                    android:id="@+id/etKey"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="10dp"
@@ -251,10 +219,56 @@
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilSalt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:hint="Enter salt"
+                                android:visibility="invisible"
+                                app:errorEnabled="false"
+                                app:hintEnabled="true">
+
+                                <EditText
+                                    android:id="@+id/etSalt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:nextFocusDown="@+id/card_name_et"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter amount"
+                                android:visibility="invisible"
+                                app:errorEnabled="false"
+                                app:hintEnabled="true">
+
+                                <TextView
+                                    android:id="@+id/etAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberDecimal"
+                                    android:maxLines="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
                                 android:id="@+id/tilSurl"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter your surl"
+                                android:visibility="invisible"
                                 app:errorEnabled="false"
                                 app:hintEnabled="true">
 
@@ -274,6 +288,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter your furl"
+                                android:visibility="invisible"
                                 app:errorEnabled="false"
                                 app:hintEnabled="true">
 
@@ -293,6 +308,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="SurePay Count(0,1,2,3)"
+                                android:visibility="invisible"
                                 app:errorEnabled="false"
                                 app:hintEnabled="true">
 
@@ -319,6 +335,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
                         android:padding="10dp"
+                        android:visibility="invisible"
                         app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="3dp"
                         app:cardElevation="5dp"
@@ -509,15 +526,16 @@
 
                                 <Button
                                     android:id="@+id/btnAddItem"
-                                    android:height="@dimen/_20sdp"
                                     android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:layout_below="@id/rvReviewOrder"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="20dp"
                                     android:layout_marginBottom="10dp"
+                                    android:height="@dimen/_20sdp"
                                     android:paddingStart="10dp"
                                     android:paddingEnd="10dp"
-                                    android:text="Add Item"  android:layout_height="wrap_content"/>
+                                    android:text="Add Item" />
 
                             </RelativeLayout>
 
@@ -615,6 +633,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
                         android:padding="10dp"
+                        android:visibility="invisible"
                         app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="3dp"
                         app:cardElevation="5dp"
@@ -656,25 +675,16 @@
                                 android:id="@+id/layout_si_details"
                                 layout="@layout/layout_si_details"
                                 android:layout_width="match_parent"
-                                android:visibility="gone"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/rl_si_header"
-                                android:layout_marginTop="20dp" />
+                                android:layout_marginTop="20dp"
+                                android:visibility="gone" />
                         </RelativeLayout>
 
 
                     </androidx.cardview.widget.CardView>
 
-                    <Button
-                        android:id="@+id/pay_now_button"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_weight="1"
-                        android:onClick="startPayment"
-                        android:text="Pay Now" />
+
                 </LinearLayout>
             </ScrollView>
 
