@@ -9,6 +9,7 @@
     android:background="@drawable/bggg"
     android:orientation="vertical">
 
+
     <LinearLayout
 
         android:layout_width="wrap_content"
@@ -20,14 +21,25 @@
 
         android:paddingRight="@dimen/_43sdp">
 
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
+            android:layout_gravity="center"
             android:layout_height="96dp"
             app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp"
-             />
+            app:civ_border_width="2dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+
 
         <TextView
             android:id="@+id/name"
@@ -35,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
@@ -51,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
@@ -67,6 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
@@ -82,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
@@ -97,6 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
@@ -113,11 +130,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:text="status"
+            android:text="Status"
             android:textColor="#157575"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
@@ -128,11 +146,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:text="language"
+            android:text="Language"
             android:textColor="#157575"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
@@ -143,11 +162,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:text="short term Goal"
+            android:text="Short Term Goal"
             android:textColor="#157575"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
@@ -158,11 +178,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:text="long Term Goal"
+            android:text="Long Term Goal"
             android:textColor="#157575"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
@@ -173,17 +194,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/lginbg"
+            android:fontFamily="@font/roboto_slab"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:text="profile url"
+            android:text="Profile Url"
             android:textColor="#157575"
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold" />
-
-
-
 
         <Button
             android:id="@+id/logout"
@@ -196,13 +215,16 @@
             android:layout_marginEnd="110dp"
             android:layout_marginRight="110dp"
             android:background="@drawable/inpuut_bg"
+            android:fontFamily="@font/roboto_slab_bold"
             android:text="Log Out"
+            android:textAllCaps="false"
             android:textColor="#F8F5F5"
             android:textSize="16sp"
-            android:textStyle="bold"
-            app:backgroundTint="#157575"
 
-            />
+            android:textStyle="bold"
+            app:backgroundTint="#157575" />
+
+        </ScrollView>
     </LinearLayout>
 
 
