@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -45,7 +46,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Properties;
 
-public class viewCourse extends AppCompatActivity implements PaymentResultListener {
+public class viewCourse extends AppCompatActivity  {
     String coursename,grouplink;
     TextView link;
     private FirebaseUser user;
@@ -105,7 +106,8 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
         btpay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Checkout checkout = new Checkout();
+                startActivity(new Intent(viewCourse.this,MainActivity.class));
+             /*   Checkout checkout = new Checkout();
                 checkout.setKeyID("rzp_test_rfooZLYQbv7p5h");
                 checkout.setImage(R.drawable.rzp_logo);
                 JSONObject object = new JSONObject();
@@ -122,7 +124,7 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
 
                 } catch (JSONException e) {
                     e.printStackTrace();
-                }
+                }*/
            }
         });
         //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
@@ -131,7 +133,7 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
 
     }
 
-    @Override
+ /*   @Override
     public void onPaymentSuccess(String s) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -156,7 +158,7 @@ public class viewCourse extends AppCompatActivity implements PaymentResultListen
     @Override
     public void onPaymentError(int i, String s) {
         Toast.makeText(getApplicationContext(), ""+s, Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
    /* private void sendEmail() {
 final String username = "peerpowerclub@gmail.com";

@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.example.peerpowerclub.BroadcastService;
 import com.example.peerpowerclub.R;
 import com.example.peerpowerclub.fragmentCodes.Fragment1;
 import com.example.peerpowerclub.fragmentCodes.Fragment2Chat;
@@ -233,6 +235,10 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
 
                         }
                     });*/
+      //  Intent intent = new Intent(this, BroadcastService.class);
+      //  startService(intent);
+      //  Log.d("hello","startedService");
+
 
 
     }

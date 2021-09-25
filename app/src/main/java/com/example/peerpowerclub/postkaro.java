@@ -146,6 +146,7 @@ public class postkaro extends AppCompatActivity {
                                 hashMap.put("name",name);
                                 hashMap.put("postImageUrl",uri.toString());
                                 hashMap.put("caption",postcap);
+                                hashMap.put("uid",userId);
 
 
                                 postref.child(userId + strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {

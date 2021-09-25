@@ -5,18 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.peerpowerclub.R;
 import com.example.peerpowerclub.myHome;
 import com.example.peerpowerclub.strt1;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity12 extends AppCompatActivity {
     String checkbox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main12);
         SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
         checkbox = preferences.getString("remember","");
         if(checkbox.equals("true"))
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         if (isFirstRun) {
             //show start activity
 
-            startActivity(new Intent(MainActivity.this, strt1.class));
+            startActivity(new Intent(MainActivity12.this, strt1.class));
 
         }
         else{

@@ -1,6 +1,7 @@
 package com.example.peerpowerclub.fragmentCodes;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -18,8 +19,10 @@ import android.widget.Toast;
 
 import com.example.peerpowerclub.R;
 import com.example.peerpowerclub.adapters.myViewHolder;
+import com.example.peerpowerclub.groupparticipants;
 import com.example.peerpowerclub.models.feedModel;
 import com.example.peerpowerclub.models.user;
+import com.example.peerpowerclub.userProfile;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
@@ -138,6 +141,14 @@ public class finalHome extends Fragment {
                 holder.caption.setText(model.getcaption());
 
                 Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+                holder.name.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getActivity(), userProfile.class);
+                        intent.putExtra("uid",model.uid);
+                        startActivity(intent);
+                    }
+                });
             }
         };
         adapter.startListening();

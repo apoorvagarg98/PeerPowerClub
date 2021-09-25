@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -71,10 +73,19 @@ public class groupparticipants extends AppCompatActivity {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull grpviewholder holder, int position, @NonNull com.example.peerpowerclub.models.user model) {
+            protected void onBindViewHolder(@NonNull grpviewholder holder, @SuppressLint("RecyclerView") int position, @NonNull com.example.peerpowerclub.models.user model) {
                 holder.status.setText(model.status);
                 holder.nameingroup.setText(model.fullname);
                 Picasso.get().load(model.imageuri).into(holder.pf);
+                holder.nameingroup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(groupparticipants.this,userProfile.class);
+                        intent.putExtra("uid",model.uid);
+                        startActivity(intent);
+                    }
+                });
+
             }
         };
         adapter.startListening();
