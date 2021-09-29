@@ -31,5 +31,8 @@
     <string name="transaction_cancelled_by_user">Transaction cancelled by user</string>
     <string name="some_error_occurred">Some error occurred...</string>
 
+    <string name="default_web_client_i" translatable="false">592473456574-4k69d6g5s10sokkim3lpacok29v9bk1r.apps.googleusercontent.com</string>
+
+
 
 </resources>

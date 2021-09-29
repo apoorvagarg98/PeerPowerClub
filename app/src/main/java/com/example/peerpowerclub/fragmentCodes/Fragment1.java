@@ -2,6 +2,7 @@ package com.example.peerpowerclub.fragmentCodes;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.peerpowerclub.R;
 import com.example.peerpowerclub.models.user;
+import com.example.peerpowerclub.myHome;
+import com.example.peerpowerclub.registrationAndLogin.Login;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -50,10 +53,9 @@ public class Fragment1 extends Fragment {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
 
-                SharedPreferences preferences = getActivity().getSharedPreferences("checkbox",MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("remember","false");
-                editor.apply();
+                Intent intent = new Intent(getActivity(), Login.class);
+
+                startActivity(intent);
 
                 getActivity().finish();
 

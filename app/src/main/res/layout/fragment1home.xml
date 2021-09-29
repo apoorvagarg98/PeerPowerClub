@@ -12,8 +12,8 @@
 
     <LinearLayout
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
 
@@ -24,206 +24,205 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
-            android:layout_gravity="center"
             android:layout_height="96dp"
+            android:layout_gravity="center"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp" />
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical">
 
 
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Name:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Name:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/phonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Contact No:"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/phonenumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Contact No:"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
 
-        <TextView
-            android:id="@+id/Email"
-            android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Email:"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Email:"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/areaofinterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Area Of Interest:"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/areaofinterest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Area Of Interest:"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/prefferedtime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Preffered Timing:"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/prefferedtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Preffered Timing:"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
 
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Status"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Status"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lng"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Language"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/lng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Language"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/stg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Short Term Goal"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/stg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Short Term Goal"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/ltg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Long Term Goal"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/ltg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Long Term Goal"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/profileurl"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/lginbg"
-            android:fontFamily="@font/roboto_slab"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Profile Url"
-            android:textColor="#157575"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/profileurl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/lginbg"
+                    android:fontFamily="@font/roboto_slab"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Profile Url"
+                    android:textColor="#157575"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="@dimen/_189sdp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="110dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="110dp"
-            android:layout_marginRight="110dp"
-            android:background="@drawable/inpuut_bg"
-            android:fontFamily="@font/roboto_slab_bold"
-            android:text="Log Out"
-            android:textAllCaps="false"
-            android:textColor="#F8F5F5"
-            android:textSize="16sp"
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="@dimen/_189sdp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="110dp"
+                    android:layout_marginRight="110dp"
+                    android:background="@drawable/inpuut_bg"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Log Out"
+                    android:textAllCaps="false"
+                    android:textColor="#F8F5F5"
+                    android:textSize="16sp"
 
-            android:textStyle="bold"
-            app:backgroundTint="#157575" />
-
+                    android:textStyle="bold"
+                    app:backgroundTint="#157575" />
+            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 

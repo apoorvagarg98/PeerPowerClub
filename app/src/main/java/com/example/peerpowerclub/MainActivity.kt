@@ -40,8 +40,8 @@ import kotlinx.android.synthetic.main.layout_si_details.*
  class MainActivity : AppCompatActivity() {
 
     private val email: String = "snooze@payu.in"
-    private val phone = "9999999999"
-    private val merchantName = "RH Group"
+    private val phone = ""
+    private val merchantName = "peerPowerClub"
     private val surl = "https://payuresponse.firebaseapp.com/success"
     private val furl = "https://payuresponse.firebaseapp.com/failure"
     private val amount = "200.0"
@@ -57,8 +57,8 @@ import kotlinx.android.synthetic.main.layout_si_details.*
 
 
     //Prod Key and Salt
-    private val prodKey = "xH1qvl"
-    private val prodSalt = "XmxBbtcx1hhfX5UPvpMhh6uE7jb4URRB"
+    private val prodKey = "CSQcrcoa"
+    private val prodSalt = "FzOXL44o"
 
     private lateinit var binding: ActivityMainBinding
 

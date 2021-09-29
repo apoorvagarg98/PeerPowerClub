@@ -41,7 +41,7 @@ public class postkaro extends AppCompatActivity {
     public static  String areaofinterest,dayNight,email,name;
     public FirebaseUser user;
     public DatabaseReference reference,postref;
-    public String userId;
+    public String userId,profileimageuri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +64,7 @@ public class postkaro extends AppCompatActivity {
                 //email = user4profile.email;
                 areaofinterest = user4profile.areaOfInterest;
                 name = user4profile.fullname;
+                profileimageuri = user4profile.imageuri;
 
             }
             @Override
@@ -147,6 +148,7 @@ public class postkaro extends AppCompatActivity {
                                 hashMap.put("postImageUrl",uri.toString());
                                 hashMap.put("caption",postcap);
                                 hashMap.put("uid",userId);
+                                hashMap.put("profileimageuri",profileimageuri);
 
 
                                 postref.child(userId + strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {

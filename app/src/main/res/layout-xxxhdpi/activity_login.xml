@@ -82,17 +82,6 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/remember2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_65sdp"
-
-            android:text="Remember Me"
-            android:textColor="#157575"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
 
         <ImageButton
 
@@ -114,6 +103,14 @@
             android:visibility="visible"
             app:backgroundTint="#ffffff"
             app:srcCompat="@drawable/signin" />
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+
+            />
 
         <TextView
             android:id="@+id/forgotPassword2"
@@ -123,6 +120,16 @@
             android:paddingTop="@dimen/_5sdp"
             android:paddingBottom="@dimen/_8sdp"
             android:text="Forgot Password?"
+            android:textColor="#157575"
+            android:textSize="@dimen/_12sdp" />
+        <TextView
+            android:id="@+id/dontHaveacc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="Dont Have an account.. create one"
             android:textColor="#157575"
             android:textSize="@dimen/_12sdp" />
 

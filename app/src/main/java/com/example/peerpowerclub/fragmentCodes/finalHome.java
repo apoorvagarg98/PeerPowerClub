@@ -25,6 +25,8 @@ import com.example.peerpowerclub.models.user;
 import com.example.peerpowerclub.userProfile;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -80,6 +82,7 @@ public class finalHome extends Fragment {
        recyclerView = view.findViewById(R.id.rv);
      //feedadapter= new feedAdapter();
      recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
     /* attatchpost = view.findViewById(R.id.insertImage);
      sendpost = view.findViewById(R.id.sendpost);
      addcaption = view.findViewById(R.id.captioninsert);*/
@@ -139,8 +142,11 @@ public class finalHome extends Fragment {
 
                 holder.name.setText(model.getname());
                 holder.caption.setText(model.getcaption());
+                Picasso.get().load(model.getProfileimageuri()).into(holder.profilePhoto);
 
                 Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+
+
                 holder.name.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

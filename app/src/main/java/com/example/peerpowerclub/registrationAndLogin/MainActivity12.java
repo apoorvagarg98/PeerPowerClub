@@ -16,31 +16,7 @@ public class MainActivity12 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main12);
-        SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
-        checkbox = preferences.getString("remember","");
-        if(checkbox.equals("true"))
-        { Thread background = new Thread() {
-            public void run() {
-                try {
-                    // Thread will sleep for 5 seconds
-                    sleep(2*1000);
 
-                    // After 5 seconds redirect to another intent
-                    Intent i=new Intent(getBaseContext(), myHome.class);
-                    startActivity(i);
-
-                    //Remove activity
-                    finish();
-                } catch (Exception e) {
-                }
-            }
-        };
-            // start thread
-            background.start();
-
-
-        }
-        else{
 
         Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
@@ -59,7 +35,7 @@ public class MainActivity12 extends AppCompatActivity {
                         sleep(2*1000);
 
                         // After 5 seconds redirect to another intent
-                        Intent i=new Intent(getBaseContext(), startactivity.class);
+                        Intent i=new Intent(getBaseContext(), Login.class);
                         startActivity(i);
 
                         //Remove activity
@@ -78,4 +54,4 @@ public class MainActivity12 extends AppCompatActivity {
                 .putBoolean("isFirstRun", false).commit();
 
     }
-}}
+}
