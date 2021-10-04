@@ -16,11 +16,20 @@ android:orientation="vertical"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/_43sdp"
+        android:paddingLeft="@dimen/_10sdp"
 
-        android:paddingRight="@dimen/_43sdp"
+        android:paddingRight="@dimen/_10sdp"
 
         >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Peer Club Enrollment"/>
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -40,9 +49,9 @@ android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/lginbg"
 
 
+            android:backgroundTint="#FAFBFD"
             android:ems="20"
             android:fontFamily="@font/roboto_slab"
             android:hint="Name:"
@@ -55,8 +64,8 @@ android:orientation="vertical"
             android:paddingBottom="10dp"
             android:shadowColor="#F8EFEF"
             android:textColor="#157575"
-            android:textColorHighlight="#090909"
 
+            android:textColorHighlight="#090909"
             android:textColorLink="#FAF3F3"
             android:textStyle="bold" />
 
@@ -66,21 +75,21 @@ android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/lginbg"
+
+            android:backgroundTint="#FAFBFD"
 
             android:ems="20"
 
             android:fontFamily="@font/roboto_slab"
-
             android:hint="Contact no:"
             android:minHeight="48dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
+
             android:paddingRight="10dp"
-
             android:paddingBottom="10dp"
-            android:textColor="#157575"
 
+            android:textColor="#157575"
             android:textStyle="bold" />
 
         <EditText
@@ -89,20 +98,20 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/lginbg"
+
+            android:backgroundTint="#FAFBFD"
 
             android:ems="20"
 
             android:fontFamily="@font/roboto_slab"
-
             android:hint="Linkedin Id:"
             android:minHeight="48dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:textColor="#157575"
 
+            android:textColor="#157575"
             android:textStyle="bold" />
 
         <EditText
@@ -111,21 +120,21 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/lginbg"
+
+            android:backgroundTint="#FAFBFD"
 
             android:ems="20"
 
             android:fontFamily="@font/roboto_slab"
-
             android:hint="Short Term Goal"
             android:minHeight="48dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
+
             android:paddingRight="10dp"
-
             android:paddingBottom="10dp"
-            android:textColor="#157575"
 
+            android:textColor="#157575"
             android:textStyle="bold" />
 
         <EditText
@@ -134,21 +143,21 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/lginbg"
+
+            android:backgroundTint="#FAFBFD"
 
             android:ems="20"
 
             android:fontFamily="@font/roboto_slab"
-
             android:hint="Long Term Goal"
             android:minHeight="48dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
+
             android:paddingRight="10dp"
-
             android:paddingBottom="10dp"
-            android:textColor="#157575"
 
+            android:textColor="#157575"
             android:textStyle="bold" />
 
         <EditText
@@ -157,21 +166,21 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/lginbg"
+
+            android:backgroundTint="#FAFBFD"
 
             android:ems="20"
 
             android:fontFamily="@font/roboto_slab"
-
             android:hint="Language "
             android:minHeight="48dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
+
             android:paddingRight="10dp"
-
             android:paddingBottom="10dp"
-            android:textColor="#157575"
 
+            android:textColor="#157575"
             android:textStyle="bold" />
 
         <Spinner
@@ -179,7 +188,6 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/lginbg"
 
             android:clipChildren="true"
             android:clipToPadding="true"
@@ -222,17 +230,17 @@ android:orientation="vertical"
 
             android:layout_marginTop="@dimen/_5sdp"
             android:background="@drawable/inpuut_bg"
-            android:fontFamily="@font/roboto_slab"
+            android:fontFamily="@font/roboto_slab_bold"
             android:gravity="center"
             android:minWidth="120dp"
             android:padding="8dp"
             android:singleLine="true"
-            android:text="Update Profile"
+            android:text="Save and Join Club"
             android:textAllCaps="false"
 
             android:textColor="@android:color/white"
             android:textSize="14sp"
-            app:backgroundTint="#157575"
+            app:backgroundTint="#4C72F0"
             app:backgroundTintMode="src_in" />
 
 

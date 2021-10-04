@@ -17,21 +17,25 @@
         android:gravity="center"
         android:orientation="vertical"
 
-        android:paddingLeft="@dimen/_43sdp"
+        android:paddingLeft="@dimen/_10sdp"
 
-        android:paddingRight="@dimen/_43sdp">
+        android:paddingRight="@dimen/_10sdp">
+
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_gravity="center"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp" />
 
         <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center">
 
             <LinearLayout
@@ -45,7 +49,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
@@ -53,7 +56,7 @@
                     android:paddingBottom="10dp"
                     android:text="Name:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -62,14 +65,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Contact No:"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -79,14 +81,13 @@
 
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Email:"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -95,14 +96,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Area Of Interest:"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -111,14 +111,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Preffered Timing:"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -128,14 +127,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Status"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -144,14 +142,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Language"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -160,14 +157,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Short Term Goal"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -176,14 +172,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Long Term Goal"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -192,14 +187,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@drawable/lginbg"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Profile Url"
-                    android:textColor="#157575"
+                    android:textColor="#75777A"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -221,9 +215,11 @@
                     android:textSize="16sp"
 
                     android:textStyle="bold"
-                    app:backgroundTint="#157575" />
+                    app:backgroundTint="#4C72F0" />
             </LinearLayout>
         </ScrollView>
+
+
     </LinearLayout>
 
 

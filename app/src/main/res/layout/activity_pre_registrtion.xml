@@ -13,40 +13,19 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/_43sdp"
+        android:paddingLeft="@dimen/_20sdp"
 
-        android:paddingRight="@dimen/_43sdp"
+        android:paddingRight="@dimen/_20sdp"
 
         >
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
             android:layout_marginBottom="@dimen/_10sdp"
-            app:srcCompat="@drawable/ppc" />
+            app:srcCompat="@drawable/logo" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="@dimen/_10sdp"
-
-            android:fontFamily="@font/aclonica"
-            android:text="Hello!"
-            android:textColor="#F21758BA"
-            android:textSize="@dimen/_18sdp"
-             />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:fontFamily="@font/aclonica"
-            android:text="Signup To Get Started!"
-            android:textColor="#F21758BA"
-            android:textSize="@dimen/_16sdp"
-             />
 
 
         <EditText
@@ -57,79 +36,157 @@
 
             android:autoText="true"
             android:background="@drawable/lginbg"
-            android:drawableLeft="@drawable/ic_baseline_email_241"
+            android:backgroundTint="#FAF3F3"
             android:drawablePadding="@dimen/_5sdp"
             android:ems="20"
             android:fontFamily="@font/roboto_slab"
             android:hint="Email"
             android:includeFontPadding="false"
             android:inputType="textPersonName"
-            android:paddingLeft="10dp"
+            android:paddingLeft="15dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
             android:shadowColor="#F8EFEF"
             android:textColor="#157575"
             android:textColorHighlight="#090909"
+            android:textColorHint="#777575"
             android:textColorLink="#FAF3F3"
             android:textStyle="normal" />
 
-        <EditText
-            android:id="@+id/prepassword"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/lginbg"
-            android:drawableLeft="@drawable/ic_baseline_lock_241"
-            android:drawablePadding="@dimen/_5sdp"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="248dp">
 
-            android:ems="20"
-            android:fontFamily="@font/roboto_slab"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:password="false"
-            android:textColor="#157575"
-            android:textStyle="normal" />
+            <EditText
+                android:id="@+id/prepassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/lginbg"
+                android:backgroundTint="#FAF3F3"
+                android:drawableLeft="@drawable/ic_baseline_lock_241"
 
-        <EditText
-            android:id="@+id/prepassword2"
-            android:layout_width="wrap_content"
+                android:drawablePadding="@dimen/_5sdp"
+                android:ems="20"
+                android:fontFamily="@font/roboto_slab"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:password="false"
+                android:textColor="#157575"
+                android:textStyle="normal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/lginbg"
-            android:drawableLeft="@drawable/ic_baseline_lock_241"
-            android:drawablePadding="@dimen/_5sdp"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="248dp">
 
-            android:ems="20"
-            android:fontFamily="@font/roboto_slab"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:password="false"
-            android:textColor="#157575"
-            android:textStyle="normal" />
+            <EditText
+                android:id="@+id/prepassword2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/lginbg"
+                android:backgroundTint="#FAF3F3"
+                android:drawableLeft="@drawable/ic_baseline_lock_241"
+
+                android:drawablePadding="@dimen/_5sdp"
+                android:ems="20"
+                android:fontFamily="@font/roboto_slab"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:password="false"
+                android:textColor="#157575"
+                android:textStyle="normal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
         <Button
             android:id="@+id/yo"
             android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/inpuut_bg"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:minWidth="120dp"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:text="Sign Up"
+
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:backgroundTint="#4C72F0"/>
+
+        <TextView
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:fontFamily="@font/roboto_slab_light"
+            android:text="-------------------------  or  -------------------------"
+            android:textColor="#141415"
+            android:textSize="@dimen/_12sdp" />
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_20sdp"
-            android:background="@drawable/inpuut_bg"
+
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="By signing up you accept the Terms of Service and Privacy Policy"
+            android:textColor="#5948EA"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+           android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:fontFamily="@font/roboto_slab_bold"
-            android:text="Register"
-            android:textAllCaps="false"
-            android:textSize="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="Already have an account? Log in"
+            android:textColor="#4C72F0"
             android:textStyle="bold"
-            app:backgroundTint="#F21758BA" />
+            android:textSize="@dimen/_12sdp" />
 
 
 
