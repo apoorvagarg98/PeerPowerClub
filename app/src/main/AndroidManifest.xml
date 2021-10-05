@@ -31,6 +31,7 @@
             android:exported="true" />
         <activity android:name=".postkaro" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".scregistered"/>
         <activity android:name=".registrationAndLogin.startactivity" />
         <activity android:name=".registrationAndLogin.Registration" />
         <activity android:name=".registrationAndLogin.Login" />

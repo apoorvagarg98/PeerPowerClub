@@ -60,7 +60,7 @@
             android:minWidth="120dp"
             android:padding="8dp"
             android:singleLine="true"
-            android:text="Back to Home"
+            android:text="login"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="13sp"

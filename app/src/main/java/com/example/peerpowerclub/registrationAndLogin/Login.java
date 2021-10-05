@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -43,9 +44,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN =123;
 
-    private ImageButton  signin;
+    private Button  signin;
     private FirebaseAuth mAuth;
-
+    ProgressDialog mLoadingBar;
 
 
     @Override
@@ -73,6 +74,7 @@ donthaveacc = findViewById(R.id.dontHaveacc);
                 finish();
             }
         });
+        mLoadingBar = new ProgressDialog(this);
 
         editTextForgotpassword = (TextView) findViewById(R.id.forgotPassword2);
         editTextForgotpassword.setOnClickListener(new View.OnClickListener() {
@@ -203,6 +205,10 @@ donthaveacc = findViewById(R.id.dontHaveacc);
             editTextPassword.requestFocus();
             return;
         }
+        else {
+            mLoadingBar.setTitle("logging user");
+            mLoadingBar.setCanceledOnTouchOutside(false);
+            mLoadingBar.show();
 
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -210,7 +216,7 @@ donthaveacc = findViewById(R.id.dontHaveacc);
                 if(task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified())
-                    {
+                    {mLoadingBar.dismiss();
                         Intent intent = new Intent(Login.this,myHome.class);
 
                         startActivity(intent);
@@ -231,5 +237,5 @@ donthaveacc = findViewById(R.id.dontHaveacc);
 
 
         });
-    }
+    }}
 }

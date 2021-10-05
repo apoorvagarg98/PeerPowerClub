@@ -85,20 +85,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <CheckBox
-            android:id="@+id/c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_95sdp"
 
-            android:text="Show Password"
-            android:textColor="#4C72F0"
-            android:textSize="10sp"
-            android:textStyle="bold" />
 
         <Button
 
-
+            android:layout_marginTop="@dimen/_20sdp"
             android:id="@+id/btnLogin2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"

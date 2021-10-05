@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class preRegistrtion extends AppCompatActivity {
 TextView preemail,prepass,prepass2;
     private FirebaseAuth mAuth;
 Button preregister;
+    ProgressDialog mLoadingBar;
 
 
     public static Uri imageUri;
@@ -47,6 +49,8 @@ Button preregister;
         prepass = findViewById(R.id.prepassword);
         prepass2 = findViewById(R.id.prepassword2);
         mAuth = FirebaseAuth.getInstance();
+        mLoadingBar = new ProgressDialog(this);
+
         preregister = findViewById(R.id.yo);
 preregister.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -81,32 +85,37 @@ preregister.setOnClickListener(new View.OnClickListener() {
             return;
 
         }
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                HashMap hashMap = new HashMap();
-                hashMap.put("email",email);
+        else {
+            mLoadingBar.setTitle("Registering user");
+            mLoadingBar.setCanceledOnTouchOutside(false);
+            mLoadingBar.show();
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    HashMap hashMap = new HashMap();
+                    hashMap.put("email", email);
 
-                hashMap.put("areaOfInterest","");
-                FirebaseUser user;
-                user = FirebaseAuth.getInstance().getCurrentUser();
-                FirebaseDatabase.getInstance().getReference("users").child(user.getUid())
-                        .setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                        Toast.makeText(preRegistrtion.this, "done", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(preRegistrtion.this, Login.class));
-                        finish();}
-                        else {
-                            Toast.makeText(preRegistrtion.this, "failed", Toast.LENGTH_SHORT).show();
+                    hashMap.put("areaOfInterest", "");
+                    FirebaseUser user;
+                    user = FirebaseAuth.getInstance().getCurrentUser();
+                    FirebaseDatabase.getInstance().getReference("users").child(user.getUid())
+                            .setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                mLoadingBar.dismiss();
+                                Toast.makeText(preRegistrtion.this, "done", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(preRegistrtion.this, scregistered.class));
+                                finish();
+                            } else {
+                                Toast.makeText(preRegistrtion.this, "failed", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
-            }
-        });
+                    });
+                }
+            });
 
-
+        }
 
     }
 }

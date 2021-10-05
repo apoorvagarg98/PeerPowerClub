@@ -79,7 +79,7 @@ hey = false;
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.child("areaOfInterest").getValue().toString().equals("")){
-                            startActivity(new Intent(myHome.this, Registration.class));
+                            startActivity(new Intent(myHome.this, joinchat.class));
                         }
                         else{
                             getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new Fragment1()).commit();
@@ -93,8 +93,28 @@ hey = false;
                     }
                 });
               break;}
-            case R.id.addPost:
-                startActivity(new Intent(myHome.this,postkaro.class));
+            case R.id.addPost:{
+                userka.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.child("areaOfInterest").getValue().toString().equals("")){
+                            startActivity(new Intent(myHome.this, joinchat.class));
+
+                        }
+                        else{
+                            startActivity(new Intent(myHome.this,postkaro.class));
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+                break;
+            }
+
+
 
         }
 
@@ -113,7 +133,7 @@ hey = false;
                     break;
                 case R.id.chat_bottom:{
 
-if(hey == true){                startActivity(new Intent(myHome.this,Registration.class));
+if(hey == true){                startActivity(new Intent(myHome.this,joinchat.class));
 }
 else {
 selected[0] = new Fragment2Chat();}
