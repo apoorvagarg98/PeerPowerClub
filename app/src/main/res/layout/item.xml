@@ -2,104 +2,252 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
 
 
     android:orientation="vertical"
     tools:context=".adapters.myViewHolder">
 
-    <LinearLayout
 
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-
-        >
-
-
-    <androidx.cardview.widget.CardView
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        android:animationCache="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-
-
-        app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="5dp">
+        android:layout_height="wrap_content">
 
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+
+            android:orientation="vertical"
+
+            android:paddingLeft="@dimen/_10sdp"
+
+            android:paddingRight="@dimen/_10sdp"
+
+            >
+
 
             <LinearLayout
+
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:paddingLeft="@dimen/_5sdp"
+
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="Peer Clubs (Free)"
+                    android:textColor="#303030"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:paddingLeft="@dimen/_120sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="View more"
+                    android:textColor="#303030"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:orientation="horizontal"
+
+
+                >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:paddingLeft="@dimen/_5sdp"
+
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="Peer Training (Paid)"
+                    android:textColor="#303030"
+
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:paddingLeft="@dimen/_100sdp"
+
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="View more"
+                    android:textColor="#303030"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal" />
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
                 android:orientation="horizontal">
 
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/feedprofilephoto"
-                    android:layout_width="55dp"
-                    android:layout_height="match_parent"
-
-                    android:layout_marginBottom="@dimen/_2sdp"
-                    android:src="@drawable/ic_baseline_person_24"
-                    app:civ_border_color="#FF000000"
-                    app:civ_border_width="2dp" />
-
                 <TextView
-                    android:id="@+id/loo"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
 
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="Feed"
+                    android:textColor="#303030"
+                    android:textSize="@dimen/_12sdp" />
 
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_220sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
 
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:paddingLeft="2dp"
-                    android:paddingTop="5dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="Filter"
+                    android:textColor="#303030"
+                    android:textSize="@dimen/_12sdp" />
 
-                    android:text="Id:"
-                    android:textColor="#157575"
-                    android:textSize="@dimen/_18sdp"
-                    android:textStyle="bold" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/feedimage"
-                android:layout_gravity="center"
+
+            <androidx.cardview.widget.CardView
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:animationCache="true"
+                android:clipChildren="true"
+                android:clipToPadding="true"
 
-                tools:srcCompat="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/caption"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="5dp">
 
-                android:drawableLeft="@drawable/ic_baseline_nat_24"
-                android:drawablePadding="@dimen/_5sdp"
-                android:fontFamily="@font/roboto_slab"
-                android:paddingLeft="@dimen/_5sdp"
-                android:text="Caption:"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/feedprofilephoto"
+                            android:layout_width="55dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:src="@drawable/ic_baseline_person_24"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:id="@+id/loo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            android:fontFamily="@font/roboto_slab_bold"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="@dimen/_5sdp"
+
+                            android:text="Id:"
+                            android:textColor="#303030"
+                            android:textSize="@dimen/_16sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/feedimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_slab"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="Caption:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

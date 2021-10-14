@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".joinchat"
-    android:background="@drawable/bggg"
+
     android:orientation="vertical">
 
 
@@ -22,20 +22,40 @@
 
         android:paddingRight="@dimen/_10sdp">
 
-        <TextView
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/roboto_slab_bold"
-            android:text="Peer Chat"
-            android:textColor="#2B26C1"
-            android:textSize="@dimen/_16sdp"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="@dimen/_46sdp"
+                android:layout_height="@dimen/_43sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+
+
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Join XYZ Club"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#303030"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_18sdp"/>
+
+        </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             app:srcCompat="@drawable/chatjoin" />
 
@@ -44,11 +64,11 @@
             android:layout_width="@dimen/_200sdp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:fontFamily="@font/roboto_slab_bold"
+            android:fontFamily="@font/roboto_slab"
             android:gravity="center"
             android:paddingTop="@dimen/_5sdp"
             android:text="Peer-to-Peer Learning  Chat with people of same mindset and goals "
-            android:textColor="#3623DC"
+            android:textColor="#303030"
             android:textSize="@dimen/_16sdp" />
 
         <TextView
@@ -56,38 +76,28 @@
             android:layout_width="@dimen/_200sdp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:fontFamily="@font/roboto_slab_bold"
+            android:fontFamily="@font/roboto_slab"
             android:gravity="center"
             android:paddingTop="@dimen/_5sdp"
-            android:text="Join Peer Club and start learning"
-            android:textColor="#3623DC"
+            android:text="📚 Join Peer Club and start learning"
+            android:textColor="#303030"
             android:textSize="@dimen/_16sdp" />
 
         <Button
 
 
-            android:id="@+id/joinpeer"
-            android:layout_width="@dimen/_220sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:id="@+id/joinpeerfirstpage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-            android:layout_marginTop="@dimen/_30sdp"
-            android:background="@drawable/inpuut_bg"
-
-            android:fontFamily="@font/roboto_slab_bold"
-            android:gravity="center"
-
-
-            android:minWidth="120dp"
-            android:padding="8dp"
-            android:singleLine="true"
-            android:text="Join Peer Club"
-
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:padding="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="Join XYZ club"
+            android:textSize="@dimen/_13sdp"
             android:textAllCaps="false"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            android:visibility="visible"
-            app:backgroundTint="#4C72F0" />
+            app:backgroundTint="#4C72F0"/>
 
 
     </LinearLayout>

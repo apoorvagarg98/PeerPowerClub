@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/bggg"
+
     android:orientation="vertical">
 
 
@@ -20,20 +20,47 @@
         android:paddingLeft="@dimen/_10sdp"
 
         android:paddingRight="@dimen/_10sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Peer Club Enrollment"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#303030"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_15sdp"
+                />
+        </LinearLayout>
 
 
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="115dp"
+            android:layout_height="108dp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_gravity="center"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp" />
 
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_marginTop="@dimen/_15sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
@@ -46,129 +73,196 @@
 
                 <TextView
                     android:id="@+id/name"
-                    android:layout_width="match_parent"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+
+                    android:background="@drawable/textviewbg"
+                    android:backgroundTint="#FAFBFD"
+                    android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Name:"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#75777A"
-                    android:textSize="@dimen/_12sdp"
+                    android:hint="Fullname:"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/_10sdp"
+                    android:shadowColor="#F8EFEF"
+                    android:textColor="#131313"
+
+                    android:textColorHighlight="#090909"
+                    android:textColorLink="#FAF3F3"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/phonenumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Contact No:"
-                    android:textColor="#75777A"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Email"
-                    android:layout_width="match_parent"
-
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Email:"
-                    android:textColor="#75777A"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="@dimen/_5sdp"
 
-                <TextView
-                    android:id="@+id/areaofinterest"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Area Of Interest:"
-                    android:textColor="#75777A"
-                    android:textSize="@dimen/_12sdp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/textviewbg"
 
-                <TextView
-                    android:id="@+id/prefferedtime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:backgroundTint="#FAFBFD"
+                    android:textColorHint=" #9D9FA0"
+
+                    android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Preffered Timing:"
-                    android:textColor="#75777A"
-                    android:textSize="@dimen/_12sdp"
+                    android:hint="Email:"
+                    android:minHeight="48dp"
+
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#131313"
                     android:textStyle="bold" />
 
 
                 <TextView
-                    android:id="@+id/status"
+                    android:id="@+id/phonenumber"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+                    android:textColorHint=" #9D9FA0"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:hint="Number:"
+                    android:minHeight="48dp"
+
+                    android:padding="@dimen/_10sdp"
+  android:textColor="#131313"
+                    android:textStyle="bold" />
+
+                <TextView
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="Skills that you are good at:"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#556161"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/skills"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Status"
-                    android:textColor="#75777A"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Skills:"
+                    android:textColor="#595B5E"
+                    android:textColorHint=" #9D9FA0"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+                <TextView
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="Skills that you want to learn:"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#556161"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/pSkillstolearn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Skills to learn:"
+                    android:textColor="#595B5E"
+                    android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lng"
-                    android:layout_width="match_parent"
+
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Language"
-                    android:textColor="#75777A"
-                    android:textSize="@dimen/_12sdp"
+                    android:text="Short term goal: (one year)"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#556161"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
+
                 <TextView
-                    android:id="@+id/stg"
+                    android:id="@+id/shortTermGoal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
+                    android:padding="@dimen/_10sdp"
                     android:text="Short Term Goal"
-                    android:textColor="#75777A"
+                    android:textColor="#595B5E"
+                    android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/ltg"
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="Long term goals: (Five year)"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#556161"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/longTermGoal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
@@ -177,45 +271,178 @@
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:text="Long Term Goal"
-                    android:textColor="#75777A"
+                    android:text="Long Term Goals"
+                    android:textColor="#595B5E"
+                    android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+                <TextView
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="Available for Personal Peer Call:"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#556161"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dayornight"
+                        android:layout_width="@dimen/_136sdp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:clipChildren="true"
+                        android:clipToPadding="true"
+                        android:contentDescription="@string/Dayornight"
+
+                        android:drawingCacheQuality="high"
+                        android:dropDownWidth="match_parent"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:spinnerMode="dropdown"
+
+
+                        android:splitMotionEvents="true" />
+
+                    <TextView
+                        android:id="@+id/timeforcall"
+                        android:layout_width="@dimen/_136sdp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:clipChildren="true"
+                        android:clipToPadding="true"
+                        android:contentDescription="@string/time"
+
+                        android:drawingCacheQuality="high"
+                        android:dropDownWidth="match_parent"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:spinnerMode="dropdown"
+
+
+                        android:splitMotionEvents="true" />
+
+                </LinearLayout>
+
+
+                <TextView
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:backgroundTint="#FAFBFD"
+                    android:gravity="center"
+
+                    android:ems="20"
+
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="Social Media Links"
+                    android:minHeight="48dp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#0E0E0E"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/profileurl"
+                    android:id="@+id/linkedIdProfileUrl"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Profile Url"
-                    android:textColor="#75777A"
-                    android:textSize="@dimen/_12sdp"
+                    android:hint="Linkedin Id:"
+                    android:minHeight="48dp"
+
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#157575"
                     android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/logout"
-                    android:layout_width="@dimen/_189sdp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="110dp"
-                    android:layout_marginLeft="110dp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginEnd="110dp"
-                    android:layout_marginRight="110dp"
-                    android:background="@drawable/inpuut_bg"
-                    android:fontFamily="@font/roboto_slab_bold"
-                    android:text="Log Out"
-                    android:textAllCaps="false"
-                    android:textColor="#F8F5F5"
-                    android:textSize="16sp"
+                <TextView
+                    android:id="@+id/instagram"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
 
-                    android:textStyle="bold"
-                    app:backgroundTint="#4C72F0" />
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:hint="Instagram:"
+                    android:minHeight="48dp"
+
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#157575"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/twitter"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:hint="Twitter:"
+                    android:minHeight="48dp"
+
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#157575"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/other"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:background="@drawable/textviewbg"
+
+                    android:backgroundTint="#FAFBFD"
+
+                    android:ems="20"
+                    android:fontFamily="@font/roboto_slab"
+                    android:hint="Others:"
+                    android:minHeight="48dp"
+
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#157575"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:textStyle="bold" />
+
             </LinearLayout>
         </ScrollView>
 

@@ -15,6 +15,18 @@
         android:theme="@style/Theme.PeerPowerClub"
         tools:replace="android:theme">
         <activity
+            android:name=".Chatmenusettings"
+            android:exported="true" />
+        <activity
+            android:name=".Menu"
+            android:exported="true" />
+        <activity
+            android:name=".alreadyinaclub"
+            android:exported="true" />
+        <activity
+            android:name=".Alltraining"
+            android:exported="true" />
+        <activity
             android:name=".Resetpassword"
             android:exported="true" />
         <activity
@@ -31,7 +43,7 @@
             android:exported="true" />
         <activity android:name=".postkaro" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".scregistered"/>
+        <activity android:name=".scregistered" />
         <activity android:name=".registrationAndLogin.startactivity" />
         <activity android:name=".registrationAndLogin.Registration" />
         <activity android:name=".registrationAndLogin.Login" />

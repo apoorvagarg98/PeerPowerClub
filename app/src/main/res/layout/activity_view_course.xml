@@ -11,7 +11,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+
+        android:paddingLeft="@dimen/_10sdp"
+
+        android:paddingRight="@dimen/_10sdp">
 
 
 
@@ -25,17 +29,35 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/badacoursename"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:fontFamily="@font/roboto_slab_bold"
-                    android:gravity="center"
-                    android:text="TextView"
-                    android:textColor="#157575"
-                    android:textSize="40sp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="@dimen/_46sdp"
+                        android:layout_height="@dimen/_43sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Training Details"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="#303030"
+                        android:fontFamily="@font/roboto_slab_bold"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_18sdp"
+                        />
+                </LinearLayout>
+
+
 
                 <ImageView
                     android:id="@+id/bigcourseImage"
@@ -44,7 +66,17 @@
                     android:layout_gravity="center"
 
                     tools:srcCompat="@tools:sample/avatars" />
-
+                <TextView
+                    android:id="@+id/badacoursename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                  android:paddingLeft="@dimen/_10sdp"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/LongDescription"
                     android:layout_width="match_parent"
@@ -59,8 +91,8 @@
                     android:scrollbars="vertical"
                     android:scrollHorizontally="true"
                     android:text="TextView"
-                    android:textColor="#040404"
-                    android:textSize="20sp"
+                    android:textColor="#9D9FA0"
+                    android:textSize="14sp"
                     android:textStyle="normal"
                     android:verticalScrollbarPosition="right" />
 
@@ -70,21 +102,18 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_gravity="center"
-                    android:background="@drawable/inpuut_bg"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:text="Pay 200 INR Only"
+                    android:text="Enroll"
                     android:textAllCaps="false"
                     android:textSize="16sp"
-                    app:backgroundTint="#157575" />
+                    android:background="@drawable/box"
+                    />
 
-                <TextView
-                    android:id="@+id/linkForGroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="79dp"
-                    android:autoLink="all"
-                    android:linksClickable="true"
-                    android:text="link"
-                    android:visibility="invisible" />
+
 
             </LinearLayout>
         </ScrollView>

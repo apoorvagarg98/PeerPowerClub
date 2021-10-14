@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgwithlogo"
+
     tools:context=".registrationAndLogin.startactivity">
 
     <LinearLayout
@@ -18,67 +18,80 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/_43sdp"
+        android:paddingLeft="@dimen/_15sdp"
         android:paddingTop="@dimen/_20sdp"
-        android:paddingRight="@dimen/_43sdp"
+        android:paddingRight="@dimen/_15sdp"
         android:paddingBottom="@dimen/_10sdp">
 
-        <ImageView
+        <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_minus10sdp"
-            android:layout_marginBottom="@dimen/_100sdp"
-            android:background="@drawable/logo"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="Welcome to Peer Power Club"
+            android:textColor="#1B1B1B"
+            android:textSize="@dimen/_14sdp" />
 
-            />
+        <TextView
 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="Experience the power of Association"
+            android:textColor="#1B1B1B"
+            android:textSize="@dimen/_16sdp" />
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_minus20sdp"
-            android:layout_marginBottom="@dimen/_30sdp"
-
-            android:background="@drawable/inpuut_bg"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/box"
             android:fontFamily="@font/roboto_slab_bold"
-            android:gravity="center"
-            android:includeFontPadding="false"
 
-            android:padding="2dp"
+            android:gravity="center"
+            android:minWidth="120dp"
+            android:paddingTop="@dimen/_10sdp"
+
+            android:padding="@dimen/_10sdp"
             android:singleLine="true"
-            android:text="Sign In"
+
+            android:text="Log In"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="16sp"
+            android:textStyle="normal"
             android:visibility="visible"
-            app:backgroundTint="#157575"
-            app:backgroundTintMode="screen" />
+            app:backgroundTint="#4C72F0" />
 
         <Button
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_minus18sdp"
-            android:layout_marginBottom="@dimen/_30sdp"
-            android:background="@drawable/inpuut_bg"
-
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/box"
             android:fontFamily="@font/roboto_slab_bold"
-            android:gravity="center"
-            android:includeFontPadding="false"
 
-            android:padding="2dp"
+            android:gravity="center"
+            android:minWidth="120dp"
+            android:paddingTop="@dimen/_10sdp"
+
+       android:padding="@dimen/_10sdp"
             android:singleLine="true"
+
             android:text="Sign Up"
             android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="16sp"
+            android:textStyle="normal"
             android:visibility="visible"
-            app:backgroundTint="#157575"
-            app:backgroundTintMode="screen" />
+            app:backgroundTint="#4C72F0" />
 
     </LinearLayout>
 

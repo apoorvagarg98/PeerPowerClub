@@ -24,11 +24,61 @@
         <item> UI/UX designing</item>
         <item> No-Code and WordPress development</item>
 
+    </string-array>
+
+    <string name="skills">PeerPowerClub</string>
+
+    <string-array name="skills">
+
+        <item> Web Developer</item>
+        <item> App Developer</item>
+
+
+    </string-array>
+
+    <string name="skills_to_learn">PeerPowerClub</string>
+
+    <string-array name="skills_to_learn">
+
+        <item> Full stack Web Development</item>
+        <item> Python </item>
+        <item> Java </item>
+        <item> Kotlin </item>
+
+
+    </string-array>
+
+    <string name="Dayornight">PeerPowerClub</string>
+
+    <string-array name="dayornight">
+
+        <item> Sat</item>
+        <item> Sun</item>
+        <item> Mon</item>
+        <item> Tue</item>
+        <item> Wed</item>
+        <item> Thurs</item>
+        <item> Fri</item>
+
+
+    </string-array>
+
+    <string name="time">PeerPowerClub</string>
+
+    <string-array name="time">
+
+        <item> 8am-10am</item>
+        <item> 10am-12pm</item>
+        <item> 1pm-3pm</item>
+        <item> 3pm-6pm</item>
+        <item> 6pm-8pm</item>
+        <item> 8pm-10pm</item>
+
 
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="transaction_cancelled_by_user">Transaction cancelled by user</string>
+    <string name="transaction_cancelled_by_user">Transaction cancelled by the user</string>
     <string name="some_error_occurred">Some error occurred...</string>
 
     <string name="default_web_client_i" translatable="false">592473456574-4k69d6g5s10sokkim3lpacok29v9bk1r.apps.googleusercontent.com</string>

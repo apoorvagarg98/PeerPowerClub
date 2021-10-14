@@ -8,6 +8,8 @@
     tools:context=".coursesItem">
 
 
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,16 +25,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/CourseName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Course Name"
 
-                android:textColor="#157575"
-                android:textSize="34sp"
-                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/courseImage"
@@ -41,21 +34,40 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
+                android:id="@+id/CourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+           android:padding="@dimen/_8sdp"
+                android:text="Course Name"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textColor="#4C72F0"
+                android:textSize="@dimen/_18sdp"
+            />
+
+            <TextView
                 android:id="@+id/shortdesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+               android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
                 android:text="Course Description"
-                android:textColor="@color/black"
+                android:textColor="#9D9FA0"
                 android:textStyle="normal" />
 
             <Button
                 android:id="@+id/enrollNow"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="enroll Now"
-                app:backgroundTint="#157575" />
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_12sdp"
+                android:fontFamily="@font/roboto_slab"
+                android:text="Enroll"
+                android:textSize="@dimen/_15sdp"
+                android:textAllCaps="false"
+                app:backgroundTint="#4C72F0" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

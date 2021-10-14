@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bggg"
+
     android:gravity="center"
     tools:context=".scregistered">
 
@@ -22,52 +22,55 @@
 
         >
 
-    <ImageView
-        android:id="@+id/tick"
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_120sdp"
-        android:layout_marginLeft="@dimen/_100sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_100sdp"
-        android:background="@drawable/check"
-        android:gravity="center"
+        <ImageView
+            android:id="@+id/tick"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginLeft="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_100sdp"
+            android:background="@drawable/scregisters"
+            android:gravity="center"
 
-        />
+            />
 
         <TextView
             android:id="@+id/forgotPassword2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:fontFamily="@font/roboto_slab"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_slab_bold"
             android:gravity="center"
             android:text="Sucessfully Registered!"
-            android:textColor="#157575"
+            android:textColor="#4C72F0"
             android:textSize="@dimen/_16sdp"
-            android:textStyle="normal" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btngotohome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_40sdp"
-            android:layout_marginBottom="@dimen/_40sdp"
-            android:background="@drawable/inpuut_bg"
+
+            android:layout_marginTop="@dimen/_30sdp"
+
             android:fontFamily="@font/roboto_slab_bold"
-
             android:gravity="center"
-            android:minWidth="120dp"
-            android:padding="8dp"
-            android:singleLine="true"
-            android:text="login"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:textSize="13sp"
-            android:visibility="visible"
-            app:backgroundTint="#157575"
-            app:backgroundTintMode="src_in" />
 
-</LinearLayout>
+
+            android:minWidth="120dp"
+
+            android:singleLine="true"
+            android:text=" ➜ Go to Log In page ➜"
+
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:backgroundTint="#4C72F0" />
+
+    </LinearLayout>
 
 </RelativeLayout>
