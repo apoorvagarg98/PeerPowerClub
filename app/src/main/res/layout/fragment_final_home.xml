@@ -6,6 +6,161 @@
     android:layout_height="wrap_content"
     tools:context=".fragmentCodes.finalHome">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:paddingLeft="@dimen/_10sdp"
+
+        android:paddingRight="@dimen/_10sdp"
+
+        >
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:paddingLeft="@dimen/_5sdp"
+
+            android:paddingTop="@dimen/_10sdp"
+            android:text="Peer Clubs (Free)"
+            android:textColor="#303030"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            android:fontFamily="@font/roboto_slab_bold"
+            android:paddingLeft="@dimen/_120sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="View more"
+            android:textColor="#303030"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal" />
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:orientation="horizontal"
+
+
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:paddingLeft="@dimen/_5sdp"
+
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Peer Training (Paid)"
+                android:textColor="#303030"
+
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:paddingLeft="@dimen/_100sdp"
+
+                android:paddingTop="@dimen/_10sdp"
+                android:text="View more"
+                android:textColor="#303030"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal" />
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/roboto_slab_bold"
+
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Feed"
+                android:textColor="#303030"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_220sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+
+                android:fontFamily="@font/roboto_slab_bold"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Filter"
+                android:textColor="#303030"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+
+
     <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
@@ -16,6 +171,9 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:stackFromEnd="true"
         tools:listitem="@layout/item" />
+
+    </LinearLayout>
+    </ScrollView>
 
 
 </FrameLayout>

@@ -11,12 +11,12 @@ import com.example.peerpowerclub.R;
 
 public class grpviewholder  extends RecyclerView.ViewHolder {
 public ImageView pf;
-public TextView nameingroup,status;
+public TextView nameingroup;
     public grpviewholder(@NonNull View itemView) {
         super(itemView);
         pf = itemView.findViewById(R.id.groupwalekaphoto);
         nameingroup = itemView.findViewById(R.id.groupParticipantname);
-        status = itemView.findViewById(R.id.statusofGroupParticipant);
+
 
     }
 }

@@ -74,7 +74,7 @@ public class groupparticipants extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull grpviewholder holder, @SuppressLint("RecyclerView") int position, @NonNull com.example.peerpowerclub.models.user model) {
-                holder.status.setText(model.status);
+
                 holder.nameingroup.setText(model.fullname);
                 Picasso.get().load(model.imageuri).into(holder.pf);
                 holder.nameingroup.setOnClickListener(new View.OnClickListener() {
