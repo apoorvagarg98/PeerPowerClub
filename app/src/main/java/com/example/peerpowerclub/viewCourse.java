@@ -64,7 +64,7 @@ public class viewCourse extends AppCompatActivity  {
         TextView cn = findViewById(R.id.badacoursename);
         TextView cld = findViewById(R.id.LongDescription);
         ImageView ci = findViewById(R.id.bigcourseImage);
-         link = findViewById(R.id.linkForGroup);
+
         cn.setText(coursename);
         cld.setText(courseLongDescription);
         Picasso.get().load(courseimageuri).into(ci);

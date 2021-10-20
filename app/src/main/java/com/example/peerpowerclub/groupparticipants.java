@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.peerpowerclub.adapters.grpviewholder;
 import com.example.peerpowerclub.adapters.myViewHolder;
@@ -48,10 +49,11 @@ public class groupparticipants extends AppCompatActivity {
         profileImageRef = FirebaseStorage.getInstance().getReference().child("profilePhotos");
         mLoadingBar = new ProgressDialog(this);
         user = FirebaseAuth.getInstance().getCurrentUser();
+        TextView na =  findViewById(R.id.na);
       //  group= FirebaseDatabase.getInstance().getReference("groups");
         groupname= getIntent().getStringExtra("gt");
         profiletref = FirebaseDatabase.getInstance().getReference("groups").child(groupname).child("users");
-
+na.setText(groupname);
         userId = user.getUid();
         loadParticipant();
 
@@ -74,7 +76,7 @@ public class groupparticipants extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull grpviewholder holder, @SuppressLint("RecyclerView") int position, @NonNull com.example.peerpowerclub.models.user model) {
-                holder.status.setText(model.status);
+
                 holder.nameingroup.setText(model.fullname);
                 Picasso.get().load(model.imageuri).into(holder.pf);
                 holder.nameingroup.setOnClickListener(new View.OnClickListener() {

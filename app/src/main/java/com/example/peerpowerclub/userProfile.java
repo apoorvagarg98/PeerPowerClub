@@ -51,7 +51,7 @@ public class userProfile extends AppCompatActivity {
                     dayNight= user4profile.prefferedTime;
                     ltg = user4profile.ltg;
                     stg = user4profile.stg;
-                    ln = user4profile.language;
+
                     prl = user4profile.profileurl;
 
                     String phone = user4profile.phonenumber;
@@ -67,7 +67,7 @@ public class userProfile extends AppCompatActivity {
                     status.setText("Status: " + user4profile.status);
                     shtg.setText("short term goal:" + user4profile.stg);
                     lotg.setText("long term goal:" + user4profile.ltg);
-                    lng.setText("language: " + user4profile.language);
+
                     purl.setText("profileUrl:" + user4profile.profileurl);
                     Picasso.get().load(user4profile.imageuri).into(profilephoto);
 

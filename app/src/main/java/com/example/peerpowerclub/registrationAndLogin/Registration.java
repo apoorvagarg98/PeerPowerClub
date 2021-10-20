@@ -10,8 +10,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
-import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,17 +19,13 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
-import com.example.peerpowerclub.BroadcastService;
 import com.example.peerpowerclub.R;
-import com.example.peerpowerclub.fragmentCodes.Fragment1;
 import com.example.peerpowerclub.fragmentCodes.Fragment2Chat;
 import com.example.peerpowerclub.models.user;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -44,7 +38,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Registration extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
-    private EditText editTextname,  editTextphonenumber,language,profileurl,stg,ltg;
+    private EditText editTextname,  editTextphonenumber,profileurl,stg,ltg,instapro,twitterpro,otherpro;
     private TextView registeruser;
     public static  final int REQUEST_CODE = 101;
     public static Uri imageUri;
@@ -54,12 +48,15 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
     FirebaseUser user;
-    ToggleButton toggleButton;
-  public static String AreaofInterest = "automobile",daynight = "day";
+
+  public static String AreaofInterest = "automobile",daynight = "sunday",timecall = " 8am-10am",skillsknow="python";
     ArrayAdapter<CharSequence> adapter;
+    ArrayAdapter<CharSequence> adapter2;
+    ArrayAdapter<CharSequence> adapter3;
+    ArrayAdapter<CharSequence> adapter4;
     DatabaseReference groups;
 
-    Spinner spinner;
+    Spinner spinner,dayskaspin,timeforcall,skillsuknow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,10 +64,15 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
         profilePhoto = findViewById(R.id.groupwalekaphoto);
         user = FirebaseAuth.getInstance().getCurrentUser();
-        language = findViewById(R.id.languages);
+
+        skillsuknow= findViewById(R.id.skills);
         profileurl = findViewById(R.id.linkedIdProfileUrl);
-        ltg = findViewById(R.id.longTermGoal);
-        stg = findViewById(R.id.shortTermGoal);
+        ltg = findViewById(R.id.ltg);
+        stg = findViewById(R.id.stg2);
+        instapro = findViewById(R.id.instagram);
+        twitterpro = findViewById(R.id.twitter);
+        otherpro = findViewById(R.id.other);
+        timeforcall= findViewById(R.id.timeforcall);
         registeruser = (Button) findViewById(R.id.preg);
         profilePhotoImageRef = FirebaseStorage.getInstance().getReference().child("profilePhotos");
         registeruser.setOnClickListener(this);
@@ -78,28 +80,60 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
         editTextphonenumber = (EditText) findViewById(R.id.contact);
 
-        toggleButton = findViewById(R.id.dayNight);
+        dayskaspin = findViewById(R.id.dayornight);
         groups = FirebaseDatabase.getInstance().getReference().child("groups");
-        spinner = findViewById(R.id.interest);
+        spinner = findViewById(R.id.Skillstolearn);
          adapter = ArrayAdapter.createFromResource(this,R.array.subjects, android.R.layout.simple_spinner_item);
+         adapter2 = ArrayAdapter.createFromResource(this,R.array.dayornight, android.R.layout.simple_spinner_item);
+         adapter3= ArrayAdapter.createFromResource(this,R.array.time, android.R.layout.simple_spinner_item);
+         adapter4= ArrayAdapter.createFromResource(this,R.array.skills, android.R.layout.simple_spinner_item);
          adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+         adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
          spinner.setAdapter(adapter);
+        dayskaspin.setAdapter(adapter2);
+        timeforcall.setAdapter(adapter3);
+        skillsuknow.setAdapter(adapter4);
          spinner.setOnItemSelectedListener(this);
+        dayskaspin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                daynight = adapterView.getItemAtPosition(i).toString();
+            }
 
-         toggleButton.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 if(toggleButton.isChecked())
-                 {
-                     daynight = "Night";
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(Registration.this, "please select", Toast.LENGTH_SHORT).show();
 
-                 }
-                 else {
-                     daynight = "day";
-                 }
+            }
+        });
+        timeforcall.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                timecall = adapterView.getItemAtPosition(i).toString();
+            }
 
-             }
-         });
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(Registration.this, "please select", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        skillsuknow.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                skillsknow=adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(Registration.this, "please select", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
 
 profilePhoto.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -134,7 +168,9 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
         String profilekaurl = profileurl.getText().toString();
         String longtm = ltg.getText().toString();
         String shorttm= stg.getText().toString();
-        String languageSpoken = language.getText().toString();
+        String insta= instapro.getText().toString();
+        String twitter= twitterpro.getText().toString();
+        String others= otherpro.getText().toString();
 
 
         if (imageUri == null) {
@@ -144,6 +180,21 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
         if (name.isEmpty()) {
             editTextname.setError("full name required");
             editTextname.requestFocus();
+            return;
+        }
+        if (insta.isEmpty()) {
+            instapro.setError("insta profile required");
+            instapro.requestFocus();
+            return;
+        }
+        if (twitter.isEmpty()) {
+            twitterpro.setError("twitter profile required");
+            twitterpro.requestFocus();
+            return;
+        }
+        if (others.isEmpty()) {
+            otherpro.setError("full name required");
+           otherpro.requestFocus();
             return;
         }
         if (profilekaurl.isEmpty()) {
@@ -161,11 +212,7 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
             ltg.requestFocus();
             return;
         }
-        if (languageSpoken.isEmpty()) {
-           language.setError("languages Spoken required");
-            language.requestFocus();
-            return;
-        }
+
 
 
         if (phone.isEmpty()) {
@@ -187,7 +234,7 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onSuccess(Uri uri) {
                             Toast.makeText(Registration.this, "done", Toast.LENGTH_LONG).show();
-                            useR[0] = new user(name,  phone, AreaofInterest, daynight, status, uri.toString(),profilekaurl,shorttm,longtm,languageSpoken,user.getUid().toString());
+                            useR[0] = new user(name,  phone, AreaofInterest, daynight, status, uri.toString(),profilekaurl,shorttm,longtm,user.getUid().toString(),insta,twitter,others,timecall ,skillsknow);
                             FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -252,6 +299,7 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+        Toast.makeText(Registration.this, "please select", Toast.LENGTH_SHORT).show();
 
     }
 }

@@ -19,7 +19,7 @@
     <item android:title="Menu"
         android:icon="@drawable/ic_baseline_menufour"
         app:showAsAction="always"
-        android:id="@+id/courses_bottom"/>
+        android:id="@+id/menu"/>
 
 
 </menu>

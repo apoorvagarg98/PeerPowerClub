@@ -37,30 +37,18 @@ public class Fragment1 extends Fragment {
     private FirebaseUser user;
     public DatabaseReference reference;
     private String userId;
-    static  String areaofinterest,dayNight,email,ltg,stg,ln,prl;
+    static  String areaofinterest,dayNight,email,ltg,stg,prl,insta,twitter,others,timecall ,skillsknow;
     public CircleImageView profilephoto;
 
 
 
-    private Button buttons,logout;
+    private Button buttons;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1home,container,false);
-        logout = view.findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
 
-                Intent intent = new Intent(getActivity(), Login.class);
 
-                startActivity(intent);
-
-                getActivity().finish();
-
-            }
-        });
 
         profilephoto = view.findViewById(R.id.profile_image);
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -69,13 +57,20 @@ public class Fragment1 extends Fragment {
         final TextView fullnameTextView = (TextView) view.findViewById(R.id.name);
         final TextView emailTextView = (TextView) view.findViewById(R.id.Email);
         final TextView phonenumberTextView = (TextView) view.findViewById(R.id.phonenumber);
-        final TextView prefferedTextView = (TextView) view.findViewById(R.id.prefferedtime);
-        final TextView areaofInterestTextView = (TextView) view.findViewById(R.id.areaofinterest);
-        final TextView status = (TextView) view.findViewById(R.id.status);
-        final TextView shtg = (TextView) view.findViewById(R.id.stg);
+        final TextView prefferedTextView = (TextView) view.findViewById(R.id.timeforcall);
+        final TextView areaofInterestTextView = (TextView) view.findViewById(R.id.pSkillstolearn);
+
+        final TextView shtg = (TextView) view.findViewById(R.id.stg2);
         final TextView lotg = (TextView) view.findViewById(R.id.ltg);
-        final TextView lng = (TextView) view.findViewById(R.id.lng);
-        final TextView purl= (TextView) view.findViewById(R.id.profileurl);
+
+        final TextView dayornight = (TextView) view.findViewById(R.id.dayornight);
+        final TextView purl= (TextView) view.findViewById(R.id.linkedIdProfileUrl);
+        final TextView instatv= (TextView) view.findViewById(R.id.instagram);
+        final TextView twittertv= (TextView) view.findViewById(R.id.twitter);
+        final TextView othertv= (TextView) view.findViewById(R.id.other);
+        final TextView skillsuknowtv= (TextView) view.findViewById(R.id.skills);
+        final TextView day= (TextView) view.findViewById(R.id.dayornight);
+
         reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -84,24 +79,34 @@ public class Fragment1 extends Fragment {
                      dayNight= user4profile.prefferedTime;
                     ltg = user4profile.ltg;
                     stg = user4profile.stg;
-                    ln = user4profile.language;
+
                     prl = user4profile.profileurl;
                     email = user.getEmail();
                      String phone = user4profile.phonenumber;
                      areaofinterest = user4profile.areaOfInterest;
 
                      String name = user4profile.fullname;
+                     insta = user4profile.insta;
+                     twitter = user4profile.twitter;
+                     others = user4profile.others;
+                     timecall = user4profile.timecall;
+                     skillsknow = user4profile.skillsknow;
+
 
                     fullnameTextView.setText("Name: " + name);
                     emailTextView.setText("Email:  " + email);
                     phonenumberTextView.setText("Phone Number: " + phone);
-                    prefferedTextView.setText("Preffered Time: " + dayNight);
-                    areaofInterestTextView.setText("Area of interest: " + areaofinterest);
-                    status.setText("Status: " + user4profile.status);
+                    prefferedTextView.setText("Preffered Time: " + timecall);
+                    areaofInterestTextView.setText(areaofinterest);
+
                     shtg.setText("short term goal:" + user4profile.stg);
                     lotg.setText("long term goal:" + user4profile.ltg);
-                    lng.setText("language: " + user4profile.language);
-                    purl.setText("profileUrl:" + user4profile.profileurl);
+                    instatv.setText("Instagram:" + insta);
+                            twittertv.setText("twitter:" + twitter);
+                    othertv.setText("others:" + others);
+                            skillsuknowtv.setText( skillsknow);
+                    day.setText(user4profile.prefferedTime);
+                    purl.setText("linkedIn:" + user4profile.profileurl);
                     Picasso.get().load(user4profile.imageuri).into(profilephoto);
 
                 }

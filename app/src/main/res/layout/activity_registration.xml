@@ -179,7 +179,7 @@ android:orientation="vertical"
                     android:splitMotionEvents="true" />
 
                 <EditText
-                    android:id="@+id/shortTermGoal"
+                    android:id="@+id/stg2"
                     style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_84sdp"
@@ -199,7 +199,7 @@ android:orientation="vertical"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/longTermGoal"
+                    android:id="@+id/ltg"
                     style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_84sdp"

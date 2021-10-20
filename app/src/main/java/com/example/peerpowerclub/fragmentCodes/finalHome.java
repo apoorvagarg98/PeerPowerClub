@@ -1,5 +1,7 @@
 package com.example.peerpowerclub.fragmentCodes;
 
+import android.annotation.SuppressLint;
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +20,15 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.adapters.courseViewHolder;
+import com.example.peerpowerclub.adapters.item2ViewHolder;
 import com.example.peerpowerclub.adapters.myViewHolder;
 import com.example.peerpowerclub.groupparticipants;
+import com.example.peerpowerclub.models.coursemodel;
 import com.example.peerpowerclub.models.feedModel;
 import com.example.peerpowerclub.models.user;
 import com.example.peerpowerclub.userProfile;
+import com.example.peerpowerclub.viewCourse;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -48,8 +54,12 @@ public class finalHome extends Fragment {
 
    public RecyclerView recyclerView;
 
+    public DatabaseReference courseref;
+    public RecyclerView recyclerViewpaidcoursewala,freewala;
+    FirebaseRecyclerAdapter<coursemodel, item2ViewHolder> adapter1;
+    FirebaseRecyclerOptions<coursemodel> options2;
 
-
+    StorageReference courseImageRef;
 
 
     public static Uri imageUri;
@@ -82,6 +92,18 @@ public class finalHome extends Fragment {
        recyclerView = view.findViewById(R.id.rv);
      //feedadapter= new feedAdapter();
      recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        recyclerViewpaidcoursewala = view.findViewById(R.id.paidcoursewalarcv);
+       freewala = view.findViewById(R.id.freewala);
+        recyclerViewpaidcoursewala.setLayoutManager(layoutManager);
+        freewala.setLayoutManager(layoutManager2);
+
+        courseImageRef = FirebaseStorage.getInstance().getReference().child("courseimages");
+        mLoadingBar = new ProgressDialog(getActivity());
+        courseref = FirebaseDatabase.getInstance().getReference("courses");
+loadfreecourse();
+        loadCourse();
 
     /* attatchpost = view.findViewById(R.id.insertImage);
      sendpost = view.findViewById(R.id.sendpost);
@@ -126,6 +148,81 @@ public class finalHome extends Fragment {
 
     }
 
+    private void loadfreecourse() {
+        options2 = new FirebaseRecyclerOptions.Builder<coursemodel>().setQuery(courseref,coursemodel.class).build();
+        adapter1=  new FirebaseRecyclerAdapter<coursemodel,item2ViewHolder>(options2){
+            @NonNull
+            @Override
+            public item2ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item2,parent,false);
+
+                return new item2ViewHolder(view);
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull item2ViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull coursemodel model) {
+
+
+
+                Picasso.get().load(model.getCourseimageuri()).into(holder.courseimage);
+                holder.courseimage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent intent = new Intent(getActivity(), Fragment2Chat.class);
+
+
+                        startActivity(intent);
+
+                    }
+                });
+            }
+        };
+        adapter1.startListening();
+       freewala.setAdapter(adapter1);
+    }
+
+    private void loadCourse()
+
+    {
+        options2 = new FirebaseRecyclerOptions.Builder<coursemodel>().setQuery(courseref,coursemodel.class).build();
+        adapter1=  new FirebaseRecyclerAdapter<coursemodel,item2ViewHolder>(options2){
+            @NonNull
+            @Override
+            public item2ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item2,parent,false);
+
+                return new item2ViewHolder(view);
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull item2ViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull coursemodel model) {
+
+
+
+                Picasso.get().load(model.getCourseimageuri()).into(holder.courseimage);
+                holder.courseimage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent intent = new Intent(getActivity(), viewCourse.class);
+                        intent.putExtra("courseName", getRef(position).getKey().toString());
+                        intent.putExtra("cn", model.getCourseName());
+                        intent.putExtra("ci", model.getCourseimageuri());
+                        intent.putExtra("cld", model.getCourseLongDescription());
+                        intent.putExtra("gl", model.getGroupLink());
+
+
+                        startActivity(intent);
+
+                    }
+                });
+            }
+        };
+        adapter1.startListening();
+        recyclerViewpaidcoursewala.setAdapter(adapter1);
+    }
+
     private void loadPost() {
         options = new FirebaseRecyclerOptions.Builder<feedModel>().setQuery(postref,feedModel.class).build();
         adapter =  new FirebaseRecyclerAdapter<feedModel,myViewHolder>(options){
@@ -161,6 +258,7 @@ public class finalHome extends Fragment {
         recyclerView.setAdapter(adapter);
 
     }
+
 
    /* public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

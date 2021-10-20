@@ -46,6 +46,7 @@
         <activity android:name=".scregistered" />
         <activity android:name=".registrationAndLogin.startactivity" />
         <activity android:name=".registrationAndLogin.Registration" />
+
         <activity android:name=".registrationAndLogin.Login" />
         <activity android:name=".viewCourse" />
         <activity

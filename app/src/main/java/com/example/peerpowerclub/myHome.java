@@ -140,9 +140,12 @@ selected[0] = new Fragment2Chat();}
 
 
                 break;}
-                case R.id.courses_bottom:
+                case R.id.discover:
                 selected[0] = new Fragment3courses();
                 break;
+                case R.id.menu:
+                    selected[0] = new menuKiFragment();
+                    break;
 
             }
 

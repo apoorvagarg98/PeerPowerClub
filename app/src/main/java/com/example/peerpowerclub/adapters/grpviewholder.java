@@ -16,7 +16,7 @@ public TextView nameingroup,status;
         super(itemView);
         pf = itemView.findViewById(R.id.groupwalekaphoto);
         nameingroup = itemView.findViewById(R.id.groupParticipantname);
-        status = itemView.findViewById(R.id.statusofGroupParticipant);
+
 
     }
 }

@@ -10,18 +10,18 @@ import android.widget.Button;
 import com.example.peerpowerclub.registrationAndLogin.Registration;
 
 public class joinchat extends AppCompatActivity {
-
+Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joinchat);
-        Button jaojao = findViewById(R.id.joinpeer);
-        jaojao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(joinchat.this, Registration.class));
+button = findViewById(R.id.joinpeerfirstpage);
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(joinchat.this,Registration.class));
+    }
+});
 
-            }
-        });
     }
 }

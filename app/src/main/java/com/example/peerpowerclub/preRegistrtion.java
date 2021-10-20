@@ -33,7 +33,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class preRegistrtion extends AppCompatActivity {
-TextView preemail,prepass,prepass2;
+TextView preemail,prepass;
     private FirebaseAuth mAuth;
 Button preregister;
     ProgressDialog mLoadingBar;
@@ -47,7 +47,7 @@ Button preregister;
         setContentView(R.layout.activity_pre_registrtion);
         preemail = findViewById(R.id.preemail);
         prepass = findViewById(R.id.prepassword);
-        prepass2 = findViewById(R.id.prepassword2);
+
         mAuth = FirebaseAuth.getInstance();
         mLoadingBar = new ProgressDialog(this);
 
@@ -66,7 +66,7 @@ preregister.setOnClickListener(new View.OnClickListener() {
     private void Registeruser() {
         String email =preemail.getText().toString();
         String password = prepass.getText().toString();
-        String chpassword = prepass2.getText().toString();
+
         if(email.isEmpty())
         {
             preemail.setError("email required");
@@ -75,16 +75,11 @@ preregister.setOnClickListener(new View.OnClickListener() {
         }
         if(password.isEmpty())
         {
-            prepass2.setError("password required");
-            prepass2.requestFocus();
+            prepass.setError("password required");
+            prepass.requestFocus();
             return;
         }
-        if(!password.equals(chpassword)) {
-            prepass2.setError("Passwords do not match.Kindly recheck");
-            prepass2.requestFocus();
-            return;
 
-        }
         else {
             mLoadingBar.setTitle("Registering user");
             mLoadingBar.setCanceledOnTouchOutside(false);
