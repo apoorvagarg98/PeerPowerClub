@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -19,6 +22,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.peerpowerclub.Chatmenusettings;
 import com.example.peerpowerclub.adapters.AdapterGroupChat;
 import com.example.peerpowerclub.R;
 import com.example.peerpowerclub.groupparticipants;
@@ -55,6 +59,8 @@ public class Fragment2Chat extends Fragment {
     @Override
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+
         View view = inflater.inflate(R.layout.fragment2chat,container,false);
         mAuth = FirebaseAuth.getInstance();
         toolbar = view.findViewById(R.id.toolbar);
@@ -65,6 +71,7 @@ public class Fragment2Chat extends Fragment {
        userref= FirebaseDatabase.getInstance().getReference("users");
         messageEt = view.findViewById(R.id.messageEt);
         user = FirebaseAuth.getInstance().getCurrentUser();
+
         loadGroupInfo();
         loaadGroupMessges();
         groupTitleTv.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +97,34 @@ public class Fragment2Chat extends Fragment {
             }
         });
         return view;
+    }
 
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
+         menuInflater.inflate(R.menu.menuforchat,menu);
+        super.onCreateOptionsMenu(menu, menuInflater);
+    }
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.Groupmembers:
+            {
+                Intent intent = new Intent(getActivity(), groupparticipants.class);
+                intent.putExtra("gt",areaofinterest + dayNight);
+                startActivity(intent);
+                break;
+            }
+            case R.id.Menuofchat:{
+                Intent intent = new Intent(getActivity(), Chatmenusettings.class);
+                startActivity(intent);
+                break;
+            }
+
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void loaadGroupMessges() {

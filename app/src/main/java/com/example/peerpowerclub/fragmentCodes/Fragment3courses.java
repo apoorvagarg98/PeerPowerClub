@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,9 +40,10 @@ public class Fragment3courses extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment3courses,container,false);
+        LinearLayoutManager layoutManager = new GridLayoutManager(getActivity(),2);
 
         recyclerView = view.findViewById(R.id.courserv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setLayoutManager(layoutManager);
         courseImageRef = FirebaseStorage.getInstance().getReference().child("courseimages");
         mLoadingBar = new ProgressDialog(getActivity());
         courseref = FirebaseDatabase.getInstance().getReference("courses");
@@ -64,11 +66,10 @@ public class Fragment3courses extends Fragment {
             @Override
             protected void onBindViewHolder(@NonNull courseViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull coursemodel model) {
 
-                holder.coursename.setText(model.getCourseName());
-                holder.shortdesc.setText(model.getCourseShortDescription());
 
+holder.coursename.setText(model.getCourseName());
                 Picasso.get().load(model.getCourseimageuri()).into(holder.courseimage);
-                holder.enrollnow.setOnClickListener(new View.OnClickListener() {
+                holder.courseimage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 

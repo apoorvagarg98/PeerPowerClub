@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item
-    android:id="@+id/Groupmembers"
-    android:orderInCategory="100"
-    
-    android:title="Group Participants"
-    />
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Groupmembers"
+
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:orderInCategory="100"
+        android:title="Group Participants"
+
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
 
 
     <item
-        android:id="@+id/Menu"
+        android:id="@+id/Menuofchat"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_24"
         android:orderInCategory="200"
         android:title="Menu"
-      />
+        android:visible="true"
+        app:showAsAction="collapseActionView" />
 
 
 

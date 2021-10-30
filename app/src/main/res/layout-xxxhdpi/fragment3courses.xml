@@ -41,7 +41,16 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:textSize="@dimen/_18sdp"
            />
+
     </LinearLayout>
+
+        <ImageView
+            android:layout_width="372dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:srcCompat="@drawable/alltraiiningjpg" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/courserv"
@@ -52,3 +61,5 @@
 
     </LinearLayout>
 </RelativeLayout>
+
+

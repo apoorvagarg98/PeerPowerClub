@@ -7,200 +7,210 @@
     android:layout_height="match_parent">
 
 
-    <Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="#4C72F0"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#4C72F0"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="@dimen/_43sdp"
+
+
+                    android:background="#4C72F0"
+                    android:src="@drawable/ic_baseline_chevron_left_24" />
+
+
+                <TextView
+                    android:id="@+id/groupName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:includeFontPadding="true"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Group Name"
+                    android:textColor="#FAF7F7"
+                    android:textSize="@dimen/_16sdp"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="633dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+
+                    android:paddingRight="@dimen/_10sdp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/chatimagefront"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_slab"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="You can schedule a google meet and interact with each other"
+                        android:textColor="#090909"
+
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/chatimagefront"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_slab"
+                        android:paddingLeft="@dimen/_5sdp"
+
+                        android:text="You can have a personal call with your peers and discuss great things!"
+                        android:textColor="#090909"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/chatimagefront"
+                        android:drawablePadding="@dimen/_5sdp"
+
+                        android:fontFamily="@font/roboto_slab"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="You can follow the roadmap to learn python"
+                        android:textColor="#090909"
+
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/chatimagefront"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_slab"
+
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text="You can connect with each other through whatsapp"
+                        android:textColor="#090909"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+
+                        android:fontFamily="@font/roboto_slab_bold"
+                        android:gravity="center"
+
+
+                        android:text="──────────────────────────────────"
+                        android:textColor="#4C72F0"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/chatRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="7dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:stackFromEnd="true"
+                        tools:listitem="@layout/row_groupchat_left" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
 
         <LinearLayout
+            android:id="@+id/chatLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:layout_marginBottom="1dp"
+
 
             android:orientation="horizontal">
 
             <ImageButton
-                android:layout_width="@dimen/_46sdp"
-                android:layout_height="@dimen/_43sdp"
-
-
-                android:background="#4C72F0"
-                android:src="@drawable/ic_baseline_chevron_left_24" />
-
-
-            <TextView
-                android:id="@+id/groupName"
+                android:id="@+id/attachbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-
-                android:layout_marginTop="@dimen/_12sdp"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/roboto_slab_bold"
-                android:includeFontPadding="true"
-                android:paddingLeft="@dimen/_10sdp"
-                android:text="Group Name"
-                android:textColor="#FAF7F7"
-                android:textSize="@dimen/_16sdp"
-                tools:ignore="MissingConstraints" />
-
-        </LinearLayout>
-
-    </Toolbar>
-
-    <LinearLayout
-        android:id="@+id/up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/_10sdp"
-
-        android:paddingRight="@dimen/_10sdp"
-
-        >
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:drawableLeft="@drawable/chatimagefront"
-            android:fontFamily="@font/roboto_slab"
-      android:drawablePadding="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:paddingLeft="@dimen/_5sdp"
-            android:text="You can schedule a google meet and interact with each other"
-            android:textColor="#090909"
-
-            android:textSize="@dimen/_12sdp" />
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:drawableLeft="@drawable/chatimagefront"
-            android:fontFamily="@font/roboto_slab"
-            android:drawablePadding="@dimen/_5sdp"
-            android:paddingLeft="@dimen/_5sdp"
-
-            android:text="You can have a personal call with your peers and discuss great things!"
-            android:textColor="#090909"
-            android:textSize="@dimen/_12sdp"
-        />
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:drawableLeft="@drawable/chatimagefront"
-            android:fontFamily="@font/roboto_slab"
-
-            android:drawablePadding="@dimen/_5sdp"
-            android:paddingLeft="@dimen/_5sdp"
-            android:text="You can follow the roadmap to learn python"
-            android:textColor="#090909"
-
-            android:textSize="@dimen/_12sdp" />
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:drawableLeft="@drawable/chatimagefront"
-            android:fontFamily="@font/roboto_slab"
-            android:drawablePadding="@dimen/_5sdp"
-
-            android:paddingLeft="@dimen/_5sdp"
-            android:text="You can connect with each other through whatsapp"
-            android:textColor="#090909"
-            android:textSize="@dimen/_12sdp"
-            />
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_10sdp"
-
-            android:fontFamily="@font/roboto_slab_bold"
-            android:gravity="center"
-
-
-            android:text="──────────────────────────────────"
-            android:textColor="#4C72F0"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chatRv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/chatLayout"
-android:layout_marginTop="@dimen/_20sdp"
-        android:layout_below="@id/up"
-        android:layout_marginBottom="7dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:stackFromEnd="true"
-        tools:listitem="@layout/row_groupchat_left" />
-
-
-    <LinearLayout
-        android:id="@+id/chatLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
-
-
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/attachbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:padding="@dimen/_5sdp"
-            android:src="@drawable/ic_baseline_add_24" />
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#F2F2F8">
-
-            <EditText
-                android:id="@+id/messageEt"
-                android:padding="@dimen/_5sdp"
-                android:layout_width="@dimen/_250sdp"
-                android:layout_height="wrap_content"
                 android:background="@null"
-                android:fontFamily="robo"
-                android:hint="Start typing...."
-                android:inputType="textCapSentences|textMultiLine"
-                android:paddingLeft="@dimen/_5sdp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_15sdp" />
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_add_24" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#F2F2F8">
+
+                <EditText
+                    android:id="@+id/messageEt"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="robo"
+                    android:hint="Start typing...."
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
 
 
-        </ScrollView>
+            </ScrollView>
 
-        <ImageButton
-            android:id="@+id/sendbtn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@null"
-            android:padding="@dimen/_5sdp"
+            <ImageButton
+                android:id="@+id/sendbtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:padding="@dimen/_5sdp"
 
-            android:src="@drawable/ic_icon" />
+                android:src="@drawable/ic_icon" />
+        </LinearLayout>
     </LinearLayout>
-
-
 
 
 </RelativeLayout>

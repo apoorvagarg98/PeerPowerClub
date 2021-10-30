@@ -66,26 +66,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:fontFamily="@font/roboto_slab"
-            android:padding="@dimen/_10sdp"
-android:drawableLeft="@drawable/ic_baseline_group_24"
-            android:text="Members"
             android:layout_marginTop="@dimen/_2sdp"
-
-            android:drawablePadding="@dimen/_5sdp"
-            android:textColor="#000000"
-            android:textSize="@dimen/_15sdp" />
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:fontFamily="@font/roboto_slab"
             android:drawableLeft="@drawable/ic_baseline_event_note_24"
-            android:padding="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:text="Learning Roadmap"
             android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:padding="@dimen/_10sdp"
+            android:text="Learning Roadmap"
             android:textColor="#000000"
             android:textSize="@dimen/_15sdp" />
         <TextView

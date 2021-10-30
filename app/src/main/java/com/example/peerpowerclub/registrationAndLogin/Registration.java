@@ -224,7 +224,7 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
 
 
         String status = "unenrolled";
-        final user[] useR = new user[1];
+        final com.example.peerpowerclub.models.user[] useR = {new user()};
 
         profilePhotoImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -249,6 +249,8 @@ profilePhoto.setOnClickListener(new View.OnClickListener() {
                                     }
                                 }
                             });
+                            Toast.makeText(Registration.this, "mai yaha tak pahucha", Toast.LENGTH_LONG).show();
+
                             FirebaseDatabase.getInstance().getReference("groups").child(AreaofInterest + daynight).child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(useR[0]).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

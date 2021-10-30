@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.peerpowerclub.R;
@@ -24,9 +25,11 @@ import com.example.peerpowerclub.adapters.courseViewHolder;
 import com.example.peerpowerclub.adapters.item2ViewHolder;
 import com.example.peerpowerclub.adapters.myViewHolder;
 import com.example.peerpowerclub.groupparticipants;
+import com.example.peerpowerclub.joinchat;
 import com.example.peerpowerclub.models.coursemodel;
 import com.example.peerpowerclub.models.feedModel;
 import com.example.peerpowerclub.models.user;
+import com.example.peerpowerclub.myHome;
 import com.example.peerpowerclub.userProfile;
 import com.example.peerpowerclub.viewCourse;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -98,7 +101,14 @@ LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity(),Linea
        freewala = view.findViewById(R.id.freewala);
         recyclerViewpaidcoursewala.setLayoutManager(layoutManager);
         freewala.setLayoutManager(layoutManager2);
+TextView viewMorePaid = view.findViewById(R.id.viewMorePaid);
+viewMorePaid.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        getFragmentManager().beginTransaction().replace(R.id.frame_layout,new Fragment3courses()).commit();
 
+    }
+});
         courseImageRef = FirebaseStorage.getInstance().getReference().child("courseimages");
         mLoadingBar = new ProgressDialog(getActivity());
         courseref = FirebaseDatabase.getInstance().getReference("courses");
@@ -168,11 +178,25 @@ loadfreecourse();
                 holder.courseimage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        reference.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if(snapshot.child("areaOfInterest").getValue().equals("")){
+                                    startActivity(new Intent(getActivity(), joinchat.class));
+                                }
+                                else{
+                                    getFragmentManager().beginTransaction().replace(R.id.frame_layout,new Fragment2Chat()).commit();
 
-                        Intent intent = new Intent(getActivity(), Fragment2Chat.class);
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
 
 
-                        startActivity(intent);
 
                     }
                 });
