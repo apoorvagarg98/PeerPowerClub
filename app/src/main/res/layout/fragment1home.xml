@@ -49,7 +49,7 @@
                 android:gravity="center"
 
                 android:layout_gravity="center"
-                android:text="Peer Club Enrollment"
+                android:text="Peer Club Profile"
                 android:textColor="#3D3D45"
                 android:textSize="@dimen/_18sdp"
                 />
@@ -160,10 +160,10 @@
 
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:text="Skills that you are good at:"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#556161"
+                    android:text="Skills that you are good at:"
+                    android:textColor="#131313"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -176,10 +176,11 @@
                     android:fontFamily="@font/roboto_slab"
                     android:padding="@dimen/_10sdp"
                     android:text="Skills:"
-                    android:textColor="#595B5E"
+                    android:textColor="#131313"
                     android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
+
                 <TextView
 
 
@@ -193,10 +194,10 @@
 
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:text="Skills that you want to learn:"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#556161"
+                    android:text="Skills that you want to learn:"
+                    android:textColor="#131313"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -209,7 +210,7 @@
                     android:fontFamily="@font/roboto_slab"
                     android:padding="@dimen/_10sdp"
                     android:text="Skills to learn:"
-                    android:textColor="#595B5E"
+                    android:textColor="#131313"
                     android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
@@ -231,7 +232,7 @@
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
                     android:text="Short term goal: (one year)"
-                    android:textColor="#556161"
+                    android:textColor="#131313"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -244,7 +245,7 @@
                     android:fontFamily="@font/roboto_slab"
                     android:padding="@dimen/_10sdp"
                     android:text="Short Term Goal"
-                    android:textColor="#595B5E"
+                    android:textColor="#131313"
                     android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
@@ -262,10 +263,10 @@
 
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:text="Long term goals: (Five year)"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#556161"
+                    android:text="Long term goals: (Five year)"
+                    android:textColor="#131313"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
 
@@ -281,10 +282,11 @@
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Long Term Goals"
-                    android:textColor="#595B5E"
+                    android:textColor="#131313"
                     android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
+
                 <TextView
 
 
@@ -295,13 +297,13 @@
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
-android:gravity="center"
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
-                    android:text="Available for Personal Peer Call:"
+                    android:gravity="center"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#556161"
+                    android:text="Available for Personal Peer Call:"
+                    android:textColor="#131313"
                     android:textSize="@dimen/_13sdp"
                     android:textStyle="bold" />
 
@@ -313,9 +315,10 @@ android:gravity="center"
                     <TextView
                         android:id="@+id/dayornight"
                         android:layout_width="@dimen/_136sdp"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:drawablePadding="@dimen/_10sdp"
                         android:clipChildren="true"
                         android:clipToPadding="true"
@@ -323,7 +326,7 @@ android:gravity="center"
 
                         android:drawingCacheQuality="high"
                         android:dropDownWidth="match_parent"
-                        android:padding="@dimen/_10sdp"
+                        android:padding="@dimen/_5sdp"
                         android:textSize="@dimen/_10sdp"
                         android:spinnerMode="dropdown"
 
@@ -333,10 +336,10 @@ android:gravity="center"
                     <TextView
                         android:id="@+id/timeforcall"
                         android:layout_width="@dimen/_136sdp"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_15sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:drawablePadding="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:drawablePadding="@dimen/_5sdp"
                         android:clipChildren="true"
                         android:clipToPadding="true"
                         android:contentDescription="@string/time"
@@ -390,7 +393,7 @@ android:gravity="center"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="#131313"
                     android:textStyle="bold" />
 
                 <TextView
@@ -410,7 +413,7 @@ android:gravity="center"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="#131313"
                     android:textStyle="bold" />
 
                 <TextView
@@ -430,7 +433,7 @@ android:gravity="center"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="#131313"
                     android:textStyle="bold" />
 
                 <TextView
@@ -440,18 +443,18 @@ android:gravity="center"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
 
+                    android:layout_marginBottom="@dimen/_30sdp"
+
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
-
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
                     android:hint="Others:"
-                    android:minHeight="48dp"
 
+                    android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
-                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:textColor="#131313"
                     android:textStyle="bold" />
 
             </LinearLayout>

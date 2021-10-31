@@ -24,17 +24,16 @@
             android:orientation="horizontal">
 
 
-
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/groupwalekaphoto"
                 android:layout_width="56dp"
 
                 android:layout_height="56dp"
 
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="2dp"
-               android:paddingLeft="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_10sdp"
                 app:srcCompat="@drawable/ic_baseline_person_24"
                 tools:ignore="ImageContrastCheck"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -43,15 +42,14 @@
                 android:id="@+id/groupParticipantname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-             android:paddingBottom="@dimen/_10sdp"
+                android:layout_gravity="center"
                 android:paddingLeft="@dimen/_10sdp"
 
+                android:paddingBottom="@dimen/_10sdp"
                 android:text="TextView"
                 android:textColor="#0F1828"
-                android:layout_gravity="center"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
 
         </LinearLayout>

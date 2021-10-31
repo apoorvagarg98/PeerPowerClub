@@ -11,7 +11,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,13 +95,13 @@
                         android:id="@+id/viewMorePaid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_70sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:fontFamily="@font/roboto_slab_bold"
-                        android:layout_marginLeft="@dimen/_100sdp"
 
-                      android:padding="@dimen/_5sdp"
-                        android:textAlignment="textEnd"
+                        android:padding="@dimen/_5sdp"
                         android:text="View more"
+                        android:textAlignment="textEnd"
                         android:textColor="#303030"
                         android:textSize="@dimen/_12sdp" />
 
@@ -116,49 +116,26 @@
 
                     tools:listitem="@layout/item2" />
 
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="horizontal">
 
 
                     <TextView
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
                         android:fontFamily="@font/roboto_slab_bold"
 
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:paddingTop="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+
                         android:text="Feed"
                         android:textColor="#303030"
                         android:textSize="@dimen/_12sdp" />
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/_220sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-
-                        android:fontFamily="@font/roboto_slab_bold"
-                        android:paddingTop="@dimen/_10sdp"
-                        android:text="Filter"
-                        android:textColor="#303030"
-                        android:textSize="@dimen/_12sdp" />
-
-                </LinearLayout>
-
-
 
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv"
                     android:layout_width="wrap_content"
-                    android:layout_height="318dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
 
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

@@ -29,21 +29,23 @@
 
             <ImageView
                 android:id="@+id/courseImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_100sdp"
                 android:padding="@dimen/_2sdp"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/CourseName"
+                android:gravity="center"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_22sdp"
                 android:fontFamily="@font/roboto_slab_bold"
               android:padding="@dimen/_2sdp"
+                android:layout_gravity="center"
 
                 android:text="Course Name"
-                android:textColor="#4C72F0"
-                android:textSize="@dimen/_16sdp"
+                android:textColor="#3B3E47"
+                android:textSize="@dimen/_12sdp"
                 app:autoSizeTextType="uniform" />
 
         </LinearLayout>
