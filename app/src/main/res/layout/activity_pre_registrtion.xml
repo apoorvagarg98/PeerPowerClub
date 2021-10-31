@@ -207,13 +207,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:fontFamily="@font/roboto_slab_bold"
+                android:fontFamily="@font/roboto_slab"
                 android:gravity="center"
                 android:paddingBottom="@dimen/_20sdp"
                 android:text="Already have an account?"
                 android:textColor="#3A3A3A"
                 android:textSize="@dimen/_12sdp"
-                android:textStyle="bold" />
+               />
 
 
             <TextView
@@ -229,7 +229,7 @@
                 android:textAllCaps="false"
                 android:textColor="#4C72F0"
                 android:textSize="@dimen/_12sdp"
-                android:textStyle="bold" />
+           />
 
 
         </LinearLayout>

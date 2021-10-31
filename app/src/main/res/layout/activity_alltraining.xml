@@ -13,39 +13,41 @@
 
         android:orientation="vertical"
 
-        android:paddingLeft="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_10sdp"
 
-        android:paddingRight="@dimen/_5sdp">
+        android:paddingRight="@dimen/_10sdp">
 
         <LinearLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal"
-
-            android:paddingLeft="@dimen/_10sdp"
-
-            android:paddingRight="@dimen/_10sdp">
+            android:orientation="horizontal">
 
             <ImageButton
-                android:layout_width="@dimen/_46sdp"
-                android:layout_height="@dimen/_43sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/box1"
                 android:src="@drawable/ic_baseline_arrow_back_ios_24" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_50sdp"
+
+                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:fontFamily="@font/roboto_slab_bold"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:fontFamily="@font/roboto_slab"
+
                 android:gravity="center"
                 android:text="All Training"
                 android:textColor="#3D3D45"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_18sdp" />
         </LinearLayout>
 
 
@@ -53,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             app:srcCompat="@drawable/alltraiiningjpg" />
 
@@ -63,6 +65,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
+
+                android:padding="@dimen/_10sdp"
                 android:layout_height="wrap_content" />
 
 

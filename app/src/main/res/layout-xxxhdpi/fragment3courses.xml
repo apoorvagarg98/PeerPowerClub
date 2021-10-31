@@ -9,55 +9,61 @@
     >
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_10sdp"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:paddingRight="@dimen/_10sdp">
 
-        <ImageButton
-            android:layout_width="@dimen/_46sdp"
-            android:layout_height="@dimen/_43sdp"
-            android:padding="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-
-            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
-
-
-        <TextView
+        <LinearLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Training Details"
-            android:padding="@dimen/_10sdp"
-            android:textColor="#303030"
-        android:fontFamily="@font/roboto_slab_bold"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_18sdp"
-           />
 
-    </LinearLayout>
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_gravity="center"
+
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/box1"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:fontFamily="@font/roboto_slab"
+
+                android:gravity="center"
+                android:text="Peer Clubs"
+                android:textColor="#3D3D45"
+                android:textSize="@dimen/_18sdp" />
+        </LinearLayout>
 
         <ImageView
-            android:layout_width="372dp"
-            android:layout_height="170dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_25sdp"
+
             android:layout_marginBottom="@dimen/_10sdp"
-            app:srcCompat="@drawable/alltraiiningjpg" />
+            app:srcCompat="@drawable/peertraining" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/courserv"
-            android:padding="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp" />
 
     </LinearLayout>
 </RelativeLayout>

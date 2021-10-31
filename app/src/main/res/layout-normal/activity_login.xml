@@ -24,7 +24,7 @@
         <ImageView
             android:layout_width="@dimen/_80sdp"
             android:layout_height="@dimen/_80sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             app:srcCompat="@drawable/logo" />
 
@@ -38,7 +38,7 @@
             android:background="@drawable/textviewbg"
             android:backgroundTint="#F6F7FA"
             android:ems="20"
-            android:fontFamily="@font/roboto_slab"
+
 
             android:hint="Email"
             android:includeFontPadding="false"
@@ -101,24 +101,22 @@
 
             android:text="Log In"
             android:textAllCaps="false"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="normal"
             android:visibility="visible"
-            app:backgroundTint="#4C72F0"
-           />
+            app:backgroundTint="#4C72F0" />
 
 
         <TextView
             android:id="@+id/forgotPassword2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_slab_bold"
+            android:fontFamily="@font/roboto_slab"
             android:gravity="center"
             android:paddingTop="@dimen/_20sdp"
             android:text="Forgot Password?"
             android:textColor="#0069E4"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_12sdp" />
 
         <TextView
 
@@ -134,15 +132,24 @@
             android:textSize="@dimen/_12sdp" />
 
 
-        <com.google.android.gms.common.SignInButton
+        <Button
             android:id="@+id/signInButton1"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_200sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_20sdp"
-
-            />
+            android:background="@drawable/box1"
+            android:backgroundTint="#FAF4F4"
+            android:drawableLeft="@drawable/google"
+            android:drawablePadding="@dimen/_20sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:text="Log in with Google"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
 
         <LinearLayout
 

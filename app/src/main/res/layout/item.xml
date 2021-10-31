@@ -12,41 +12,6 @@
 
 
 
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:orientation="horizontal">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:fontFamily="@font/roboto_slab_bold"
-
-                    android:paddingLeft="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:text="Feed"
-                    android:textColor="#303030"
-                    android:textSize="@dimen/_12sdp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_220sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-
-                    android:fontFamily="@font/roboto_slab_bold"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:text="Filter"
-                    android:textColor="#303030"
-                    android:textSize="@dimen/_12sdp" />
-
-            </LinearLayout>
 
 
             <androidx.cardview.widget.CardView
@@ -67,6 +32,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -79,8 +45,9 @@
                             android:id="@+id/feedprofilephoto"
                             android:layout_width="55dp"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginBottom="@dimen/_2sdp"
+
+                            android:padding="@dimen/_2sdp"
+
                             android:src="@drawable/ic_baseline_person_24"
                             app:civ_border_color="#FF000000"
                             app:civ_border_width="2dp" />
@@ -99,8 +66,8 @@
 
                             android:text="Id:"
                             android:textColor="#303030"
-                            android:textSize="@dimen/_16sdp"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/_13sdp"
+                           />
                     </LinearLayout>
 
                     <ImageView
@@ -108,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-
+                        android:layout_marginTop="@dimen/_5sdp"
                         tools:srcCompat="@tools:sample/avatars" />
 
                     <TextView
@@ -120,11 +87,11 @@
 
                         android:drawablePadding="@dimen/_5sdp"
                         android:fontFamily="@font/roboto_slab"
-                        android:paddingLeft="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"
                         android:text="Caption:"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_14sdp"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/_12sdp"
+                       />
 
 
                 </LinearLayout>

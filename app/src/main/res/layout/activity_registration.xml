@@ -23,33 +23,39 @@ android:orientation="vertical"
         >
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+
+            android:orientation="horizontal"
+            >
 
             <ImageButton
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:padding="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
 
+                android:layout_gravity="center"
+                android:background="@drawable/box1"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:src="@drawable/ic_baseline_arrow_back_ios_24" />
 
-
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:fontFamily="@font/roboto_slab"
                 android:gravity="center"
-                android:text="Peer Club Enrollment"
-                android:padding="@dimen/_10sdp"
-                android:textColor="#303030"
-                android:fontFamily="@font/roboto_slab_bold"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:textSize="@dimen/_15sdp"
+
+                android:layout_gravity="center"
+                android:text="  My Profile"
+                android:textColor="#3D3D45"
+                android:textSize="@dimen/_18sdp"
                 />
         </LinearLayout>
-
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -82,6 +88,7 @@ android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
 
 
                     android:background="@drawable/textviewbg"
@@ -94,7 +101,7 @@ android:orientation="vertical"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
                     android:shadowColor="#F8EFEF"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
 
                     android:textColorHighlight="#090909"
                     android:textColorLink="#FAF3F3"
@@ -110,7 +117,7 @@ android:orientation="vertical"
                     android:layout_marginTop="@dimen/_5sdp"
 
                     android:background="@drawable/textviewbg"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:backgroundTint="#FAFBFD"
 
                     android:ems="20"
@@ -119,7 +126,7 @@ android:orientation="vertical"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
 
@@ -133,14 +140,14 @@ android:orientation="vertical"
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
                     android:hint="Number:"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -155,9 +162,9 @@ android:orientation="vertical"
                     android:drawablePadding="@dimen/_10sdp"
                     android:drawingCacheQuality="high"
                     android:dropDownWidth="match_parent"
-                    android:paddingLeft="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
 
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:spinnerMode="dropdown"
                     android:splitMotionEvents="true" />
 
@@ -172,9 +179,9 @@ android:orientation="vertical"
                     android:drawablePadding="@dimen/_10sdp"
                     android:drawingCacheQuality="high"
                     android:dropDownWidth="match_parent"
-                    android:paddingLeft="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
 
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:spinnerMode="dropdown"
                     android:splitMotionEvents="true" />
 
@@ -194,8 +201,9 @@ android:orientation="vertical"
                     android:hint="Describe your short term(one year) goal:"
                     android:minHeight="48dp"
 
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <EditText
@@ -208,13 +216,13 @@ android:orientation="vertical"
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
                     android:hint="Describe your long term(five years) goal:"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView
@@ -222,7 +230,7 @@ android:orientation="vertical"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
 
                     android:background="@drawable/textviewbg"
 
@@ -233,7 +241,7 @@ android:orientation="vertical"
                     android:hint="Select time slot when you are available for a personal phone call from a peer"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
               <LinearLayout
@@ -251,7 +259,7 @@ android:orientation="vertical"
                     android:clipChildren="true"
                     android:clipToPadding="true"
                     android:contentDescription="@string/Dayornight"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:drawingCacheQuality="high"
                     android:dropDownWidth="match_parent"
                     android:paddingLeft="@dimen/_10sdp"
@@ -265,6 +273,7 @@ android:orientation="vertical"
                       android:layout_width="@dimen/_136sdp"
                       android:layout_height="50dp"
                       android:layout_marginLeft="@dimen/_15sdp"
+                      android:layout_marginBottom="@dimen/_5sdp"
                       android:layout_marginTop="@dimen/_5sdp"
                       android:drawablePadding="@dimen/_10sdp"
                       android:clipChildren="true"
@@ -290,7 +299,7 @@ android:orientation="vertical"
 
                     android:backgroundTint="#FAFBFD"
                     android:gravity="center"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:ems="20"
 
                     android:fontFamily="@font/roboto_slab"
@@ -308,7 +317,7 @@ android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
@@ -319,7 +328,7 @@ android:orientation="vertical"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <EditText
@@ -328,6 +337,7 @@ android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
 
                     android:background="@drawable/textviewbg"
 
@@ -339,7 +349,7 @@ android:orientation="vertical"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <EditText
@@ -348,7 +358,7 @@ android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
@@ -359,7 +369,7 @@ android:orientation="vertical"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <EditText
@@ -370,7 +380,7 @@ android:orientation="vertical"
                     android:layout_marginTop="@dimen/_5sdp"
 
                     android:background="@drawable/textviewbg"
-
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:backgroundTint="#FAFBFD"
 
                     android:ems="20"
@@ -379,7 +389,7 @@ android:orientation="vertical"
                     android:minHeight="48dp"
 
                     android:padding="@dimen/_10sdp"
-                    android:textColor="#157575"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <TextView

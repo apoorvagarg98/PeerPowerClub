@@ -26,21 +26,24 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:layout_width="@dimen/_46sdp"
-                    android:layout_height="@dimen/_43sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_44sdp"
 
 
+                    android:layout_gravity="center"
                     android:background="#4C72F0"
-                    android:src="@drawable/ic_baseline_chevron_left_24" />
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:src="@drawable/ic_baseline_chevron_left_24"/>
 
 
                 <TextView
                     android:id="@+id/groupName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
 
-                    android:layout_marginTop="@dimen/_12sdp"
+                 android:layout_marginTop="@dimen/_2sdp"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:includeFontPadding="true"
@@ -69,9 +72,9 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"
 
-                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_5sdp"
 
                     >
 
@@ -81,7 +84,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:drawableLeft="@drawable/chatimagefront"
-                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_3sdp"
                         android:fontFamily="@font/roboto_slab"
                         android:paddingLeft="@dimen/_5sdp"
                         android:text="You can schedule a google meet and interact with each other"
@@ -95,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:drawableLeft="@drawable/chatimagefront"
-                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_3sdp"
                         android:fontFamily="@font/roboto_slab"
                         android:paddingLeft="@dimen/_5sdp"
 
@@ -109,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:drawableLeft="@drawable/chatimagefront"
-                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_3sdp"
 
                         android:fontFamily="@font/roboto_slab"
                         android:paddingLeft="@dimen/_5sdp"
@@ -122,9 +125,9 @@
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
                         android:drawableLeft="@drawable/chatimagefront"
-                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawablePadding="@dimen/_3sdp"
                         android:fontFamily="@font/roboto_slab"
 
                         android:paddingLeft="@dimen/_5sdp"
@@ -136,13 +139,13 @@
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
 
                         android:fontFamily="@font/roboto_slab_bold"
                         android:gravity="center"
 
 
-                        android:text="──────────────────────────────────"
+                        android:text="────────────────────────────────"
                         android:textColor="#4C72F0"
                         android:textSize="@dimen/_12sdp"
                         android:textStyle="bold" />
@@ -151,7 +154,7 @@
                         android:id="@+id/chatRv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:layout_marginBottom="7dp"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         app:stackFromEnd="true"
