@@ -40,7 +40,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextemail, editTextPassword;
     private TextView  editTextForgotpassword,donthaveacc;
-   com.google.android.gms.common.SignInButton gsignButton ;
+   Button gsignButton ;
     GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN =123;
 
