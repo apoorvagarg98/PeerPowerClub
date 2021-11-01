@@ -36,8 +36,8 @@
                 android:layout_gravity="center"
 
                 android:layout_marginLeft="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 android:background="@drawable/box1"
                 android:src="@drawable/ic_baseline_arrow_back_ios_24" />
 
@@ -46,8 +46,8 @@
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 android:fontFamily="@font/roboto_slab_bold"
 
                 android:gravity="center"
@@ -101,7 +101,7 @@
             android:background="@drawable/box"
             android:fontFamily="@font/roboto_slab"
             android:padding="@dimen/_8sdp"
-            android:text="Join XYZ club"
+            android:text="Join Peer club"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             app:backgroundTint="#4C72F0" />

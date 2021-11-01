@@ -5,12 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".registrationAndLogin.MainActivity12">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_140sdp"
+       android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:srcCompat="@drawable/splash"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

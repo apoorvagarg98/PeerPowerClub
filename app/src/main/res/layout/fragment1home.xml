@@ -24,7 +24,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+android:layout_gravity="center"
             android:orientation="horizontal"
             >
 
@@ -33,22 +33,22 @@
                 android:layout_height="@dimen/_44sdp"
                 android:layout_marginLeft="@dimen/_2sdp"
 
-                android:layout_gravity="center"
+             android:layout_gravity="center"
                 android:background="@drawable/box1"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 android:src="@drawable/ic_baseline_arrow_back_ios_24" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="@dimen/_15sdp"
+android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 android:fontFamily="@font/roboto_slab"
                 android:gravity="center"
 
-                android:layout_gravity="center"
+
                 android:text="Peer Club Profile"
                 android:textColor="#3D3D45"
                 android:textSize="@dimen/_18sdp"
@@ -277,7 +277,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_slab"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="10dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"

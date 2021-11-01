@@ -22,7 +22,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_2sdp"
             android:orientation="horizontal">
 
             <ImageButton
@@ -41,12 +41,12 @@
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 android:fontFamily="@font/roboto_slab_bold"
 
                 android:gravity="center"
-                android:text="Club"
+                android:text="Peer Clubs"
                 android:textColor="#3D3D45"
                 android:textSize="@dimen/_18sdp" />
         </LinearLayout>
@@ -98,7 +98,7 @@
             android:background="@drawable/box"
             android:fontFamily="@font/roboto_slab"
             android:padding="@dimen/_8sdp"
-            android:text="Join XYZ club"
+            android:text="Join Peer club"
             android:textAllCaps="false"
             android:textSize="@dimen/_13sdp"
             app:backgroundTint="#4C72F0" />
