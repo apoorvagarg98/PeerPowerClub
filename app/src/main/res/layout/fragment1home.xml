@@ -165,10 +165,10 @@ android:layout_gravity="center"
 
                     android:fontFamily="@font/roboto_slab"
                     android:minHeight="48dp"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
                     android:text="Skills that you are good at:"
                     android:textColor="#131313"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
 
@@ -201,10 +201,10 @@ android:layout_gravity="center"
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
                     android:minHeight="48dp"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
                     android:text="Skills that you want to learn:"
                     android:textColor="#131313"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
 
@@ -238,10 +238,10 @@ android:layout_gravity="center"
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
                     android:minHeight="48dp"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
                     android:text="Short term goal: (one year)"
                     android:textColor="#131313"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
 
@@ -274,10 +274,10 @@ android:layout_gravity="center"
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
                     android:minHeight="48dp"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
                     android:text="Long term goals: (Five year)"
                     android:textColor="#131313"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_14sdp"
                     android:textStyle="bold" />
 
 
