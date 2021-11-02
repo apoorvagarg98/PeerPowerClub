@@ -42,7 +42,8 @@ android:layout_gravity="center"
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-android:layout_gravity="center"
+                android:layout_gravity="center"
+
                 android:layout_marginTop="@dimen/_2sdp"
                 android:layout_marginBottom="@dimen/_2sdp"
                 android:fontFamily="@font/roboto_slab"
@@ -85,7 +86,7 @@ android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-
+                    android:textSize="@dimen/_12sdp"
 
                     android:background="@drawable/textviewbg"
                     android:backgroundTint="#FAFBFD"
@@ -101,7 +102,7 @@ android:layout_gravity="center"
 
                     android:textColorHighlight="#090909"
                     android:textColorLink="#FAF3F3"
-                    android:textStyle="bold" />
+                  />
 
 
                 <TextView
@@ -110,6 +111,7 @@ android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
 
                     android:background="@drawable/textviewbg"
 
@@ -123,7 +125,7 @@ android:layout_gravity="center"
 
                     android:padding="@dimen/_10sdp"
                     android:textColor="#131313"
-                    android:textStyle="bold" />
+                   />
 
 
                 <TextView
@@ -132,6 +134,7 @@ android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_12sdp"
 
                     android:background="@drawable/textviewbg"
 
@@ -145,20 +148,21 @@ android:layout_gravity="center"
 
                     android:padding="@dimen/_10sdp"
                     android:textColor="#131313"
-                    android:textStyle="bold" />
+                   />
 
                 <TextView
 
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
 
-                    android:background="@drawable/textviewbg"
+                    android:background="@drawable/box"
 
                     android:backgroundTint="#FAFBFD"
 
                     android:ems="20"
+
                     android:fontFamily="@font/roboto_slab"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
@@ -172,9 +176,11 @@ android:layout_gravity="center"
                     android:id="@+id/skills"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:fontFamily="@font/roboto_slab"
                     android:padding="@dimen/_10sdp"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#E2E6ED"
                     android:text="Skills:"
                     android:textColor="#131313"
                     android:textColorHint=" #9D9FA0"
@@ -186,9 +192,9 @@ android:layout_gravity="center"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
 
-                    android:background="@drawable/textviewbg"
+                    android:background="@drawable/box"
 
                     android:backgroundTint="#FAFBFD"
 
@@ -206,9 +212,11 @@ android:layout_gravity="center"
                     android:id="@+id/pSkillstolearn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:fontFamily="@font/roboto_slab"
                     android:padding="@dimen/_10sdp"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#E2E6ED"
                     android:text="Skills to learn:"
                     android:textColor="#131313"
                     android:textColorHint=" #9D9FA0"
@@ -222,7 +230,7 @@ android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
 
                     android:background="@drawable/textviewbg"
 
@@ -241,11 +249,13 @@ android:layout_gravity="center"
                     android:id="@+id/stg2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:fontFamily="@font/roboto_slab"
                     android:padding="@dimen/_10sdp"
                     android:text="Short Term Goal"
                     android:textColor="#131313"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#E2E6ED"
                     android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold" />
@@ -255,7 +265,7 @@ android:layout_gravity="center"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
 
                     android:background="@drawable/textviewbg"
 
@@ -275,13 +285,16 @@ android:layout_gravity="center"
                     android:id="@+id/ltg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
                     android:fontFamily="@font/roboto_slab"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
                     android:text="Long Term Goals"
+
+                    android:background="@drawable/box"
+                    android:backgroundTint="#E2E6ED"
                     android:textColor="#131313"
                     android:textColorHint=" #9D9FA0"
                     android:textSize="@dimen/_12sdp"
@@ -305,7 +318,7 @@ android:layout_gravity="center"
                     android:text="Available for Personal Peer Call:"
                     android:textColor="#131313"
                     android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold" />
+                  />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -323,7 +336,8 @@ android:layout_gravity="center"
                         android:clipChildren="true"
                         android:clipToPadding="true"
                         android:contentDescription="@string/Dayornight"
-
+                        android:background="@drawable/box"
+                        android:backgroundTint="#E2E6ED"
                         android:drawingCacheQuality="high"
                         android:dropDownWidth="match_parent"
                         android:padding="@dimen/_5sdp"
@@ -336,6 +350,8 @@ android:layout_gravity="center"
                     <TextView
                         android:id="@+id/timeforcall"
                         android:layout_width="@dimen/_136sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_15sdp"
                         android:layout_marginTop="@dimen/_2sdp"
@@ -347,6 +363,8 @@ android:layout_gravity="center"
                         android:drawingCacheQuality="high"
                         android:dropDownWidth="match_parent"
                         android:padding="@dimen/_10sdp"
+                        android:background="@drawable/box"
+                        android:backgroundTint="#E2E6ED"
                         android:textSize="@dimen/_10sdp"
                         android:spinnerMode="dropdown"
 
@@ -374,7 +392,7 @@ android:layout_gravity="center"
                     android:padding="@dimen/_10sdp"
                     android:textColor="#0E0E0E"
                     android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold" />
+                  />
 
                 <TextView
                     android:id="@+id/linkedIdProfileUrl"
@@ -391,10 +409,10 @@ android:layout_gravity="center"
                     android:fontFamily="@font/roboto_slab"
                     android:hint="Linkedin Id:"
                     android:minHeight="48dp"
-
+                    android:textSize="@dimen/_12sdp"
                     android:padding="@dimen/_10sdp"
                     android:textColor="#131313"
-                    android:textStyle="bold" />
+                   />
 
                 <TextView
                     android:id="@+id/instagram"
@@ -406,7 +424,7 @@ android:layout_gravity="center"
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
-
+                    android:textSize="@dimen/_12sdp"
                     android:ems="20"
                     android:fontFamily="@font/roboto_slab"
                     android:hint="Instagram:"
@@ -414,7 +432,7 @@ android:layout_gravity="center"
 
                     android:padding="@dimen/_10sdp"
                     android:textColor="#131313"
-                    android:textStyle="bold" />
+                  />
 
                 <TextView
                     android:id="@+id/twitter"
@@ -422,7 +440,7 @@ android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-
+                    android:textSize="@dimen/_12sdp"
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
@@ -434,7 +452,7 @@ android:layout_gravity="center"
 
                     android:padding="@dimen/_10sdp"
                     android:textColor="#131313"
-                    android:textStyle="bold" />
+                  />
 
                 <TextView
                     android:id="@+id/other"
@@ -444,7 +462,7 @@ android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_5sdp"
 
                     android:layout_marginBottom="@dimen/_30sdp"
-
+                    android:textSize="@dimen/_12sdp"
                     android:background="@drawable/textviewbg"
 
                     android:backgroundTint="#FAFBFD"
@@ -455,7 +473,7 @@ android:layout_gravity="center"
                     android:minHeight="48dp"
                     android:padding="@dimen/_10sdp"
                     android:textColor="#131313"
-                    android:textStyle="bold" />
+                  />
 
             </LinearLayout>
         </ScrollView>

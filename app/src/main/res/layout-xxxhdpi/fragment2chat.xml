@@ -49,6 +49,8 @@
                     android:includeFontPadding="true"
                     android:paddingLeft="@dimen/_10sdp"
                     android:text="Group Name"
+
+                    android:layout_gravity="center"
                     android:textColor="#FAF7F7"
                     android:textSize="@dimen/_16sdp"
                     tools:ignore="MissingConstraints" />
