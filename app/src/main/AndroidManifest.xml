@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PeerPowerClub"
         tools:replace="android:theme">
         <activity
+            android:name=".faltuKaInfo"
+            android:exported="true" />
+        <activity
             android:name=".Chatmenusettings"
             android:exported="true" />
         <activity
@@ -46,7 +49,6 @@
         <activity android:name=".scregistered" />
         <activity android:name=".registrationAndLogin.startactivity" />
         <activity android:name=".registrationAndLogin.Registration" />
-
         <activity android:name=".registrationAndLogin.Login" />
         <activity android:name=".viewCourse" />
         <activity

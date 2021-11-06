@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".faltuKaInfo">
+
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:drawableLeft="@drawable/chatimagefront"
+            android:drawablePadding="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:paddingLeft="@dimen/_5sdp"
+
+            android:text="You can have a personal call with your peers and discuss great things!"
+            android:textColor="#090909"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:drawableLeft="@drawable/chatimagefront"
+            android:drawablePadding="@dimen/_3sdp"
+
+            android:fontFamily="@font/roboto_slab"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="You can follow the roadmap to learn python"
+            android:textColor="#090909"
+
+            android:textSize="@dimen/_12sdp" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:drawableLeft="@drawable/chatimagefront"
+            android:drawablePadding="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="You can schedule a google meet and interact with each other"
+            android:textColor="#090909"
+
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawableLeft="@drawable/chatimagefront"
+            android:drawablePadding="@dimen/_3sdp"
+            android:fontFamily="@font/roboto_slab"
+
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="You can connect with each other through whatsapp"
+            android:textColor="#090909"
+            android:textSize="@dimen/_12sdp" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+        android:fontFamily="@font/roboto_slab_bold"
+        android:gravity="center"
+
+
+        android:text="────────────────────────────────"
+        android:textColor="#4C72F0"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

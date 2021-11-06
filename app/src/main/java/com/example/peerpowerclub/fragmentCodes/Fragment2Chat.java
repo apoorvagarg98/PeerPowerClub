@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.peerpowerclub.Chatmenusettings;
 import com.example.peerpowerclub.adapters.AdapterGroupChat;
 import com.example.peerpowerclub.R;
+import com.example.peerpowerclub.faltuKaInfo;
 import com.example.peerpowerclub.groupparticipants;
 import com.example.peerpowerclub.models.modelGroupChat;
 import com.example.peerpowerclub.models.user;
@@ -116,6 +117,12 @@ public class Fragment2Chat extends Fragment {
             }
             case R.id.Menuofchat:{
                 Intent intent = new Intent(getActivity(), Chatmenusettings.class);
+
+                startActivity(intent);
+                break;
+            }
+            case R.id.infowala:{
+                Intent intent = new Intent(getActivity(), faltuKaInfo.class);
                 startActivity(intent);
                 break;
             }

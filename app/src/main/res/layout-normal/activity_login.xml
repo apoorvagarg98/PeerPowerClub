@@ -139,8 +139,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_20sdp"
-            android:background="@drawable/box1"
-            android:backgroundTint="#FAF4F4"
+            android:backgroundTint="#FAF8F8"
             android:drawableLeft="@drawable/google"
             android:drawablePadding="@dimen/_20sdp"
             android:fontFamily="@font/roboto_slab"
@@ -190,6 +189,20 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F31515"
+            android:shadowColor="#ED1818"
+            android:text="Button"
+            android:textColor="#F81515"
+            android:textColorHighlight="#CF1A1A"
+            android:textColorHint="#F60A0A"
+            android:textColorLink="#E40E0E"
+            app:rippleColor="#EF0606"
+            app:strokeColor="#E41111" />
 
     </LinearLayout>
 

@@ -40,10 +40,9 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextemail, editTextPassword;
     private TextView  editTextForgotpassword,donthaveacc;
-   Button gsignButton ;
+    Button gsignButton ;
     GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN =123;
-
     private Button  signin;
     private FirebaseAuth mAuth;
     ProgressDialog mLoadingBar;
@@ -107,10 +106,7 @@ donthaveacc = findViewById(R.id.dontHaveacc);
     public void onClick(View v) {
         switch (v.getId())
         {
-//            case R.id.register:
-//                startActivity(new Intent(this, Registration.class));
 
-//                break;
 
             case R.id.btnLogin2:
                 userLogin();
@@ -124,6 +120,7 @@ donthaveacc = findViewById(R.id.dontHaveacc);
         }
 
     }
+
     private void signIn() {
 
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -239,3 +236,4 @@ donthaveacc = findViewById(R.id.dontHaveacc);
         });
     }}
 }
+
